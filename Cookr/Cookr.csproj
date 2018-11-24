@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
+    <Compile Include="Logic\SearchEngine.cs" />
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
     </Compile>

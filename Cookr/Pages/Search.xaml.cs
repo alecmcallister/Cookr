@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cookr.Logic;
+using Cookr.UserControls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,16 +19,44 @@ namespace Cookr.Pages
 {
     public partial class Search : Page
     {
-        String SearchString;
+        String searchString;
+        List<RecipeObject> searchResults;
+
         public Search()
         {
             InitializeComponent();
         }
-        public Search(String search)
+        public Search(String _search)
         {
-            SearchString = search;
             InitializeComponent();
-            SearchedLabel.Content = "\"" + SearchString + "\"";
+
+            searchString = _search;
+            SearchedLabel.Content = "\"" + searchString + "\"";
+            search(searchString);
+            LoadSearchResults(searchResults);
+            
+        }
+
+        private void search(string searchString)
+        {
+            searchString = searchString.ToLower();
+            string[] delimiters = { " ", "," };
+            string[] tagStrings = searchString.Split(delimiters, StringSplitOptions.None);
+            List<string> tags = new List<string>(tagStrings);
+
+            searchResults = SearchEngine.TagSearch(RecipeManager.GetRecipes(),tags);
+        }
+
+        private void LoadSearchResults(List<RecipeObject> searchResults)
+        {
+            if (searchResults.Count == 0)
+            {
+                TextBlock noResults = new TextBlock();
+                noResults.Text = "Sorry! No recipes were found!!";
+                SearchResultsStack.Children.Add(noResults);
+                return;
+            }
+            searchResults.ForEach(recipe => SearchResultsStack.Children.Add(new RecipeCard(recipe)));
         }
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)

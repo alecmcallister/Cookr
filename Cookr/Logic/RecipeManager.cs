@@ -16,10 +16,10 @@ namespace Cookr.Logic
             /// It will be replaced by a XML reader
 
             List<RecipeObject> loadedRecipes = new List<RecipeObject>();
-            loadedRecipes.Add(new RecipeObject("Asparagus Soup",true, new ArrayList{"asparagus", "Soup" }));
-            loadedRecipes.Add(new RecipeObject("Lasgna", true, new ArrayList{ "lasgna", "mild" }));
-            loadedRecipes.Add(new RecipeObject("Chicken Burger", false, new ArrayList{ "burger", "Chicken" }));
-            loadedRecipes.Add(new RecipeObject("Pizza", true, new ArrayList{ "pizza", "cheese" }));
+            loadedRecipes.Add(new RecipeObject("Asparagus Soup", true, new List<string> { "asparagus", "Soup" }));
+            loadedRecipes.Add(new RecipeObject("Lasgna", true, new List<String> { "lasgna", "mild" }));
+            loadedRecipes.Add(new RecipeObject("Chicken Burger", false, new List<String> { "burger", "Chicken" }));
+            loadedRecipes.Add(new RecipeObject("Pizza", true, new List<String> { "pizza", "cheese" }));
 
             recipes = loadedRecipes;
 

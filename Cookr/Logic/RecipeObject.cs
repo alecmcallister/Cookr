@@ -11,9 +11,9 @@ namespace Cookr.Logic
     {
         public string title { get; set; }
         public bool popularToday { get; set; }
-        public ArrayList tags { get; set; }
+        public List<string> tags { get; set; }
         
-        public RecipeObject(string _title, bool _popularToday, ArrayList _tags)
+        public RecipeObject(string _title, bool _popularToday, List<string> _tags)
         {
             title = _title;
             popularToday = _popularToday;
