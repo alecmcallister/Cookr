@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cookr"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Cookr" Height="700" Width="900">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="344*"/>
+            <RowDefinition Height="325*"/>
+        </Grid.RowDefinitions>
+        <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="569" 
+               VerticalAlignment="Top" Width="792" NavigationUIVisibility="Hidden" 
+               Source="/Cookr;component/Pages/Home.xaml" Grid.RowSpan="2"/>
     </Grid>
 </Window>
