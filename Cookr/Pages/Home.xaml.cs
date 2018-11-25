@@ -17,17 +17,18 @@ using System.Windows.Shapes;
 
 namespace Cookr.Pages
 {
-    public partial class Home : Page
+    public partial class Home : Page, CookrPage
     {
         public Home()
         {
             InitializeComponent();
             Load_PopularToday();
+            BackBtn.Visibility = Visibility.Collapsed;
         }
 
         private void BtnSearch_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Search(SearchField.Text));
+            NavigationManager.NavigateToSearch(SearchField.Text);
         }
 
         private void SearchField_GotFocus(object sender, RoutedEventArgs e)
@@ -57,6 +58,34 @@ namespace Cookr.Pages
                 SearchField.Text = "Search";
                 SearchField.Foreground = Brushes.LightGray;
             }
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationManager.NavigateToSearch("Pizza");
+        }
+
+        private void SearchField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                NavigationManager.NavigateToSearch(SearchField.Text);
+            }
+        }
+
+        private void BackButton_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationManager.NavigateToPrev();
+        }
+
+        public void SetBackButton()
+        {
+            if (!NavigationManager.allowPrev())
+            {
+                BackBtn.Visibility = Visibility.Collapsed;
+            }
+            else
+                BackBtn.Visibility = Visibility.Visible;
         }
     }
 }

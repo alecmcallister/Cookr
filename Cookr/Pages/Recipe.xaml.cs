@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cookr.Logic;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,11 +19,34 @@ namespace Cookr.Pages
     /// <summary>
     /// Interaction logic for Recipe.xaml
     /// </summary>
-    public partial class Recipe : Page
+    public partial class Recipe : Page, CookrPage
     {
-        public Recipe()
+        public Recipe(RecipeObject _recipe)
         {
             InitializeComponent();
+            RecipeTitle.Content = _recipe.title;
+            Tags.Content = String.Join(", ", _recipe.tags.ToArray());
         }
+
+        private void HomeBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationManager.NavigateToHome();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationManager.NavigateToPrev();
+        }
+
+        public void SetBackButton()
+        {
+            if (!NavigationManager.allowPrev())
+            {
+                BackBtn.Visibility = Visibility.Collapsed;
+            }
+            else
+                BackBtn.Visibility = Visibility.Visible;
+        }
+
     }
 }

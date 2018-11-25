@@ -55,6 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logic\CookrPage.cs" />
+    <Compile Include="Logic\NavigationManager.cs" />
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
     <Compile Include="Logic\SearchEngine.cs" />

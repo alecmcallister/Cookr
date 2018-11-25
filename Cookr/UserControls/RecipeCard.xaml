@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Cookr.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="75" d:DesignWidth="150">
-    <Grid Height="75" Width="150"  Background="LightGray" Margin="3">
+    <Grid Height="75" Width="150"  Background="LightGray" Margin="3" MouseDown="Grid_MouseDown">
         <Label Name="Title"  Content="Recipe Name" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Top"/>
 
     </Grid>

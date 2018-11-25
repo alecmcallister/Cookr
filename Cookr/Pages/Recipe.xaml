@@ -5,10 +5,15 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cookr.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="700" d:DesignWidth="900"
+      Background="white"
       Title="Recipe">
 
     <Grid>
-        
+        <Label Name="RecipeTitle" Content="" HorizontalAlignment="Left" Margin="192,102,0,0" VerticalAlignment="Top" Width="316" FontSize="36" FontWeight="Bold"/>
+        <Label Name="Tags" Content="Tags" HorizontalAlignment="Left" Margin="192,248,0,0" VerticalAlignment="Top"/>
+        <Button Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="54,45,0,0" VerticalAlignment="Top" Width="75" Click="HomeBtn_Click"/>
+        <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="150,45,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click"/>
+
     </Grid>
 </Page>

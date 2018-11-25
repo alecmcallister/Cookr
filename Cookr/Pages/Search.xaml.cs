@@ -2,22 +2,13 @@
 using Cookr.UserControls;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Cookr.Pages
 {
-    public partial class Search : Page
+    public partial class Search : Page, CookrPage
     {
         String searchString;
         List<RecipeObject> searchResults;
@@ -31,6 +22,7 @@ namespace Cookr.Pages
             InitializeComponent();
 
             searchString = _search;
+            SearchField.Text = searchString;
             SearchedLabel.Content = "\"" + searchString + "\"";
             search(searchString);
             LoadSearchResults(searchResults);
@@ -61,12 +53,35 @@ namespace Cookr.Pages
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Home());
+            NavigationManager.NavigateToHome();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            this.NavigationService.Navigate(new Search(SearchField.Text));
+            NavigationManager.NavigateToSearch(SearchField.Text);
+        }
+
+        private void SearchField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Enter)
+            {
+                NavigationManager.NavigateToSearch(SearchField.Text);
+            }
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationManager.NavigateToPrev();
+        }
+
+        public void SetBackButton()
+        {
+            if (!NavigationManager.allowPrev())
+            {
+                BackBtn.Visibility = Visibility.Collapsed;
+            }
+            else
+                BackBtn.Visibility = Visibility.Visible;
         }
     }
 }

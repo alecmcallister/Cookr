@@ -1,4 +1,5 @@
 ﻿using Cookr.Logic;
+using Cookr.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,10 +22,18 @@ namespace Cookr.UserControls
     /// </summary>
     public partial class RecipeCard : UserControl
     {
-        public RecipeCard(RecipeObject recipe)
+        private RecipeObject recipe;
+
+        public RecipeCard(RecipeObject _recipe)
         {
             InitializeComponent();
-            this.Title.Content = recipe.title;
+            this.Title.Content = _recipe.title;
+            recipe = _recipe;
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            NavigationManager.NavigateToRecipe(recipe);
         }
     }
 }
