@@ -57,6 +57,10 @@
     </ApplicationDefinition>
     <Compile Include="Logic\CookrPage.cs" />
     <Compile Include="Logic\NavigationManager.cs" />
+    <Compile Include="Logic\RecipeComponents\Ingredient.cs" />
+    <Compile Include="Logic\RecipeComponents\RecipeStep.cs" />
+    <Compile Include="Logic\RecipeComponents\Tool.cs" />
+    <Compile Include="Logic\RecipeComponents\ToolTip.cs" />
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
     <Compile Include="Logic\SearchEngine.cs" />
@@ -130,5 +134,8 @@
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>RD /S /Q "$(TargetDir)"</PreBuildEvent>
   </PropertyGroup>
 </Project>

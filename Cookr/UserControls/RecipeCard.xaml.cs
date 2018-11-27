@@ -27,7 +27,7 @@ namespace Cookr.UserControls
         public RecipeCard(RecipeObject _recipe)
         {
             InitializeComponent();
-            this.Title.Content = _recipe.title;
+            this.Title.Content = _recipe.Title;
             recipe = _recipe;
         }
 

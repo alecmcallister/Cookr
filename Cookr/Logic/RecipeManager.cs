@@ -16,10 +16,6 @@ namespace Cookr.Logic
         public static void LoadRecipes() {
 
             List<RecipeObject> loadedRecipes = new List<RecipeObject>();
-            //loadedRecipes.Add(new RecipeObject("Asparagus Soup", true, new List<string> { "asparagus", "Soup" }));
-            //loadedRecipes.Add(new RecipeObject("Lasgna", true, new List<String> { "lasgna", "mild" }));
-            //loadedRecipes.Add(new RecipeObject("Chicken Burger", false, new List<String> { "burger", "Chicken" }));
-            //loadedRecipes.Add(new RecipeObject("Pepperoni Pizza", true, new List<String> { "pizza", "cheese", "pepperoni" }));
 
             string mainPath = ".\\Recipes";
 

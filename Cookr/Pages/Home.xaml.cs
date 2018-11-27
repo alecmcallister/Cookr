@@ -45,7 +45,7 @@ namespace Cookr.Pages
             List<RecipeObject> recipes = RecipeManager.GetRecipes();
             List<RecipeCard> popularToday = new List<RecipeCard>();
             recipes.ForEach(recipe => {
-                if (recipe.popularToday)
+                if (recipe.PopularToday)
                     popularToday.Add(new RecipeCard(recipe));
             });
             popularToday.ForEach(recipe => PopularTodayStack.Children.Add(recipe));

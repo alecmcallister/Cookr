@@ -16,16 +16,19 @@ using System.Windows.Shapes;
 
 namespace Cookr.Pages
 {
-    /// <summary>
-    /// Interaction logic for Recipe.xaml
-    /// </summary>
+
+    // ANDY - All the changes you need to make would be on this page.
     public partial class Recipe : Page, CookrPage
     {
+        public RecipeObject recipe;
+
         public Recipe(RecipeObject _recipe)
         {
+            // This incoming RecipeObject contains all the information from a single XML files including steps, tools, igredients, filepaths etc..
             InitializeComponent();
-            RecipeTitle.Content = _recipe.title;
-            Tags.Content = String.Join(", ", _recipe.tags.ToArray());
+            recipe = _recipe;
+            RecipeTitle.Content = _recipe.Title;
+            Tags.Content = String.Join(", ", _recipe.Tags.ToArray());
         }
 
         private void HomeBtn_Click(object sender, RoutedEventArgs e)

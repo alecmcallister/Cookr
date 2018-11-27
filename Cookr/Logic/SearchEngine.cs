@@ -20,12 +20,12 @@ namespace Cookr.Logic {
             List<SearchObject> searched = new List<SearchObject>();
 
             _recipes.ForEach(recipe => {
-                if (recipe.tags.Any(tag => _tags.Contains(tag)))
+                if (recipe.Tags.Any(tag => _tags.Contains(tag)))
                 {
                     searched.Add(new SearchObject()
                     {
                         recipe = recipe,
-                        searchCorr = recipe.tags.Count(_tags.Contains)
+                        searchCorr = recipe.Tags.Count(_tags.Contains)
                     });
                 }
                 searched = searched.OrderByDescending(x => x.searchCorr).ToList();

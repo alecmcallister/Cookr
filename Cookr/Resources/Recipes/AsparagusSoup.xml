@@ -14,12 +14,12 @@
 	<NumberOfServing>6</NumberOfServing>
 
 	<Ingredients>
-		<Ingredient name="Oil" Quanitity="1 Tbsp" Optional="0" TooltipID="1"/>
-		<Ingredient name="Large Onion" Quanitity="1" Optional="0"/>
-		<Ingredient name="Small Garlic Clove" Quanitity="1" Optional="1"/>
-		<Ingredient name="Fresh Asparagus Spears" Quantity="1-1/2 lb. (675g)" Optional="0"/>
-		<Ingredients name="Chicken Broth" Quantity="2 Cups" Optional="0"/>
-		<Ingredients name="Milk" Quantity="1/4 cup" Optional="0"/>
+		<Ingredient Name="Oil" Quantity="1 Tbsp" Optional="0" ToolTipID="1"/>
+		<Ingredient Name="Large Onion" Quantity="1" Optional="0"/>
+		<Ingredient Name="Small Garlic Clove" Quantity="1" Optional="1"/>
+		<Ingredient Name="Fresh Asparagus Spears" Quantity="1-1/2 lb. (675g)" Optional="0"/>
+		<Ingredient Name="Chicken Broth" Quantity="2 Cups" Optional="0"/>
+		<Ingredient Name="Milk" Quantity="1/4 cup" Optional="0"/>
 	</Ingredients>
 	
 	<Tools>
@@ -27,13 +27,13 @@
 		<Tool Name="Large Sauce Pan"/>
 	</Tools>
 	
-	<Tooltips>
-		<Tooltip Key="1" Text="Olive oil is recommended, but other oils or butter are fine.">
+	<ToolTips>
+		<ToolTip Key="1" Text="Olive oil is recommended, but other oils or butter are fine.">
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
-		</Tooltip>
-	</Tooltips>
+		</ToolTip>
+	</ToolTips>
 	
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
