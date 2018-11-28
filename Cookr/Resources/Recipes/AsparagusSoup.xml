@@ -30,7 +30,6 @@
 	<ToolTips>
 		<ToolTip Key="1" Text="Olive oil is recommended, but other oils or butter are fine.">
 			<Images>
-				<image>#FILEPATH</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
@@ -40,15 +39,15 @@
 			<StepText>Chop up 1 large onion, and mince 1 small garlic clove</StepText>
 			<Title>Chop onion &amp; mince garlic</Title>
 			<Images>
-				<image>#FILEPATH</image>
-				<image>#FILEPATH</image>
+				<image>Resources/Images/AsparagusSoup-Prep1-1.png</image>
+				<image>Resources/Images/AsparagusSoup-Prep1-2.png</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
 			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears</StepText>
 			<Title>Trim &amp; chop asparagus</Title>
 			<Images>
-				<image>#FILEPATH</image>
+				<image>Resources/Images/AsparagusSoup-Prep2.png</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
@@ -62,14 +61,7 @@
 			<StepText>Add 1-1/2 lb. (675 g) trimmed chopped asparagus, 1 minced small garlic clove, and 2-1/2 cups chicken broth to the saucepan/nBring to a boil, stirring occasionally. Then cover and simmer on medium-low heat for 15 minutes, or until vegetables are very tender.</StepText>
 			<Title>Add mix to saucepan</Title>
 			<Images>
-				<image>#FILEPATH</image>
-			</Images>
-		</RecipeStep>
-		<RecipeStep Type="Cook" Number="2">
-			<StepText>Add 1-1/2 lb. (675 g) trimmed chopped asparagus, 1 minced small garlic clove, and 2-1/2 cups chicken broth to the saucepan/nBring to a boil, stirring occasionally. Then cover and simmer on medium-low heat for 15 minutes, or until vegetables are very tender.</StepText>
-			<Title>Add mix to saucepan</Title>
-			<Images>
-				<image>#FILEPATH</image>
+				<image>Resources/Images/AsparagusSoup-Cook2.png</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
@@ -77,7 +69,7 @@
 			<StepText>Transfer the mixture to the blender in batches, blending it until smooth.</StepText>
 			<Title>Blend mixture</Title>
 			<Images>
-				<image>#FILEPATH</image>
+				<image>Resources/Images/AsparagusSoup-Cook3.png</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="4">
