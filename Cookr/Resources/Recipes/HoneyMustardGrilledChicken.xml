@@ -1,0 +1,88 @@
+<Recipe>
+	<Title>Honey Mustard Grilled Chicken</Title>
+	<PopularToday>1</PopularToday>
+	<Tags>
+		<Tag>honey</Tag>
+		<Tag>mustard</Tag>
+		<Tag>honey mustard</Tag>
+		<Tag>grill</Tag>
+		<Tag>chicken</Tag>
+		<Tag>quick and easy</Tag>
+		<Tag>quick</Tag>
+		<Tag>easy</Tag>
+	</Tags>
+	<Rating>3.5</Rating>
+	<TitleImage>HoneyMustartGrilledChicken-Title.jpg</TitleImage>
+	<RecipeIntroduction>Have faith in mustard!</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>35</TotalTime>
+	<NumberOfServing>4</NumberOfServing>
+	<Ingredients>
+		<Ingredient Name="Oil" Quantity="" Optional="0" ToolTipID="1"/>
+		<Ingredient Name="Dijon Mustard" Quantity="1/3 Cup" Optional="0"/>
+		<Ingredient Name="Honey" Quantity="1/4 Cup" Optional="0"/>
+		<Ingredient Name="Mayonnaise" Quantity="2 tablespoons" Optional="0"/>
+		<Ingredient Name="Steak Sauce" Quantity="1 teaspoon" Optional="0"/>
+		<Ingredient Name="Skinless, Boneless Chicken Breast Halves" Quantity="4" Optional="0"/>
+	</Ingredients>
+	
+	<Tools>
+		<Tool Name="Grill"/>
+		<Tool Name="Paper Towel"/>
+		<Tool Name="Oven Mitt"/>
+		<Tool Name="Tongs"/>
+		<Tool Name="Basting Brush"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Key="1" Text="Use a high-heat cooking oil, such as Canola oil, olive oil or peanut oil">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Prep 1 - TODO">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="4" Text="Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
+			<Images>
+				<image>Resources/Images/Tooltip-OilGrill.PNG</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="5" Text="Basting means to coat the grilling chicken with the sauce again. This TODO - WHAT DOES THIS DO?. You should use a basting brush to keep your hands away from the heat.">
+			<Images>
+				<image>Resources/Images/HoneyMustardGrilledChicken-Tooltip5.PNG</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText ToolTipID="2,3"> Preheat the grill for medium heat.</StepText>
+			<Title>Preheat Grill</Title>
+			<Images>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Prep" Number="2">
+			<StepText> In a shallow bowl, mix the mustard, honey, mayonnaise, and steak sauce. Set aside a small amount of the honey mustard sauce for basting (See next step), and dip the chicken into the remaining sauce to coat.</StepText>
+			<Title>Make sauce &amp; Coat Chicken</Title>
+			<Images>
+				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-1.PNG</image>
+				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-2.PNG</image>
+				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-3.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<Warning>Make sure not to get too close to the heated grill! Use an oven mitt and tongs when oiling the grill</Warning>
+			<StepText ToolTipID="4,5">Lightly oil the grill grate. Grill chicken over indirect heat for 18 to 20 minutes, turning occasionally, or until juices run clear. Baste occasionally with the reserved sauce during the last 10 minutes. Watch carefully to prevent burning!</StepText>
+			<Title>Oil Grill, Grill Chicken</Title>
+			<Images>
+				<image>Resources/Images/HoneyMustardGrilledChicken-Cook1.PNG</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

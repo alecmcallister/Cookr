@@ -8,6 +8,7 @@
 		<Tag>kabobs</Tag>
 		<Tag>kebab</Tag>
 		<Tag>kababs</Tag>
+		<Tag>grill</Tag>
 	</Tags>
 	<Rating>4.5</Rating>
 	<TitleImage>PinappleChickenKabobs-Title.jpg</TitleImage>
@@ -28,6 +29,7 @@
 	<Tools>
 		<Tool Name="Grill"/>
 		<Tool Name="6 skewers"/>
+		<Tool Name="Paper Towel"/>
 		<Tool Name="Oven Mitt"/>
 		<Tool Name="Tongs"/>
 	</Tools>
@@ -37,16 +39,17 @@
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="2" Text="THIS WILL BE FOR PREHEAT IN STEP cook 1 - TODO">
+		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM HIGH HEAT IN STEP cook 1 - TODO. ">
+		<ToolTip Key="3" Text="TODO: THIS WILL BE FOR MEDIUM HIGH HEAT IN STEP cook 1. ">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="4" Text="THIS WILL BE FOR OIL THE GRATE IN STEP cook 1 - TODO. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
+		<ToolTip Key="4" Text="TODO: THIS WILL BE FOR OIL THE GRILL IN STEP Cook 1. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
 			<Images>
+				<image>Resources/Images/Tooltip-OilGrill.PNG</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
@@ -75,7 +78,7 @@
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
 			<Warning>Make sure not to get too close to the heated grill! Use an oven mitt and tongs when oiling the grill</Warning>
-			<StepText>Preheat an outdoor grill for medium-high heat and lightly oil the grate.</StepText>
+			<StepText ToolTipID="2,3,4">Preheat an outdoor grill for medium-high heat and lightly oil the grate.</StepText>
 			<Title>Heat and oil grill</Title>
 			<Images>
 				<image>Resources/Images/PinappleChickenKabobs-Cook1.jpg</image>
@@ -89,7 +92,7 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
-			<StepText>  Cook on the preheated grill until chicken is no longer pink in the center and the juices run clear, 7 to 10 minutes per side. </StepText>
+			<StepText>Cook on the preheated grill until chicken is no longer pink in the center and the juices run clear, 7 to 10 minutes per side. </StepText>
 			<Title>Cook skewers on grill</Title>
 			<Images>
 				<image>Resources/Images/PinappleChickenKabobs-Cook3.jpg</image>
