@@ -1,0 +1,78 @@
+<Recipe>
+	<Title>Hamburger Steak</Title>
+	<PopularToday>1</PopularToday>
+	<Tags>
+		<Tag>beef</Tag>
+		<Tag>onion</Tag>
+		<Tag>quick and easy</Tag>
+		<Tag>quick</Tag>
+		<Tag>easy</Tag>
+	</Tags>
+	<Rating>4.5</Rating>
+	<TitleImage>HamburgerSteak-Title.PNG</TitleImage>
+	<RecipeIntroduction>An easy-to-make classic featuring tasty hamburger 'steaks' smothered in gravy and onions. Traditionally served with hot white rice or potatoes, it's a great way to dress up a pound of ground beef and you probably have all the ingredients on hand!</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>35</TotalTime>
+	<NumberOfServing>4</NumberOfServing>
+	<Ingredients>
+		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
+		<Ingredient Name="Egg" Quantity="1" Optional="0"/>
+		<Ingredient Name="Bread Crumbs" Quantity="1/4 Cup" Optional="0"/>
+		<Ingredient Name="Ground Black Pepper" Quantity="1/8 teaspoon" Optional="0"/>
+		<Ingredient Name="Seasoned Salt" Quantity="1/2 teaspoon" Optional="0"/>
+		<Ingredient Name="Garlic Powder" Quantity="1/2 teaspoon" Optional="0"/>
+		<Ingredient Name="Worcestershire Sauce" Quantity="1 teaspoon" Optional="0"/>
+		<Ingredient Name="Vegetable Oil" Quantity="1 tablespoon" Optional="0"/>
+		<Ingredient Name="Thinly Sliced Onion" Quantity="1 cup" Optional="0"/>
+		<Ingredient Name="All-purpose Flour" Quantity="2 tablespoons" Optional="0"/>
+		<Ingredient Name="Beef Broth" Quantity="1 cup" Optional="0"/>
+		<Ingredient Name="Cooking Sherry" Quantity="1 tablespoon" Optional="0"/>
+	</Ingredients>
+	
+	<Tools>
+		<Tool Name="Oven"/>
+		<Tool Name="Large Skillet"/>
+		<Tool Name="Plate"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Key="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="2" Text="THIS WILL BE FOR MEDIUM-LOW HEAT IN STEP Cook 1 - TODO">
+			<Images>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText>In a large bowl, mix together the ground beef, egg, bread crumbs, pepper, salt, onion powder, garlic powder, and Worcestershire sauce. Form into 8 balls, and flatten into patties.</StepText>
+			<Title>Make Beef Mixture</Title>
+			<Images>
+				<image>Resources/Images/HamburgerSteak-Prep1-1.PNG</image>
+				<image>Resources/Images/HamburgerSteak-Prep1-2.PNG</image>
+				<image>Resources/Images/HamburgerSteak-Prep1-3.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText ToolTipID="1">Heat the oil in a large skillet over medium heat. Fry the patties and onion in the oil until patties are nicely browned, about 4 minutes per side. Remove the beef patties to a plate, and keep warm.</StepText>
+			<Title>Fry Steak Patties</Title>
+			<Images>
+				<image>Resources/Images/HamburgerSteak-Cook1-1.PNG</image>
+				<image>Resources/Images/HamburgerSteak-Cook1-2.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText ToolTipID="1">Sprinkle flour over the onions and drippings in the skillet. Stir in flour with a fork, scraping bits of beef off of the bottom as you stir. Gradually mix in the beef broth and sherry. Season with seasoned salt. Simmer and stir over medium-low heat for about 5 minutes, until the gravy thickens. Turn heat to low, return patties to the gravy, cover, and simmer for another 15 minutes.</StepText>
+			<Title>Fry Steak Patties &amp; Make Gravy</Title>
+			<Images>
+				<image>Resources/Images/HamburgerSteak-Cook2-1.PNG</image>
+				<image>Resources/Images/HamburgerSteak-Cook2-2.PNG</image>
+				<image>Resources/Images/HamburgerSteak-Cook2-3.PNG</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

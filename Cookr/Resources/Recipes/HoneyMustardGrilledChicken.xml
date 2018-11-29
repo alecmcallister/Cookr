@@ -62,14 +62,14 @@
 	
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
-			<StepText ToolTipID="2,3"> Preheat the grill for medium heat.</StepText>
+			<StepText ToolTipID="2,3">Preheat the grill for medium heat.</StepText>
 			<Title>Preheat Grill</Title>
 			<Images>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
-			<StepText> In a shallow bowl, mix the mustard, honey, mayonnaise, and steak sauce. Set aside a small amount of the honey mustard sauce for basting (See next step), and dip the chicken into the remaining sauce to coat.</StepText>
-			<Title>Make sauce &amp; Coat Chicken</Title>
+			<StepText>In a shallow bowl, mix the mustard, honey, mayonnaise, and steak sauce. Set aside a small amount of the honey mustard sauce for basting (See next step), and dip the chicken into the remaining sauce to coat.</StepText>
+			<Title>Make Sauce &amp; Coat Chicken</Title>
 			<Images>
 				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-1.PNG</image>
 				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-2.PNG</image>
