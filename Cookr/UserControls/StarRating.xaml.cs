@@ -26,6 +26,10 @@ namespace Cookr.UserControls
 
         private int _max = 5;
 
+        public delegate void MyDelegate(int rating);
+
+        public MyDelegate listener { get; set; }
+
         public int Value
         {
             get
@@ -78,11 +82,17 @@ namespace Cookr.UserControls
             ToggleButton button = sender as ToggleButton;
             int newvalue = int.Parse(button.Tag.ToString());
             Value = newvalue;
+            if(listener != null)
+            {
+                listener(Value);
+            }
+
         }
 
         public StarRating()
         {
             InitializeComponent();
+            listener = null;
         }
     }
 }

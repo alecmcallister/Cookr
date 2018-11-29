@@ -20,6 +20,8 @@ namespace Cookr.Logic
         [XmlElement("Rating")]
         public double Rating { get; set; }
 
+        public int UserRating { get; set; }
+
         [XmlElement("TitleImage")]
         public string TitleImage { get; set; }
 

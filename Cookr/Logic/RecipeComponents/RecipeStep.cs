@@ -13,13 +13,16 @@ namespace Cookr.Logic.RecipeComponents
         [XmlAttribute("Number")]
         public int Number;
 
+        [XmlElement("Warning")]
+        public string Warning;
+
         [XmlElement("StepText")]
         public string StepText;
 
         [XmlElement("Title")]
         public string Title;
 
-        [XmlArray("Images"), XmlArrayItem("Image")]
+        [XmlArray("Images"), XmlArrayItem("image")]
         public List<string> Images;
     }
 }

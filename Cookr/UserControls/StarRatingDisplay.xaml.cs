@@ -83,6 +83,7 @@ namespace Cookr.UserControls
         public StarRatingDisplay()
         {
             InitializeComponent();
+            Value = 3;
         }
     }
 }

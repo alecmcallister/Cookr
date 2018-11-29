@@ -4,16 +4,122 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cookr.Pages"
+      xmlns:rating="clr-namespace:Cookr.UserControls"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="900"
       Background="white"
       Title="Recipe">
+    <Page.Resources>
+        <LinearGradientBrush x:Key="RecipeStepGradient" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE5E5E5" Offset="0"/>
+            <GradientStop Color="#FFD4D4D4" Offset="1"/>
+        </LinearGradientBrush>
+    </Page.Resources>
 
     <Grid>
-        <Label Name="RecipeTitle" Content="" HorizontalAlignment="Left" Margin="192,102,0,0" VerticalAlignment="Top" Width="316" FontSize="36" FontWeight="Bold"/>
-        <Label Name="Tags" Content="Tags" HorizontalAlignment="Left" Margin="192,248,0,0" VerticalAlignment="Top"/>
-        <Button Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="54,45,0,0" VerticalAlignment="Top" Width="75" Click="HomeBtn_Click"/>
-        <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="150,45,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="32*"/>
+        </Grid.RowDefinitions>
+        <Rectangle HorizontalAlignment="Left" Grid.Row="0" Height="60" Stroke="Black" VerticalAlignment="Top" Width="900" StrokeThickness="0" Fill="{DynamicResource BlueGradient}"/>
+
+        <Button x:Name="HomeBtn" Content="Home" Grid.Row="0" HorizontalAlignment="Left" Margin="299,18,0,0" VerticalAlignment="Top" Width="75" Click="HomeBtn_Click" Height="19.96"/>
+        <Button x:Name="BackBtn" Content="Back" Grid.Row="0" HorizontalAlignment="Left" Margin="10,18,0,0" VerticalAlignment="Top" Width="62" Click="Button_Click" Height="19.96"/>
+        <TextBox x:Name="RecipeSearchField"         Grid.Row="0" HorizontalAlignment="Left" Margin="384,10,0,0" TextWrapping="Wrap" Height="36" Text="Search" VerticalAlignment="Top" Width="164" FontSize="24" FontFamily="MV Boli" Foreground="#FF8B8B8B" GotFocus="RecipeSearchField_GotFocus" LostFocus="RecipeSearchField_LostFocus" KeyDown="RecipeSearchField_KeyDown"/>
+        <Button x:Name="RecipeBtnSearch" Content="Search" Grid.Row="0" HorizontalAlignment="Left" Margin="558,18,0,0" VerticalAlignment="Top" Width="75" Click="RecipeBtnSearch_Click" Height="19.96"/>
+
+
+        <StackPanel Name="RecipeButtonStack" HorizontalAlignment="Left" Grid.Column="0" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="190" Background="#FF313131" Grid.Row="1">
+            <Button x:Name="DescriptionButton" Content="Description" Height="35" Click="DescriptionButton_Click" Margin="0,0,0,0" BorderBrush="#FF555555" Foreground="#FFCBCBCB">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF666666" Offset="0"/>
+                        <GradientStop Color="#FF616161" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Grid Height="35">
+                <Button x:Name="IngredientsButton" Content="Ingredients" Click="IngredientsButton_Click" Margin="0,0,95,0" Height="35" VerticalAlignment="Bottom" BorderBrush="#FF555555" Foreground="#FFCBCBCB" >
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF666666" Offset="0"/>
+                            <GradientStop Color="#FF616161" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="ToolsButton"       Content="Tools"       Click="ToolsButton_Click" Margin="95,0,0,0" BorderBrush="#FF555555" Foreground="#FFCBCBCB">
+                    <Button.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                            <GradientStop Color="#FF666666" Offset="0"/>
+                            <GradientStop Color="#FF616161" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+        </StackPanel>
+        <ScrollViewer HorizontalAlignment="Left" Grid.Column="0"  Margin="190,0,0,0" VerticalAlignment="Stretch" Width="710" Grid.Row="1">
+            <ScrollViewer.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE5E5E5" Offset="0"/>
+                    <GradientStop Color="#FFD9D9D9" Offset="0.996"/>
+                </LinearGradientBrush>
+            </ScrollViewer.Background>
+            <StackPanel Name="RecipeStepStack" HorizontalAlignment="Left" Grid.Column="1" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="710" Grid.Row="1">
+                <Grid HorizontalAlignment="Stretch" Height="180" VerticalAlignment="Top" Grid.Row="1">
+                    <Grid.Background>
+                        <ImageBrush x:Name="RecipeTitleImage" ImageSource="/Images/0-0.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Rectangle HorizontalAlignment="Left" Height="180" Margin="0" VerticalAlignment="Stretch" Width="147">
+                        <Rectangle.Fill>
+                            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                <LinearGradientBrush.RelativeTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform CenterY="0.5" CenterX="0.5"/>
+                                        <SkewTransform CenterY="0.5" CenterX="0.5"/>
+                                        <RotateTransform Angle="90" CenterY="0.5" CenterX="0.5"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </LinearGradientBrush.RelativeTransform>
+                                <GradientStop Color="#00000000"/>
+                                <GradientStop Color="#99000000" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                    <rating:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Value="4" />
+                    <Label x:Name="RecipeTime" Content="40 m" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFEEEEEE"/>
+                    <Label x:Name="RecipeTitle" Content="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Foreground="#FFEEEEEE">
+                        <Label.Background>
+                            <RadialGradientBrush>
+                                <GradientStop Color="#A7000000" Offset="0.5"/>
+                                <GradientStop Color="#0B000000" Offset="1"/>
+                            </RadialGradientBrush>
+                        </Label.Background>
+                    </Label>
+                </Grid>
+                <Border BorderBrush="#FFC8C8C8" BorderThickness="1">
+                    <TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,10,10" Background="{DynamicResource RecipeStepBrush}">
+                        Description <LineBreak/> <LineBreak/> Prep time 25 minutes <LineBreak/> Cook time 15 minutes <LineBreak/> 6 Servings
+                    </TextBlock>
+                </Border>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="0.5*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border BorderBrush="#FFC8C8C8" BorderThickness="2" Grid.Column="0" >
+                        <TextBlock x:Name="IngredientsTextBlock" TextWrapping="Wrap" Grid.Column="0"  Padding="10,10,10,10" Background="{DynamicResource RecipeStepGradient}">
+                        Ingredients <LineBreak/> <LineBreak/>- Asparagus<LineBreak/>- Asparagus<LineBreak/>- Asparagus
+                        </TextBlock>
+                    </Border>
+                    <Border BorderBrush="#FFC8C8C8" BorderThickness="2" Grid.Column="1">
+                        <TextBlock x:Name="ToolsTextBlock" TextWrapping="Wrap"  Grid.Column="1" Padding="10,10,10,10" Background="{DynamicResource RecipeStepGradient}">
+                        Tools <LineBreak/> <LineBreak/> - Spoon <LineBreak/> - Another Spoon <LineBreak/>- Another Spoon <LineBreak/>
+                        </TextBlock>
+                    </Border>
+                </Grid>
+            </StackPanel>
+        </ScrollViewer>
 
     </Grid>
 </Page>
