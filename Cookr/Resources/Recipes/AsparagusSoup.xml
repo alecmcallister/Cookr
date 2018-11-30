@@ -28,7 +28,17 @@
 	</Tools>
 
 	<ToolTips>
-		<ToolTip Key="1" Text="Olive oil is recommended, but other oils or butter are fine.">
+		<ToolTip Id="1" Text="Olive oil is recommended, but other oils or butter are fine.">
+			<Images>
+				<image>#FILEPATH</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="Quinn is a tool tip">
+			<Images>
+				<image>#FILEPATH</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="3" Text="Andy misses Miek Smeth">
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
@@ -84,6 +94,10 @@
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="saucepan" ToolTipID="2" />
+				<StepTip TargetText="melted" ToolTipID="3" />
+			</StepTips>
 		</RecipeStep>
 	</RecipeSteps>
 </Recipe>

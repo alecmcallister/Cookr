@@ -7,6 +7,15 @@ namespace Cookr.Logic.RecipeComponents
     [Serializable]
     public class RecipeStep
     {
+        public struct StepTips
+        {
+            [XmlAttribute("TargetText")]
+            public string TargetText;
+
+            [XmlAttribute("ToolTipID")]
+            public int ToolTipID;
+        }
+
         [XmlAttribute("Type")]
         public string Type;
 
@@ -24,5 +33,8 @@ namespace Cookr.Logic.RecipeComponents
 
         [XmlArray("Images"), XmlArrayItem("image")]
         public List<string> Images;
+
+        [XmlArray("StepTips"), XmlArrayItem("StepTip")]
+        public List<StepTips> stepTips;
     }
 }
