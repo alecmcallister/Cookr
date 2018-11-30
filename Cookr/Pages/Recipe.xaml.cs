@@ -27,7 +27,7 @@ namespace Cookr.Pages
         public RecipeObject recipe;
 
         // List of the buttons making up that list on the left
-        public List<RecipeStepButton> stepButtons;
+        public List<RecipeStepButtonCustom> stepButtons;
 
         // List of the elements in the recipe's RecipeStepStack that can be used for navigation.
         public List<UIElement> recipeScrollableNavigationThingys;
@@ -64,14 +64,14 @@ namespace Cookr.Pages
         /// </summary>
         private void SetUpButtonDefaults()
         {
-            stepButtons[0].SidebarRecipeStepButton.Content = recipe.Title;
-            stepButtons[1].SidebarRecipeStepButton.Content = "Ingredients";
-            stepButtons[2].SidebarRecipeStepButton.Content = "Tools";
-            stepButtons[0].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
-            stepButtons[1].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
-            stepButtons[2].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
+            stepButtons[0].Content.Text = recipe.Title;
+            stepButtons[1].Content.Text = "Ingredients";
+            stepButtons[2].Content.Text = "Tools";
+            stepButtons[0].Content.HorizontalAlignment = HorizontalAlignment.Center;
+            stepButtons[1].Content.HorizontalAlignment = HorizontalAlignment.Center;
+            stepButtons[2].Content.HorizontalAlignment = HorizontalAlignment.Center;
 
-            foreach(RecipeStepButton b in stepButtons)
+            foreach(RecipeStepButtonCustom b in stepButtons)
             {
                 b.Listener = NavigationButton_Click;
             }
@@ -81,7 +81,7 @@ namespace Cookr.Pages
         {
             for(int i = 0; i < stepButtons.Count; i++)
             {
-                if((RecipeStepButton)sender == stepButtons[i])
+                if((RecipeStepButtonCustom)sender == stepButtons[i])
                 {
                     //Navigate to the corresponding UI element In the recipe stackpanel
                     UIElement item = recipeScrollableNavigationThingys[i];
@@ -124,7 +124,7 @@ namespace Cookr.Pages
 
         private void fillStepButtonsList()
         {
-            stepButtons = new List<RecipeStepButton>();
+            stepButtons = new List<RecipeStepButtonCustom>();
             foreach (UIElement e in RecipeButtonStack.Children)
             {
                 if (e.GetType() == typeof(Grid))
@@ -132,12 +132,12 @@ namespace Cookr.Pages
                     Grid grid = (Grid)e;
                     foreach (UIElement ge in grid.Children)
                     {
-                        stepButtons.Add((RecipeStepButton)ge);
+                        stepButtons.Add((RecipeStepButtonCustom)ge);
                     }
                 }
                 else
                 {
-                    stepButtons.Add((RecipeStepButton)e);
+                    stepButtons.Add((RecipeStepButtonCustom)e);
                 }
             }
         }
@@ -155,12 +155,12 @@ namespace Cookr.Pages
                 {
                     // We changed to a different phase/type of step, so add in some little bar guys.
                     currentType = rs.Type;
-                    RecipeButtonStack.Children.Add(new RecipeStepButton(currentType, true));
+                    RecipeButtonStack.Children.Add(new RecipeStepButtonCustom(currentType, true));
                     RecipeStepStack.Children.Add(new RecipePhase(currentType));
                 }
 
                 // Add the for realsies button for this step
-                RecipeButtonStack.Children.Add(new RecipeStepButton(rs.Number.ToString() + ". " + rs.Title, false));
+                RecipeButtonStack.Children.Add(new RecipeStepButtonCustom(rs.Number.ToString() + ". " + rs.Title, false));
 
                 // Add the for realsies step... for this step.
                 RecipeStepStack.Children.Add(new RecipeStepLayout(rs, this));
@@ -229,28 +229,14 @@ namespace Cookr.Pages
         private void RunButtonsListUpdate()
         {
             int i = 0;
-            int full = 0, partial = 0, invisible = 0;
-            UIElementCollection recipeButtons = RecipeButtonStack.Children;
-            foreach(UIElement e in RecipeStepStack.Children)
+            foreach(UIElement e in recipeScrollableNavigationThingys)
             {
-                if(i >= recipeButtons.Count)
+                if(i >= stepButtons.Count)
                 {
                     break;
                 }
-                switch (IsUserElementVisible(e, Application.Current.MainWindow))
-                {
-                    case RecipeUserVisible.full:
-                        full++;
-                        break;
-
-                    case RecipeUserVisible.partial:
-                        partial += 1;
-                        break;
-
-                    case RecipeUserVisible.invisible:
-                        invisible += 1;
-                        break;
-                }
+                stepButtons[i].StyleState = (VisibilityStyleState)IsUserElementVisible(e, Application.Current.MainWindow);
+                i++;
             }
         }
 
@@ -264,7 +250,7 @@ namespace Cookr.Pages
 
             Rect bounds = element.TransformToAncestor(container).TransformBounds(new Rect(0.0, 0.0, element.RenderSize.Width, element.RenderSize.Height));
             Rect rect = new Rect(0.0, 0.0, container.ActualWidth, container.ActualHeight);
-            
+
             if (rect.Contains(bounds.TopLeft) || rect.Contains(bounds.BottomRight) || rect.IntersectsWith(bounds))
             {
                 visibility = RecipeUserVisible.partial;
