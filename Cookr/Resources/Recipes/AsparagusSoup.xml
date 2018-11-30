@@ -30,17 +30,17 @@
 	<ToolTips>
 		<ToolTip Id="1" Text="Olive oil is recommended, but other oils or butter are fine.">
 			<Images>
-				<image>#FILEPATH</image>
+				<image>0-8.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="2" Text="Quinn is a tool tip">
+		<ToolTip Id="2" Text="Cut off bottom fourth of asparagus and discard it, as it is tough and stringy. Starting at the tip, cut the rest of the asparagus into equal lengths.">
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="3" Text="Andy misses Miek Smeth">
+		<ToolTip Id="3" Text="Heating just below the boiling point, with only small bubbles.">
 			<Images>
-				<image>#FILEPATH</image>
+				<image>0-5.jpg</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
@@ -48,7 +48,7 @@
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
 			<Warning></Warning>
-			<StepText>Chop up 1 large onion, and mince 1 small garlic clove</StepText>
+			<StepText>Chop up 1 large onion, and mince 1 small garlic clove.</StepText>
 			<Title>Chop onion &amp; mince garlic</Title>
 			<Images>
 				<image>0-2.png</image>
@@ -57,15 +57,18 @@
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
 			<Warning></Warning>
-			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears</StepText>
+			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears.</StepText>
 			<Title>Trim &amp; chop asparagus</Title>
 			<Images>
 				<image>0-1.png</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="Trim and chop" ToolTipID="2" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
 			<Warning></Warning>
-			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently</StepText>
+			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently.</StepText>
 			<Title>Heat oil &amp; onion</Title>
 			<Images>
 				<image>0-7.jpg</image>
@@ -78,6 +81,9 @@
 			<Images>
 				<image>0-4.png</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="simmer" ToolTipID="3" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
 			<Warning>Oven mitts are recommended for handling the hot pan</Warning>
@@ -94,10 +100,6 @@
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
-			<StepTips>
-				<StepTip TargetText="saucepan" ToolTipID="2" />
-				<StepTip TargetText="melted" ToolTipID="3" />
-			</StepTips>
 		</RecipeStep>
 	</RecipeSteps>
 </Recipe>

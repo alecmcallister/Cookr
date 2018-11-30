@@ -7,6 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="35">
     <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource BlueGradient}">
-        <TextBlock x:Name="PhaseTitle" HorizontalAlignment="Center"  Margin="0,0,0,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Cook!" VerticalAlignment="Center" FontSize="14" Foreground="#FFDEDEDE"/>
+        <TextBlock x:Name="PhaseTitle" HorizontalAlignment="Center"  Margin="0,0,0,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Cook!" VerticalAlignment="Center" FontSize="14" Foreground="WhiteSmoke"/>
     </Grid>
 </UserControl>

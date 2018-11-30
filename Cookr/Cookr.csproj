@@ -64,6 +64,9 @@
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
     <Compile Include="Logic\SearchEngine.cs" />
+    <Compile Include="UserControls\InfoPopup.xaml.cs">
+      <DependentUpon>InfoPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Search.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\InfoPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -179,9 +186,12 @@
     <Resource Include="Images\0-2.png" />
     <Resource Include="Images\0-3.png" />
     <Resource Include="Images\0-4.png" />
-    <Resource Include="Images\0-5.png" />
+    <Content Include="Images\0-5.jpg" />
     <Resource Include="Images\0-6.png" />
     <Resource Include="Images\0-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\0-8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

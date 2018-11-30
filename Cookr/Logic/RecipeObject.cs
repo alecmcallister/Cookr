@@ -51,5 +51,17 @@ namespace Cookr.Logic
 
         [XmlArray("RecipeSteps"), XmlArrayItem("RecipeStep")]
         public List<RecipeStep> RecipeSteps { get; set; }
+
+        public ToolTip GetToolTip(int ID)
+        {
+            foreach(ToolTip tip in ToolTips)
+            {
+                if(tip.Id == ID)
+                {
+                    return tip;
+                }
+            }
+            return null;
+        }
     }
 }

@@ -9,8 +9,8 @@ namespace Cookr.Logic.RecipeComponents
         [XmlAttribute("Name")]
         public string Name;
 
-        [XmlAttribute("ToolTipId")]
-        public int ToolTipId;
+        [XmlAttribute("ToolTipID")]
+        public int ToolTipID;
 
     }
 }

@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cookr.Pages"
-      xmlns:rating="clr-namespace:Cookr.UserControls"
+      xmlns:controls="clr-namespace:Cookr.UserControls"
       mc:Ignorable="d" 
       d:DesignHeight="700" d:DesignWidth="900"
       Background="white"
@@ -58,19 +58,24 @@
             </Grid>
 
         </StackPanel>
-        <ScrollViewer HorizontalAlignment="Left" Grid.Column="0"  Margin="190,0,0,0" VerticalAlignment="Stretch" Width="710" Grid.Row="1">
+        <ScrollViewer HorizontalAlignment="Left" Grid.Column="0"  Margin="190,0,0,0" ScrollChanged="ScrollViewer_ScrollChanged" VerticalAlignment="Stretch" Width="710" Grid.Row="1">
             <ScrollViewer.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFE5E5E5" Offset="0"/>
                     <GradientStop Color="#FFD9D9D9" Offset="0.996"/>
                 </LinearGradientBrush>
             </ScrollViewer.Background>
+            
             <StackPanel Name="RecipeStepStack" HorizontalAlignment="Left" Grid.Column="1" Margin="0,0,0,0" VerticalAlignment="Stretch" Width="710" Grid.Row="1">
+
+                <Popup x:Name="InformationPopup" StaysOpen="False" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
+                    <controls:InfoPopup x:Name="PopupContent" Padding="7" Foreground="{x:Null}" />
+                </Popup>
                 <Grid HorizontalAlignment="Stretch" Height="180" VerticalAlignment="Top" Grid.Row="1">
                     <Grid.Background>
                         <ImageBrush x:Name="RecipeTitleImage" ImageSource="/Images/0-0.jpg" Stretch="UniformToFill"/>
                     </Grid.Background>
-                    <Rectangle HorizontalAlignment="Left" Height="180" Margin="0" VerticalAlignment="Stretch" Width="147">
+                    <Rectangle HorizontalAlignment="Left" Height="180" Margin="0" VerticalAlignment="Stretch" Width="150">
                         <Rectangle.Fill>
                             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                 <LinearGradientBrush.RelativeTransform>
@@ -86,7 +91,7 @@
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
-                    <rating:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Value="4" />
+                    <controls:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Value="4" />
                     <Label x:Name="RecipeTime" Content="40 m" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFEEEEEE"/>
                     <Label x:Name="RecipeTitle" Content="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Foreground="#FFEEEEEE">
                         <Label.Background>
@@ -98,7 +103,7 @@
                     </Label>
                 </Grid>
                 <Border BorderBrush="#FFC8C8C8" BorderThickness="1">
-                    <TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,10,10" Background="{DynamicResource RecipeStepBrush}">
+                    <TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,18,10" Background="{DynamicResource RecipeStepBrush}">
                         Description <LineBreak/> <LineBreak/> Prep time 25 minutes <LineBreak/> Cook time 15 minutes <LineBreak/> 6 Servings
                     </TextBlock>
                 </Border>

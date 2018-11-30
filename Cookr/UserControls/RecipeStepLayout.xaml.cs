@@ -1,4 +1,5 @@
 ﻿using Cookr.Logic.RecipeComponents;
+using Cookr.Pages;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -26,7 +27,7 @@ namespace Cookr.UserControls
         {
             InitializeComponent();
         }
-        public RecipeStepLayout(RecipeStep step)
+        public RecipeStepLayout(RecipeStep step, Recipe recipePage)
         {
             InitializeComponent();
             StepTitle.Text = step.Number.ToString() + ". " + step.Title;
@@ -35,10 +36,13 @@ namespace Cookr.UserControls
                 StepWarning.Visibility = Visibility.Visible;
                 StepWarning.Text = step.Warning;
             }
-            StepInstruction.Text = step.StepText;
+            
+            StepInstruction.Inlines.Clear();
+            List<RecipeStep.StepTips> tipList = new List<RecipeStep.StepTips>(step.stepTips);
+            ProcessTextForTips(step.StepText, tipList, recipePage);
 
             // Add the list of images for the step
-            foreach(string i in step.Images)
+            foreach (string i in step.Images)
             {
                 if(File.Exists("Images/" + i))
                 {
@@ -49,6 +53,49 @@ namespace Cookr.UserControls
             }
 
 
+        }
+
+        /// <summary>
+        /// Recursive adventure to add tips to the first occurence of the word they should be giving you a tip about
+        /// </summary>
+        /// <param name="stepText">The text we want to put the tip inside of</param>
+        /// <param name="tipStack">The List of tips left to be inserted</param>
+        /// <param name="recipePage">Reference to the recipePage so we can call CreateInTextToolTip.</param>
+        private List<RecipeStep.StepTips> ProcessTextForTips(string stepText, List<RecipeStep.StepTips> tipList, Recipe recipePage)
+        {
+            if(tipList.Count == 0)
+            {
+                if(stepText.Length > 0)
+                {
+                    StepInstruction.Inlines.Add(stepText);
+                }
+                return tipList;
+            }
+            else
+            {
+                for(int i = 0; i < tipList.Count; i++)
+                {
+                    RecipeStep.StepTips tip = tipList[i];
+                    if (stepText.Contains(tip.TargetText))
+                    {
+                        string[] upperlower = stepText.Split(new string[] { tip.TargetText }, 2, StringSplitOptions.None);
+                        //upperlower[1] = upperlower[1].Substring(tip.TargetText.Length - 1);
+                        // Remove the tip from the list so other iterations of this function don't use it again.
+                        tipList.Remove(tip);
+
+                        // Process the text before the word we're inserting as a tooltip
+                        tipList = ProcessTextForTips(upperlower[0], tipList, recipePage);
+
+                        // Actually add the tooltop
+                        StepInstruction.Inlines.Add(recipePage.CreateInTextToolTip(tip.TargetText, tip.ToolTipID));
+
+                        // Process the text following the tooltip
+                        tipList = ProcessTextForTips(upperlower[1], tipList, recipePage);
+                        break;
+                    }
+                }
+            }
+            return null;
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Cookr.Logic.RecipeComponents
         [XmlAttribute("Text")]
         public string Text;
 
-        [XmlArray("Images"), XmlArrayItem("Image")]
+        [XmlArray("Images"), XmlArrayItem("image")]
         public List<string> Images;
     }
 }
