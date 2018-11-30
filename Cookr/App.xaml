@@ -4,6 +4,15 @@
              xmlns:local="clr-namespace:Cookr"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
+        <LinearGradientBrush x:Key="RecipeStepBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFE5E5E5" Offset="0"/>
+            <GradientStop Color="#FFD4D4D4" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="BlueGradient" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF57A3E5" Offset="0"/>
+            <GradientStop Color="#FF445DFF" Offset="1"/>
+        </LinearGradientBrush>
+
     </Application.Resources>
 </Application>

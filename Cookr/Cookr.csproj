@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logic\MultiplyConverter.cs" />
     <Compile Include="Logic\CookrPage.cs" />
     <Compile Include="Logic\NavigationManager.cs" />
     <Compile Include="Logic\RecipeComponents\Ingredient.cs" />
@@ -64,8 +65,32 @@
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
     <Compile Include="Logic\SearchEngine.cs" />
+    <Compile Include="UserControls\InfoPopup.xaml.cs">
+      <DependentUpon>InfoPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipePhase.xaml.cs">
+      <DependentUpon>RecipePhase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeStepButtonCustom.xaml.cs">
+      <DependentUpon>RecipeStepButtonCustom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeStepButton.xaml.cs">
+      <DependentUpon>RecipeStepButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeRatingStepLayout.xaml.cs">
+      <DependentUpon>RecipeRatingStepLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StarRatingDisplay.xaml.cs">
+      <DependentUpon>StarRatingDisplay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StarRating.xaml.cs">
+      <DependentUpon>StarRating.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeStepLayout.xaml.cs">
+      <DependentUpon>RecipeStepLayout.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -91,7 +116,39 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\InfoPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\RecipeCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipePhase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipeStepButtonCustom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RecipeStepButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipeRatingStepLayout.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StarRatingDisplay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\StarRating.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipeStepLayout.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -130,6 +187,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\0-0.jpg" />
+    <Resource Include="Images\0-1.png" />
+    <Resource Include="Images\0-2.png" />
+    <Resource Include="Images\0-3.png" />
+    <Resource Include="Images\0-4.png" />
+    <Content Include="Images\0-5.jpg" />
+    <Resource Include="Images\0-6.png" />
+    <Resource Include="Images\0-7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\0-8.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

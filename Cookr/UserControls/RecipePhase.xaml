@@ -1,0 +1,12 @@
+﻿<UserControl x:Class="Cookr.UserControls.RecipePhase"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cookr.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="35">
+    <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Background="{DynamicResource BlueGradient}">
+        <TextBlock x:Name="PhaseTitle" HorizontalAlignment="Center"  Margin="0,0,0,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Cook!" VerticalAlignment="Center" FontSize="14" Foreground="WhiteSmoke"/>
+    </Grid>
+</UserControl>

@@ -15,8 +15,8 @@ namespace Cookr.Logic.RecipeComponents
         [XmlAttribute("Optional")]
         public bool Optional;
 
-        [XmlAttribute("ToolTipId")]
-        public int ToolTipId;
+        [XmlAttribute("ToolTipID")]
+        public int ToolTipID;
 
     }
 }

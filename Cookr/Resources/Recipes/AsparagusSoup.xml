@@ -1,13 +1,13 @@
 <Recipe>
-	<Title>Asparagus Soup</Title>
+	<Title>Cream of Asparagus Soup</Title>
 	<PopularToday>1</PopularToday>
 	<Tags>
 		<Tag>asparagus</Tag>
 		<Tag>soup</Tag>
 	</Tags>
 	<Rating>3</Rating>
-	<TitleImage>#FILEPATH</TitleImage>
-	<RecipeIntroduction>Recipe by Kraft\n\nThis simple but elegant soup is a must-try. The texture becomes smooth and silky with the addition of cream cheese. Perfect as is or served with whole wheat rolls and a mixed green salid.</RecipeIntroduction>
+	<TitleImage>0-0.jpg</TitleImage>
+	<RecipeIntroduction>Recipe by Kraft&#xD;&#xD;This simple but elegant soup is a must-try. The texture becomes smooth and silky with the addition of cream cheese. Perfect as is or served with whole wheat rolls and a mixed green salid.</RecipeIntroduction>
 	<PrepTime>25</PrepTime>
 	<CookTime>15</CookTime>
 	<TotalTime>40</TotalTime>
@@ -21,58 +21,80 @@
 		<Ingredient Name="Chicken Broth" Quantity="2 Cups" Optional="0"/>
 		<Ingredient Name="Milk" Quantity="1/4 cup" Optional="0"/>
 	</Ingredients>
-	
+
 	<Tools>
 		<Tool Name="Blender"/>
 		<Tool Name="Large Sauce Pan"/>
 	</Tools>
-	
+
 	<ToolTips>
-		<ToolTip Key="1" Text="Olive oil is recommended, but other oils or butter are fine.">
+		<ToolTip Id="1" Text="Olive oil is recommended, but other oils or butter are fine.">
 			<Images>
+				<image>0-8.jpg</image>
 			</Images>
 		</ToolTip>
-	</ToolTips>
-	
-	<RecipeSteps>
-		<RecipeStep Type="Prep" Number="1">
-			<StepText>Chop up 1 large onion, and mince 1 small garlic clove</StepText>
-			<Title>Chop onion &amp; mince garlic</Title>
-			<Images>
-				<image>Resources/Images/AsparagusSoup-Prep1-1.png</image>
-				<image>Resources/Images/AsparagusSoup-Prep1-2.png</image>
-			</Images>
-		</RecipeStep>
-		<RecipeStep Type="Prep" Number="2">
-			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears</StepText>
-			<Title>Trim &amp; chop asparagus</Title>
-			<Images>
-				<image>Resources/Images/AsparagusSoup-Prep2.png</image>
-			</Images>
-		</RecipeStep>
-		<RecipeStep Type="Cook" Number="1">
-			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently</StepText>
-			<Title>Heat oil &amp; onion</Title>
+		<ToolTip Id="2" Text="Cut off bottom fourth of asparagus and discard it, as it is tough and stringy. Starting at the tip, cut the rest of the asparagus into equal lengths.">
 			<Images>
 				<image>#FILEPATH</image>
 			</Images>
+		</ToolTip>
+		<ToolTip Id="3" Text="Heating just below the boiling point, with only small bubbles.">
+			<Images>
+				<image>0-5.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<Warning></Warning>
+			<StepText>Chop up 1 large onion, and mince 1 small garlic clove.</StepText>
+			<Title>Chop onion &amp; mince garlic</Title>
+			<Images>
+				<image>0-2.png</image>
+				<image>0-3.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Prep" Number="2">
+			<Warning></Warning>
+			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears.</StepText>
+			<Title>Trim &amp; chop asparagus</Title>
+			<Images>
+				<image>0-1.png</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Trim and chop" ToolTipID="2" />
+			</StepTips>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<Warning></Warning>
+			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently.</StepText>
+			<Title>Heat oil &amp; onion</Title>
+			<Images>
+				<image>0-7.jpg</image>
+			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
+			<Warning></Warning>
 			<StepText>Add 1-1/2 lb. (675 g) trimmed chopped asparagus, 1 minced small garlic clove, and 2-1/2 cups chicken broth to the saucepan/nBring to a boil, stirring occasionally. Then cover and simmer on medium-low heat for 15 minutes, or until vegetables are very tender.</StepText>
 			<Title>Add mix to saucepan</Title>
 			<Images>
-				<image>Resources/Images/AsparagusSoup-Cook2.png</image>
+				<image>0-4.png</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="simmer" ToolTipID="3" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
 			<Warning>Oven mitts are recommended for handling the hot pan</Warning>
 			<StepText>Transfer the mixture to the blender in batches, blending it until smooth.</StepText>
 			<Title>Blend mixture</Title>
 			<Images>
-				<image>Resources/Images/AsparagusSoup-Cook3.png</image>
+				<image>0-6.png</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="4">
+			<Warning></Warning>
 			<StepText>Return the mixture to the saucepan. Add 3/4 cup cream cheese and 1/4 cup milk. Stir on medium heat 2 to 3 minutes, or until cream cheese is completely melted and soup is heated through.</StepText>
 			<Title>Return mixture to saucepan</Title>
 			<Images>
