@@ -11,8 +11,8 @@
             <RowDefinition Height="344*"/>
             <RowDefinition Height="325*"/>
         </Grid.RowDefinitions>
-        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" Height="700"
-               VerticalAlignment="Top" Width="900" NavigationUIVisibility="Hidden"
+        <Frame x:Name="MainFrame" Content="Frame" HorizontalAlignment="Left" MinHeight="700"
+               VerticalAlignment="Top" MinWidth="900" NavigationUIVisibility="Hidden"
                Source="/Cookr;component/Pages/Home.xaml" Grid.RowSpan="2"/>
     </Grid>
 </Window>

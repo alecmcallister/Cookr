@@ -20,6 +20,10 @@ namespace Cookr.UserControls
     /// </summary>
     public partial class RecipeStepButton : UserControl
     {
+        public delegate void MyDelegate(object sender, RoutedEventArgs e);
+
+        public MyDelegate Listener { get; set; }
+
         public RecipeStepButton()
         {
             InitializeComponent();
@@ -39,7 +43,7 @@ namespace Cookr.UserControls
 
         private void SidebarRecipeStepButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Listener(this, e);
         }
     }
 }

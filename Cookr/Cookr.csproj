@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Logic\MultiplyConverter.cs" />
     <Compile Include="Logic\CookrPage.cs" />
     <Compile Include="Logic\NavigationManager.cs" />
     <Compile Include="Logic\RecipeComponents\Ingredient.cs" />
@@ -72,6 +73,9 @@
     </Compile>
     <Compile Include="UserControls\RecipePhase.xaml.cs">
       <DependentUpon>RecipePhase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeStepButtonCustom.xaml.cs">
+      <DependentUpon>RecipeStepButtonCustom.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RecipeStepButton.xaml.cs">
       <DependentUpon>RecipeStepButton.xaml</DependentUpon>
@@ -123,6 +127,10 @@
     <Page Include="UserControls\RecipePhase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipeStepButtonCustom.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\RecipeStepButton.xaml">
       <SubType>Designer</SubType>

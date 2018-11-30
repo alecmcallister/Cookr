@@ -19,11 +19,18 @@ using System.Windows.Shapes;
 
 namespace Cookr.Pages
 {
+    enum RecipeUserVisible { invisible, partial, full, };
 
     // ANDY - All the changes you need to make would be on this page.
     public partial class Recipe : Page, CookrPage
     {
         public RecipeObject recipe;
+
+        // List of the buttons making up that list on the left
+        public List<RecipeStepButton> stepButtons;
+
+        // List of the elements in the recipe's RecipeStepStack that can be used for navigation.
+        public List<UIElement> recipeScrollableNavigationThingys;
 
         public Recipe(RecipeObject _recipe)
         {
@@ -33,7 +40,7 @@ namespace Cookr.Pages
 
             // Populate Title, time, star rating, TitleImage.
             RecipeTitle.Content = recipe.Title;
-            RecipeTime.Content = recipe.TotalTime.ToString() + " m";
+            RecipeTime.Content = recipe.TotalTime.ToString() + " minutes";
             RecipeStarRating.Value = (int)(recipe.Rating);
             RecipeTitleImage.ImageSource = new BitmapImage(
                                            new Uri("Images/" + recipe.TitleImage, UriKind.Relative));
@@ -44,6 +51,95 @@ namespace Cookr.Pages
             GenerateToolsList(ToolsTextBlock);
 
             LoadRecipeSteps();
+
+            fillStepButtonsList();
+
+            SetUpButtonDefaults();
+            fillRecipeScrollableNavigationThingyList();
+        }
+
+        /// <summary>
+        /// Set up the first 3 buttons for the recipe more directly.
+        /// Also set up a callback function for when the buttons are clicked.
+        /// </summary>
+        private void SetUpButtonDefaults()
+        {
+            stepButtons[0].SidebarRecipeStepButton.Content = recipe.Title;
+            stepButtons[1].SidebarRecipeStepButton.Content = "Ingredients";
+            stepButtons[2].SidebarRecipeStepButton.Content = "Tools";
+            stepButtons[0].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
+            stepButtons[1].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
+            stepButtons[2].SidebarRecipeStepButton.HorizontalContentAlignment = HorizontalAlignment.Center;
+
+            foreach(RecipeStepButton b in stepButtons)
+            {
+                b.Listener = NavigationButton_Click;
+            }
+        }
+
+        private void NavigationButton_Click(object sender, RoutedEventArgs e)
+        {
+            for(int i = 0; i < stepButtons.Count; i++)
+            {
+                if((RecipeStepButton)sender == stepButtons[i])
+                {
+                    //Navigate to the corresponding UI element In the recipe stackpanel
+                    UIElement item = recipeScrollableNavigationThingys[i];
+                    Rect bounds = item.TransformToAncestor(RecipeStepScrollViewer).TransformBounds(new Rect(0.0, 0.0, item.RenderSize.Width, item.RenderSize.Height));
+                    RecipeStepScrollViewer.ScrollToVerticalOffset(bounds.Y + RecipeStepScrollViewer.ContentVerticalOffset);
+                }
+            }
+        }
+
+        /// <summary>
+        /// An absolute hack way to get all the navigation buttons in a list, where we can do whatever
+        /// We want to em. This might not be the best way to get around the fact that 2 of those boys
+        /// are mushed together in a grid but this works.
+        /// </summary>
+        private void fillRecipeScrollableNavigationThingyList()
+        {
+            recipeScrollableNavigationThingys = new List<UIElement>();
+            // Add the pieces we already know are going to be there directly
+            recipeScrollableNavigationThingys.Add(RecipeTitleImageGrid);
+            recipeScrollableNavigationThingys.Add(IngredientsTextBlock);
+            recipeScrollableNavigationThingys.Add(ToolsTextBlock);
+
+            // And then make sure we don't add them again...
+            // We're skipping the title image, description, ingredients, tools.
+            int elementsToSkip = 4;
+            foreach (UIElement e in RecipeStepStack.Children)
+            {
+                if(elementsToSkip > 0)
+                {
+                    elementsToSkip--;
+                    continue;
+                }
+                recipeScrollableNavigationThingys.Add(e);
+            }
+
+            // Remove the last two elements we added since they're the little bar that says done and the rating section...
+            recipeScrollableNavigationThingys.RemoveRange(recipeScrollableNavigationThingys.Count - 2, 2);
+
+        }
+
+        private void fillStepButtonsList()
+        {
+            stepButtons = new List<RecipeStepButton>();
+            foreach (UIElement e in RecipeButtonStack.Children)
+            {
+                if (e.GetType() == typeof(Grid))
+                {
+                    Grid grid = (Grid)e;
+                    foreach (UIElement ge in grid.Children)
+                    {
+                        stepButtons.Add((RecipeStepButton)ge);
+                    }
+                }
+                else
+                {
+                    stepButtons.Add((RecipeStepButton)e);
+                }
+            }
         }
 
         private void LoadRecipeSteps()
@@ -130,6 +226,55 @@ namespace Cookr.Pages
                 }
             }
         }
+        private void RunButtonsListUpdate()
+        {
+            int i = 0;
+            int full = 0, partial = 0, invisible = 0;
+            UIElementCollection recipeButtons = RecipeButtonStack.Children;
+            foreach(UIElement e in RecipeStepStack.Children)
+            {
+                if(i >= recipeButtons.Count)
+                {
+                    break;
+                }
+                switch (IsUserElementVisible(e, Application.Current.MainWindow))
+                {
+                    case RecipeUserVisible.full:
+                        full++;
+                        break;
+
+                    case RecipeUserVisible.partial:
+                        partial += 1;
+                        break;
+
+                    case RecipeUserVisible.invisible:
+                        invisible += 1;
+                        break;
+                }
+            }
+        }
+
+        private RecipeUserVisible IsUserElementVisible(UIElement element, FrameworkElement container)
+        {
+            if (!element.IsVisible)
+                return RecipeUserVisible.invisible;
+
+            RecipeUserVisible visibility = RecipeUserVisible.invisible;
+            if (container == null) throw new ArgumentNullException("container");
+
+            Rect bounds = element.TransformToAncestor(container).TransformBounds(new Rect(0.0, 0.0, element.RenderSize.Width, element.RenderSize.Height));
+            Rect rect = new Rect(0.0, 0.0, container.ActualWidth, container.ActualHeight);
+            
+            if (rect.Contains(bounds.TopLeft) || rect.Contains(bounds.BottomRight) || rect.IntersectsWith(bounds))
+            {
+                visibility = RecipeUserVisible.partial;
+            }
+            if (rect.Contains(bounds))
+            {
+                visibility = RecipeUserVisible.full;
+            }
+            return visibility;
+        }
 
         public Run CreateInTextToolTip(string text, int ToolTipID)
         {
@@ -173,21 +318,7 @@ namespace Cookr.Pages
         private void ScrollViewer_ScrollChanged(object sender, ScrollChangedEventArgs e)
         {
             InformationPopup.IsOpen = false;
-        }
-
-        private void DescriptionButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void ToolsButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void IngredientsButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            RunButtonsListUpdate();
         }
 
 

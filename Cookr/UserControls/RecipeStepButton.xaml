@@ -6,6 +6,27 @@
              xmlns:local="clr-namespace:Cookr.UserControls"
              mc:Ignorable="d" 
              d:DesignWidth="190">
+    <UserControl.Resources>
+        <Storyboard x:Key="OnMouseLeave1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="SidebarRecipeStepButton">
+                <EasingColorKeyFrame KeyTime="0" Value="#FF898989"/>
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF616161"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="OnMouseEnter1">
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="SidebarRecipeStepButton">
+                <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#FF898989"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </UserControl.Resources>
+    <UserControl.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="SidebarRecipeStepButton">
+            <BeginStoryboard x:Name="OnMouseEnter1_BeginStoryboard" Storyboard="{StaticResource OnMouseEnter1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseLeave" SourceName="SidebarRecipeStepButton">
+            <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}"/>
+        </EventTrigger>
+    </UserControl.Triggers>
     <Grid>
         <Button x:Name="SidebarRecipeStepButton" HorizontalContentAlignment="Left" Content="Step Description" Height="35" Click="SidebarRecipeStepButton_Click" Padding="5,0,0,0" Margin="0,0,0,0" BorderBrush="#FF555555" Foreground="#FFCBCBCB">
             <Button.Background>
