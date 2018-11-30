@@ -66,7 +66,7 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
-			<StepText ToolTipID="1">Sprinkle flour over the onions and drippings in the skillet. Stir in flour with a fork, scraping bits of beef off of the bottom as you stir. Gradually mix in the beef broth and sherry. Season with seasoned salt. Simmer and stir over medium-low heat for about 5 minutes, until the gravy thickens. Turn heat to low, return patties to the gravy, cover, and simmer for another 15 minutes.</StepText>
+			<StepText ToolTipID="2">Sprinkle flour over the onions and drippings in the skillet. Stir in flour with a fork, scraping bits of beef off of the bottom as you stir. Gradually mix in the beef broth and sherry. Season with seasoned salt. Simmer and stir over medium-low heat for about 5 minutes, until the gravy thickens. Turn heat to low, return patties to the gravy, cover, and simmer for another 15 minutes.</StepText>
 			<Title>Fry Steak Patties &amp; Make Gravy</Title>
 			<Images>
 				<image>Resources/Images/HamburgerSteak-Cook2-1.PNG</image>
