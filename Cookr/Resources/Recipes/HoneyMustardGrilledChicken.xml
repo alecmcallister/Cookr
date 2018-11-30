@@ -41,7 +41,7 @@
 			</Images>
 		</ToolTip>
 		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
-		<Images>
+			<Images>
 			</Images>
 		</ToolTip>
 		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Prep 1 - TODO">

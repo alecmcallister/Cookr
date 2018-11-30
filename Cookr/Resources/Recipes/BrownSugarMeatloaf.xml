@@ -34,7 +34,7 @@
 	<ToolTips>
 		<ToolTip Key="1" Text="An example cooking spay is PAM.">
 			<Images>
-				<image>Resources/Images/BrownSugarMeatloaf-Tool1.jpg</image>
+				<image>Resources/Images/Tooltip-CookingSpray.jpg</image>
 			</Images>
 		</ToolTip>
 		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 2. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">

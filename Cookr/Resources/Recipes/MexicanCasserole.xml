@@ -1,0 +1,77 @@
+<Recipe>
+	<Title>Beef Nacho Casserole</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>vegetarian</Tag>
+		<Tag>casserole</Tag>
+		<Tag>quick and easy</Tag>
+		<Tag>quick</Tag>
+		<Tag>easy</Tag>
+	</Tags>
+	<Rating>4</Rating>
+	<TitleImage>MexicanCasserole-Title.PNG</TitleImage>
+	<RecipeIntroduction>A simple meal to whip up in less than an hour that even the kids are sure to love. Layers of seasoned ground beef, corn, tortilla chips and cheese are baked under a layer of Colby cheese.</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>35</TotalTime>
+	<NumberOfServing>6</NumberOfServing>
+	<Ingredients>
+		<Ingredient Name="Refried Beans" Quantity="1 (16 ounce) can" Optional="0"/>
+		<Ingredient Name="Onion" Quantity="3/4" Optional="0"/>
+		<Ingredient Name="Flour Tortillas" Quantity="5 (10 inch)" Optional="0"/>
+		<Ingredient Name="Salsa" Quantity="1 Cup" Optional="0"/>
+		<Ingredient Name="Shredded Cheddar or Colby Jack Cheese" Quantity="2 Cups" Optional="0" ToolTipID="1"/>
+	</Ingredients>
+	
+	<Tools>
+		<Tool Name="Oven"/>
+		<Tool Name="9-inch Pie Pan"/>
+		<Ingredient Name="Non-stick Cooking Spray" ToolTipID="1"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Key="1" Text="An example cooking spay is PAM.">
+			<Images>
+				<image>Resources/Images/Tooltip-CookingSpray.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM-HIGH HEAT IN STEP Cook 1 - TODO">
+			<Images>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText ToolTipID="2">Preheat oven to 375 degrees F (190 degrees C). Spray a 9-inch pie pan with non-stick cooking spray.</StepText>
+			<Title>Preheat Oven &amp; Spray Pan</Title>
+			<Images>
+				<image>Resources/Images/MexicanCasserole-Prep1.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText ToolTipID="3">In a saucepan, cook refried beans and onions (to soften them) on medium-high heat for about 5 minutes.</StepText>
+			<Title>Cook Beans &amp; Onions</Title>
+			<Images>
+				<image>Resources/Images/MexicanCasserole-Cook1.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText>Place one tortilla in the bottom of the greased pan. Spread about 1/3 cup of the bean mixture over it. Layer a few tablespoons of salsa over this. Then, place another tortilla over the salsa, and add more of the bean mixture. Follow the beans with a big handful of cheese, spreading evenly. repeat layers, spreading the ingredients evenly over the tortillas. On the top layer, make sure to use lots of salsa and cheese!</Title>
+			<Images>
+				<image>Resources/Images/MexicanCasserole-Cook2-1.PNG</image>
+				<image>Resources/Images/MexicanCasserole-Cook2-2.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="3">
+			<StepText ToolTipID="1"> Bake until the cheese is melted, approximately 15 to 20 minutes.</Title>
+			<Images>
+				<image>Resources/Images/MexicanCasserole-Cook3.PNG</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

@@ -12,8 +12,8 @@
 	<TitleImage>HamburgerSteak-Title.PNG</TitleImage>
 	<RecipeIntroduction>An easy-to-make classic featuring tasty hamburger 'steaks' smothered in gravy and onions. Traditionally served with hot white rice or potatoes, it's a great way to dress up a pound of ground beef and you probably have all the ingredients on hand!</RecipeIntroduction>
 	<PrepTime>15</PrepTime>
-	<CookTime>20</CookTime>
-	<TotalTime>35</TotalTime>
+	<CookTime>25</CookTime>
+	<TotalTime>40</TotalTime>
 	<NumberOfServing>4</NumberOfServing>
 	<Ingredients>
 		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
