@@ -60,7 +60,7 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
-			<StepText ToolTipID="1">Heat 1 tbsp. oil in a large skillet over medium heat. Fry the patties and onion in the oil until patties are nicely browned, about 4 minutes per side. Remove the beef patties to a plate, and keep warm.</StepText>
+			<StepText>Heat 1 tbsp. oil in a large skillet over medium heat. Fry the patties and onion in the oil until patties are nicely browned, about 4 minutes per side. Remove the beef patties to a plate, and keep warm.</StepText>
 			<Title>Fry Steak Patties</Title>
 			<Images>
 				<image>HamburgerSteak-Cook1-1.PNG</image>

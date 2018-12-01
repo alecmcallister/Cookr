@@ -243,6 +243,12 @@
     <Resource Include="Images\Tooltip-CookingSpray.jpg" />
     <Resource Include="Images\Tooltip-OilGrill.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MexicanCasserole-Prep2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\HoneyMustardGrilledChicken-Title.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>

@@ -46,7 +46,6 @@
 
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
-			<Warning></Warning>
 			<StepText>Chop up 1 large onion, and mince 1 small garlic clove.</StepText>
 			<Title>Chop onion &amp; mince garlic</Title>
 			<Images>
@@ -55,7 +54,6 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
-			<Warning></Warning>
 			<StepText>Trim and chop 1-1/2 lb (675g) asparagus spears.</StepText>
 			<Title>Trim &amp; chop asparagus</Title>
 			<Images>
@@ -66,7 +64,6 @@
 			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
-			<Warning></Warning>
 			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently.</StepText>
 			<Title>Heat oil &amp; onion</Title>
 			<Images>
@@ -74,7 +71,6 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
-			<Warning></Warning>
 			<StepText>Add 1-1/2 lb. (675 g) trimmed chopped asparagus, 1 minced small garlic clove, and 2-1/2 cups chicken broth to the saucepan/nBring to a boil, stirring occasionally. Then cover and simmer on medium-low heat for 15 minutes, or until vegetables are very tender.</StepText>
 			<Title>Add mix to saucepan</Title>
 			<Images>
@@ -93,7 +89,6 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="4">
-			<Warning></Warning>
 			<StepText>Return the mixture to the saucepan. Add 3/4 cup cream cheese and 1/4 cup milk. Stir on medium heat 2 to 3 minutes, or until cream cheese is completely melted and soup is heated through.</StepText>
 			<Title>Return mixture to saucepan</Title>
 			<Images>

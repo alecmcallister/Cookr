@@ -83,7 +83,8 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
-			<StepText> Bake until the cheese is melted, approximately 15 to 20 minutes.</Title>
+			<StepText> Bake until the cheese is melted, approximately 15 to 20 minutes.</StepText>
+			<Title>Bake Casserole</Title>
 			<Images>
 				<image>MexicanCasserole-Cook3.PNG</image>
 			</Images>
