@@ -189,17 +189,59 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\0-0.jpg" />
-    <Resource Include="Images\0-1.png" />
-    <Resource Include="Images\0-2.png" />
-    <Resource Include="Images\0-3.png" />
-    <Resource Include="Images\0-4.png" />
-    <Content Include="Images\0-5.jpg" />
-    <Resource Include="Images\0-6.png" />
-    <Resource Include="Images\0-7.jpg" />
+    <Resource Include="Images\AsparagusSoup-Cook1.jpg" />
+    <Resource Include="Images\AsparagusSoup-Cook2.png" />
+    <Resource Include="Images\AsparagusSoup-Cook3.png" />
+    <Resource Include="Images\AsparagusSoup-Prep1-1.png" />
+    <Resource Include="Images\AsparagusSoup-Prep1-2.png" />
+    <Resource Include="Images\AsparagusSoup-Prep2.png" />
+    <Resource Include="Images\AsparagusSoup-Title.jpg" />
+    <Resource Include="Images\AsparagusSoup-Tooltip1.jpg" />
+    <Resource Include="Images\AsparagusSoup-Tooltip5.jpg" />
+    <Resource Include="Images\BrownSugarMeatloaf-Cook1-1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\0-8.jpg" />
+    <Resource Include="Images\BrownSugarMeatloaf-Cook1-2.png" />
+    <Resource Include="Images\BrownSugarMeatloaf-Cook2-1.png" />
+    <Resource Include="Images\BrownSugarMeatloaf-Cook2-2.png" />
+    <Resource Include="Images\BrownSugarMeatloaf-Cook3.png" />
+    <Resource Include="Images\BrownSugarMeatloaf-Prep1.png" />
+    <Resource Include="Images\BrownSugarMeatloaf-Prep2.jpg" />
+    <Resource Include="Images\BrownSugarMeatloaf-Title.png" />
+    <Resource Include="Images\HamburgerSteak-Cook1-1.PNG" />
+    <Resource Include="Images\HamburgerSteak-Cook1-2.PNG" />
+    <Resource Include="Images\HamburgerSteak-Cook2-1.PNG" />
+    <Resource Include="Images\HamburgerSteak-Cook2-2.PNG" />
+    <Resource Include="Images\HamburgerSteak-Cook2-3.PNG" />
+    <Resource Include="Images\HamburgerSteak-Prep1-1.PNG" />
+    <Resource Include="Images\HamburgerSteak-Prep1-2.PNG" />
+    <Resource Include="Images\HamburgerSteak-Prep1-3.PNG" />
+    <Resource Include="Images\HamburgerSteak-Title.PNG" />
+    <Resource Include="Images\HoneyMustardGrilledChicken-Cook1.PNG" />
+    <Resource Include="Images\HoneyMustardGrilledChicken-Prep2-1.PNG" />
+    <Resource Include="Images\HoneyMustardGrilledChicken-Prep2-2.PNG" />
+    <Resource Include="Images\HoneyMustardGrilledChicken-Prep2-3.PNG" />
+    <Resource Include="Images\HoneyMustardGrilledChicken-Tooltip5.PNG" />
+    <Resource Include="Images\MexicanCasserole-Cook1.PNG" />
+    <Resource Include="Images\MexicanCasserole-Cook2-1.PNG" />
+    <Resource Include="Images\MexicanCasserole-Cook2-2.PNG" />
+    <Resource Include="Images\MexicanCasserole-Cook3.PNG" />
+    <Resource Include="Images\MexicanCasserole-Prep1.PNG" />
+    <Resource Include="Images\MexicanCasserole-Title.PNG" />
+    <Resource Include="Images\PinappleChickenKabobs-Cook1.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Cook2.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Cook3.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Prep1.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Prep2.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Prep3.jpg" />
+    <Resource Include="Images\PinappleChickenKabobs-Title.jpg" />
+    <Resource Include="Images\SlowCookerTacoSoup-Cook1.png" />
+    <Resource Include="Images\SlowCookerTacoSoup-Cook2-1.png" />
+    <Resource Include="Images\SlowCookerTacoSoup-Cook2-2.png" />
+    <Resource Include="Images\SlowCookerTacoSoup-Prep1.png" />
+    <Resource Include="Images\SlowCookerTacoSoup-Title.png" />
+    <Resource Include="Images\Tooltip-CookingSpray.jpg" />
+    <Resource Include="Images\Tooltip-OilGrill.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

@@ -11,7 +11,7 @@
 		<Tag>quick</Tag>
 		<Tag>easy</Tag>
 	</Tags>
-	<Rating>3.5</Rating>
+	<Rating>3</Rating>
 	<TitleImage>HoneyMustartGrilledChicken-Title.jpg</TitleImage>
 	<RecipeIntroduction>Have faith in mustard!</RecipeIntroduction>
 	<PrepTime>15</PrepTime>
@@ -50,39 +50,47 @@
 		</ToolTip>
 		<ToolTip Key="4" Text="Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
 			<Images>
-				<image>Resources/Images/Tooltip-OilGrill.PNG</image>
+				<image>Tooltip-OilGrill.PNG</image>
 			</Images>
 		</ToolTip>
 		<ToolTip Key="5" Text="Basting means to coat the grilling chicken with the sauce again. This TODO - WHAT DOES THIS DO?. You should use a basting brush to keep your hands away from the heat.">
 			<Images>
-				<image>Resources/Images/HoneyMustardGrilledChicken-Tooltip5.PNG</image>
+				<image>HoneyMustardGrilledChicken-Tooltip5.PNG</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
 	
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
-			<StepText ToolTipID="2,3">Preheat the grill for medium heat.</StepText>
+			<StepText>Preheat the grill for medium heat.</StepText>
 			<Title>Preheat Grill</Title>
 			<Images>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="Preheat" ToolTipID="2" />
+				<StepTip TargetText="medium heat" ToolTipID="3" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
-			<StepText>In a shallow bowl, mix the mustard, honey, mayonnaise, and steak sauce. Set aside a small amount of the honey mustard sauce for basting (See next step), and dip the chicken into the remaining sauce to coat.</StepText>
+			<StepText>In a shallow bowl, mix 1/3 cup mustard, 1/4 cup honey, 2 tbsp. mayonnaise, and 1 tsp. steak sauce. Set aside a small amount of the honey mustard sauce for basting (See next step), and dip all 4 chicken breast halves into the remaining sauce to coat.</StepText>
 			<Title>Make Sauce &amp; Coat Chicken</Title>
 			<Images>
-				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-1.PNG</image>
-				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-2.PNG</image>
-				<image>Resources/Images/HoneyMustardGrilledChicken-Prep2-3.PNG</image>
+				<image>HoneyMustardGrilledChicken-Prep2-1.PNG</image>
+				<image>HoneyMustardGrilledChicken-Prep2-2.PNG</image>
+				<image>HoneyMustardGrilledChicken-Prep2-3.PNG</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
 			<Warning>Make sure not to get too close to the heated grill! Use an oven mitt and tongs when oiling the grill</Warning>
-			<StepText ToolTipID="4,5">Lightly oil the grill grate. Grill chicken over indirect heat for 18 to 20 minutes, turning occasionally, or until juices run clear. Baste occasionally with the reserved sauce during the last 10 minutes. Watch carefully to prevent burning!</StepText>
+			<StepText>Lightly oil the grill grate. Grill chicken over indirect heat for 18 to 20 minutes, turning occasionally, or until juices run clear. Baste occasionally with the reserved sauce during the last 10 minutes. Watch carefully to prevent burning!</StepText>
 			<Title>Oil Grill, Grill Chicken</Title>
 			<Images>
-				<image>Resources/Images/HoneyMustardGrilledChicken-Cook1.PNG</image>
+				<image>HoneyMustardGrilledChicken-Cook1.PNG</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="Lightly oil" ToolTipID="4" />
+				<StepTip TargetText="Baste" ToolTipID="5" />
+			</StepTips>
 		</RecipeStep>
 	</RecipeSteps>
 </Recipe>

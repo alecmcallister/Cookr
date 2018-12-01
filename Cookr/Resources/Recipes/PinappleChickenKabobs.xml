@@ -10,7 +10,7 @@
 		<Tag>kababs</Tag>
 		<Tag>grill</Tag>
 	</Tags>
-	<Rating>4.5</Rating>
+	<Rating>4</Rating>
 	<TitleImage>PinappleChickenKabobs-Title.jpg</TitleImage>
 	<RecipeIntroduction>For people who love chicken, pineapple, and pepper.</RecipeIntroduction>
 	<PrepTime>15</PrepTime>
@@ -49,7 +49,7 @@
 		</ToolTip>
 		<ToolTip Key="4" Text="TODO: THIS WILL BE FOR OIL THE GRILL IN STEP Cook 1. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
 			<Images>
-				<image>Resources/Images/Tooltip-OilGrill.PNG</image>
+				<image>Tooltip-OilGrill.PNG</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
@@ -59,43 +59,48 @@
 			<StepText>Chop up the green bell pepper into 1-inch pieces</StepText>
 			<Title>Chop green pepper</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Prep1.jpg</image>
+				<image>PinappleChickenKabobs-Prep1.jpg</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="2">
 			<StepText>Chop up half of an onion into 1-inch pieces</StepText>
 			<Title>Chop onion into slices</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Prep2.jpg</image>
+				<image>PinappleChickenKabobs-Prep2.jpg</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Prep" Number="3">
-			<StepText>Chop the chicken breast into 1-inch chunks</StepText>
+			<StepText>Chop the 1/2 pound of chicken breast into 1-inch chunks</StepText>
 			<Title>Chop chicken breast into chunks</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Prep3.jpg</image>
+				<image>PinappleChickenKabobs-Prep3.jpg</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
 			<Warning>Make sure not to get too close to the heated grill! Use an oven mitt and tongs when oiling the grill</Warning>
-			<StepText ToolTipID="2,3,4">Preheat an outdoor grill for medium-high heat and lightly oil the grate.</StepText>
+			<StepText>Preheat an outdoor grill for medium-high heat and lightly oil the grate.</StepText>
 			<Title>Heat and oil grill</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Cook1.jpg</image>
+				<image>PinappleChickenKabobs-Cook1.jpg</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="Preheat" ToolTipID="2" />
+				<StepTip TargetText="medium-high heat" ToolTipID="3" />
+				<StepTip TargetText="lightly oil the grate" ToolTipID="4" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
-			<StepText> Thread green bell pepper, onion, chicken, and pineapple onto skewers; brush with barbeque sauce.</StepText>
+			<StepText> Thread green bell pepper, onion, chicken, and pineapple chunks onto skewers; brush each skewer with barbeque sauce.</StepText>
 			<Title>Thread Skewers, add barbeque sauce</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Cook2.jpg</image>
+				<image>PinappleChickenKabobs-Cook2.jpg</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
 			<StepText>Cook on the preheated grill until chicken is no longer pink in the center and the juices run clear, 7 to 10 minutes per side. </StepText>
 			<Title>Cook skewers on grill</Title>
 			<Images>
-				<image>Resources/Images/PinappleChickenKabobs-Cook3.jpg</image>
+				<image>PinappleChickenKabobs-Cook3.jpg</image>
 			</Images>
 		</RecipeStep>
 	</RecipeSteps>
