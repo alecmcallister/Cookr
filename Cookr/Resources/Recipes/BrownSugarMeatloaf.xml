@@ -11,7 +11,7 @@
 	<PrepTime>30</PrepTime>
 	<CookTime>60</CookTime>
 	<TotalTime>90</TotalTime>
-	<NumberOfServing>8</NumberOfServing>
+	<NumberOfServings>8</NumberOfServings>
 	<Ingredients>
 		<Ingredient Name="Packed Brown Sugar" Quantity="1/2 Cup" Optional="0"/>
 		<Ingredient Name="Ketchup" Quantity="1/2 Cup" Optional="0"/>
@@ -24,25 +24,25 @@
 		<Ingredient Name="Ground Ginger" Quantity="1/4 teaspoon" Optional="0"/>
 		<Ingredient Name="Crushed Saltine Cracker Crumbs" Quantity="3/4 Cup" Optional="0"/>
 	</Ingredients>
-	
+
 	<Tools>
 		<Tool Name="Oven"/>
 		<Tool Name="5x9 Loaf Pan"/>
 		<Tool Name="Non-stick Cooking Spray" ToolTipID="1"/>
 	</Tools>
-	
+
 	<ToolTips>
-		<ToolTip Key="1" Text="An example cooking spay is PAM.">
+		<ToolTip Id="1" Text="An example cooking spray is PAM.">
 			<Images>
 				<image>Tooltip-CookingSpray.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 2. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
-		<Images>
+		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 2. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+			<Images>
 			</Images>
 		</ToolTip>
 	</ToolTips>
-	
+
 	<RecipeSteps>
 		<RecipeStep Type="Prep" Number="1">
 			<StepText>Chop up 1 small onion</StepText>

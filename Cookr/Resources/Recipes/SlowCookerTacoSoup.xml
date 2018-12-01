@@ -12,7 +12,7 @@
 	<PrepTime>10</PrepTime>
 	<CookTime>480</CookTime>
 	<TotalTime>490</TotalTime>
-	<NumberOfServing>8</NumberOfServing>
+	<NumberOfServings>8</NumberOfServings>
 	<Ingredients>
 		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
 		<Ingredient Name="Onion" Quantity="1" Optional="0"/>
@@ -32,7 +32,7 @@
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Key="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
 			<Images>
 			</Images>
 		</ToolTip>

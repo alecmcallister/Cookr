@@ -15,7 +15,7 @@
 	<PrepTime>15</PrepTime>
 	<CookTime>20</CookTime>
 	<TotalTime>35</TotalTime>
-	<NumberOfServing>6</NumberOfServing>
+	<NumberOfServings>6</NumberOfServings>
 	<Ingredients>
 		<Ingredient Name="Refried Beans" Quantity="1 (16 ounce) can" Optional="0"/>
 		<Ingredient Name="Onion" Quantity="1 (3/4 of a cup worth)" Optional="0"/>
@@ -31,16 +31,16 @@
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Key="1" Text="An example cooking spay is PAM.">
+		<ToolTip Id="1" Text="An example cooking spay is PAM.">
 			<Images>
 				<image>Tooltip-CookingSpray.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM-HIGH HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="3" Text="THIS WILL BE FOR MEDIUM-HIGH HEAT IN STEP Cook 1 - TODO">
 			<Images>
 			</Images>
 		</ToolTip>

@@ -11,7 +11,7 @@
 	<PrepTime>25</PrepTime>
 	<CookTime>15</CookTime>
 	<TotalTime>40</TotalTime>
-	<NumberOfServing>6</NumberOfServing>
+	<NumberOfServings>6</NumberOfServings>
 
 	<Ingredients>
 		<Ingredient Name="Oil" Quantity="1 Tbsp" Optional="0" ToolTipID="1"/>
@@ -67,7 +67,7 @@
 			<StepText>Heat 1 Tbsp. oil and 1 large chopped onion in a large saucepan on medium heat for 5 minutes, stirring frequently.</StepText>
 			<Title>Heat oil &amp; onion</Title>
 			<Images>
-				<image>AsparagusSoup-Cook1.jgp</image>
+				<image>AsparagusSoup-Cook1.jpg</image>
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">

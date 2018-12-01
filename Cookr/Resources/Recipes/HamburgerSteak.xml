@@ -14,7 +14,7 @@
 	<PrepTime>15</PrepTime>
 	<CookTime>25</CookTime>
 	<TotalTime>40</TotalTime>
-	<NumberOfServing>4</NumberOfServing>
+	<NumberOfServings>4</NumberOfServings>
 	
 	<Ingredients>
 		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>

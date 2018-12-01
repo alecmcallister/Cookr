@@ -76,7 +76,7 @@
                                     </TransformGroup>
                                 </LinearGradientBrush.RelativeTransform>
                                 <GradientStop Color="#00000000"/>
-                                <GradientStop Color="#99000000" Offset="0.5"/>
+                                <GradientStop Color="#99000000" Offset="0.6"/>
                             </LinearGradientBrush>
                         </Rectangle.Fill>
                     </Rectangle>
@@ -85,8 +85,8 @@
                     <Label x:Name="RecipeTitle" Content="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Foreground="#FFEEEEEE">
                         <Label.Background>
                             <RadialGradientBrush>
-                                <GradientStop Color="#A7000000" Offset="0.5"/>
-                                <GradientStop Color="#0B000000" Offset="1"/>
+                                <GradientStop Color="#E5000000"/>
+                                <GradientStop Color="#00000000" Offset="1"/>
                             </RadialGradientBrush>
                         </Label.Background>
                     </Label>

@@ -40,13 +40,17 @@ namespace Cookr.Pages
 
             // Populate Title, time, star rating, TitleImage.
             RecipeTitle.Content = recipe.Title;
-            RecipeTime.Content = recipe.TotalTime.ToString() + " minutes";
+            RecipeTime.Content = hoursAndMinutesString(recipe.TotalTime);
             RecipeStarRating.Value = (int)(recipe.Rating);
             RecipeTitleImage.ImageSource = new BitmapImage(
                                            new Uri("Images/" + recipe.TitleImage, UriKind.Relative));
 
             // Populate recipe introduction, ingredients, and tools.
-            DescriptionTextBlock.Text = recipe.RecipeIntroduction;
+            DescriptionTextBlock.Text = recipe.RecipeIntroduction + "\r\rPrep:\t"
+                                        + hoursAndMinutesString(recipe.PrepTime) + "\rCook:\t"
+                                        + hoursAndMinutesString(recipe.CookTime) + "\rServings: "
+                                        + recipe.NumberOfServings.ToString();
+
             GenerateIngredientsList(IngredientsTextBlock);
             GenerateToolsList(ToolsTextBlock);
 
@@ -56,6 +60,21 @@ namespace Cookr.Pages
 
             SetUpButtonDefaults();
             fillRecipeScrollableNavigationThingyList();
+        }
+
+        private object hoursAndMinutesString(int time)
+        {
+            int hours = (int)time / 60;
+            string result = "";
+            if (hours > 0)
+            {
+                result = hours.ToString() + " hours ";
+            }
+            if(time % 60 > 0)
+            {
+                result += (time % 60).ToString() + " minutes";
+            }
+            return result;
         }
 
         /// <summary>
