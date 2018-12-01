@@ -43,7 +43,12 @@
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="2" Text="THIS WILL BE FOR MEDIUM-LOW HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
+			<Images>
+				<image>BrownedGroundMeat-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="3" Text="THIS WILL BE FOR MEDIUM-LOW HEAT IN STEP Cook 1 - TODO">
 			<Images>
 			</Images>
 		</ToolTip>
@@ -69,6 +74,9 @@
 			<StepTips>
 				<StepTip TargetText="medium heat" ToolTipID="1" />
 			</StepTips>
+			<StepTips>
+				<StepTip TargetText="browned" ToolTipID="2" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
 			<StepText>Sprinkle 2 tbsp. flour over the onions and drippings in the skillet. Stir in flour with a fork, scraping bits of beef off of the bottom as you stir. Gradually mix in the 1 cup beef broth and 1 tbsp. sherry. Season with 1/2 tsp. seasoned salt. Simmer and stir over medium-low heat for about 5 minutes, until the gravy thickens. Turn heat to low, return patties to the gravy, cover, and simmer for another 15 minutes.</StepText>
@@ -79,7 +87,7 @@
 				<image>HamburgerSteak-Cook2-3.PNG</image>
 			</Images>
 			<StepTips>
-				<StepTip TargetText="medium-low heat" ToolTipID="2" />
+				<StepTip TargetText="medium-low heat" ToolTipID="3" />
 			</StepTips>
 		</RecipeStep>
 	</RecipeSteps>

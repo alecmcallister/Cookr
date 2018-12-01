@@ -197,7 +197,6 @@
     <Resource Include="Images\AsparagusSoup-Prep2.png" />
     <Resource Include="Images\AsparagusSoup-Title.jpg" />
     <Resource Include="Images\AsparagusSoup-Tooltip1.jpg" />
-    <Resource Include="Images\AsparagusSoup-Tooltip5.jpg" />
     <Resource Include="Images\BrownSugarMeatloaf-Cook1-1.png" />
   </ItemGroup>
   <ItemGroup>
@@ -251,6 +250,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\Tooltip-Onion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AsparagusSoup-Tooltip5.jpg" />
+    <Resource Include="Images\BrownedGroundMeat-Tooltip.jpg" />
+    <Resource Include="Images\DutchOven-Tooltip.jpg" />
+    <Resource Include="Images\ItalianSausageSoup-Cook1-1.png" />
+    <Resource Include="Images\ItalianSausageSoup-Cook1-2.png" />
+    <Resource Include="Images\ItalianSausageSoup-Cook2.png" />
+    <Resource Include="Images\ItalianSausageSoup-Cook3.png" />
+    <Resource Include="Images\ItalianSausageSoup-Prep1-1.png" />
+    <Resource Include="Images\ItalianSausageSoup-Prep1-2.png" />
+    <Resource Include="Images\ItalianSausageSoup-Prep1-3.png" />
+    <Resource Include="Images\ItalianSausageSoup-Title.png" />
+    <Resource Include="Images\Simmer-Tooltip.jpg" />
+    <Resource Include="Images\Stockpot-Tooltip.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

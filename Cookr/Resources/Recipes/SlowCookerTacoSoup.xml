@@ -36,6 +36,11 @@
 			<Images>
 			</Images>
 		</ToolTip>
+		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
+			<Images>
+				<image>BrownedGroundMeat-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
 	</ToolTips>
 	
 	<RecipeSteps>
@@ -55,6 +60,7 @@
 			</Images>
 			<StepTips>
 				<StepTip TargetText="medium heat" ToolTipID="1" />
+				<StepTip TargetText="browned" ToolTipID="2" />
 			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
