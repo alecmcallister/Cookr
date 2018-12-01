@@ -41,7 +41,6 @@
                        Margin="10,10,0,10"
                        MaxHeight="250"
                        Stretch="Uniform" 
-                       Source="/Images/0-0.jpg"
                        Grid.Column="0"
                        Visibility="Collapsed"/>
 

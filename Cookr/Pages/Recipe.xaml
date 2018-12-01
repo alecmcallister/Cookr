@@ -62,7 +62,7 @@
                 </Popup>
                 <Grid x:Name="RecipeTitleImageGrid" HorizontalAlignment="Stretch" Height="180" VerticalAlignment="Top" Grid.Row="1">
                     <Grid.Background>
-                        <ImageBrush x:Name="RecipeTitleImage" ImageSource="/Images/0-0.jpg" Stretch="UniformToFill"/>
+                        <ImageBrush x:Name="RecipeTitleImage" Stretch="UniformToFill"/>
                     </Grid.Background>
                     <Rectangle HorizontalAlignment="Left" Height="180" Margin="0" VerticalAlignment="Stretch" Width="150">
                         <Rectangle.Fill>
