@@ -304,14 +304,16 @@ namespace Cookr.Pages
                 {
                     return;
                 }
-                PopupContent.TooltipImage.Visibility = Visibility.Collapsed;
-                if(tip.Images.Count > 0)
+                PopupContent.TooltipImageStackPanel.Children.Clear();
+                PopupContent.TooltipImageStackPanel.Visibility = Visibility.Collapsed;
+                foreach(string imgname in tip.Images)
                 {
-                    if (File.Exists("Images/" + tip.Images[0]))
+                    if (File.Exists("Images/" + imgname))
                     {
                         Image img = new Image();
-                        PopupContent.TooltipImage.Source = new BitmapImage(new Uri("/Images/" + tip.Images[0], UriKind.Relative));
-                        PopupContent.TooltipImage.Visibility = Visibility.Visible;
+                        img.Source = new BitmapImage(new Uri("/Images/" + imgname, UriKind.Relative));
+                        PopupContent.TooltipImageStackPanel.Children.Add(img);
+                        PopupContent.TooltipImageStackPanel.Visibility = Visibility.Visible;
                     }
                 }
                 PopupContent.TooltipText.Text = tip.Text;

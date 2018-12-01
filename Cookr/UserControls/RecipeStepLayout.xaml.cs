@@ -91,9 +91,13 @@ namespace Cookr.UserControls
 
                         // Process the text following the tooltip
                         tipList = ProcessTextForTips(upperlower[1], tipList, recipePage);
-                        break;
+                        return tipList;
                     }
                 }
+            }
+            if (stepText.Length > 0)
+            {
+                StepInstruction.Inlines.Add(stepText);
             }
             return tipList;
         }
