@@ -35,19 +35,19 @@
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Key="1" Text="Use a high-heat cooking oil, such as Canola oil, olive oil or peanut oil">
+		<ToolTip Id="1" Text="Use a high-heat cooking oil, such as Canola oil, olive oil or peanut oil">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="3" Text="TODO: THIS WILL BE FOR MEDIUM HIGH HEAT IN STEP cook 1. ">
+		<ToolTip Id="3" Text="TODO: THIS WILL BE FOR MEDIUM HIGH HEAT IN STEP cook 1. ">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="4" Text="TODO: THIS WILL BE FOR OIL THE GRILL IN STEP Cook 1. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
+		<ToolTip Id="4" Text="TODO: THIS WILL BE FOR OIL THE GRILL IN STEP Cook 1. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
 			<Images>
 				<image>Tooltip-OilGrill.PNG</image>
 			</Images>

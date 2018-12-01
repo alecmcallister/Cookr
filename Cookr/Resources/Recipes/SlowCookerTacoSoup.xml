@@ -32,7 +32,7 @@
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Key="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
 			<Images>
 			</Images>
 		</ToolTip>

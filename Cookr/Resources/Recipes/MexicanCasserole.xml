@@ -18,30 +18,35 @@
 	<NumberOfServing>6</NumberOfServing>
 	<Ingredients>
 		<Ingredient Name="Refried Beans" Quantity="1 (16 ounce) can" Optional="0"/>
-		<Ingredient Name="Onion" Quantity="1 (3/4 of a cup worth)" Optional="0"/>
+		<Ingredient Name="Onion" Quantity="1 (3/4 of a cup worth)" Optional="0" ToolTipID="4"/>
 		<Ingredient Name="Flour Tortillas" Quantity="5 (10 inch)" Optional="0"/>
 		<Ingredient Name="Salsa" Quantity="1 Cup" Optional="0"/>
-		<Ingredient Name="Shredded Cheddar or Colby Jack Cheese" Quantity="2 Cups" Optional="0" ToolTipID="1"/>
+		<Ingredient Name="Shredded Cheddar or Colby Jack Cheese" Quantity="2 Cups" Optional="0"/>
 	</Ingredients>
 	
 	<Tools>
 		<Tool Name="Oven"/>
 		<Tool Name="9-inch Pie Pan"/>
-		<Ingredient Name="Non-stick Cooking Spray" ToolTipID="1"/>
+		<Tool Name="Non-stick Cooking Spray" ToolTipID="1"/>
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Key="1" Text="An example cooking spay is PAM.">
+		<ToolTip Id="1" Text="An example cooking spay is PAM.">
 			<Images>
 				<image>Tooltip-CookingSpray.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Key="3" Text="THIS WILL BE FOR MEDIUM-HIGH HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="3" Text="THIS WILL BE FOR MEDIUM-HIGH HEAT IN STEP Cook 1 - TODO">
 			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="4" Text="Onions have LAYERS!">
+			<Images>
+				<image>Tooltip-Onion.jpg</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>

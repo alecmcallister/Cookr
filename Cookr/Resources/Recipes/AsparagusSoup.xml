@@ -15,7 +15,7 @@
 
 	<Ingredients>
 		<Ingredient Name="Oil" Quantity="1 Tbsp" Optional="0" ToolTipID="1"/>
-		<Ingredient Name="Large Onion" Quantity="1" Optional="0"/>
+		<Ingredient Name="Large Onion" Quantity="1" Optional="0" ToolTipID="4"/>
 		<Ingredient Name="Small Garlic Clove" Quantity="1" Optional="1"/>
 		<Ingredient Name="Fresh Asparagus Spears" Quantity="1-1/2 lb. (675g)" Optional="0"/>
 		<Ingredient Name="Chicken Broth" Quantity="2 Cups" Optional="0"/>
@@ -40,6 +40,11 @@
 		<ToolTip Id="3" Text="Heating just below the boiling point, with only small bubbles.">
 			<Images>
 				<image>AsparagusSoup-Tooltip5.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="4" Text="Onions have LAYERS!">
+			<Images>
+				<image>Tooltip-Onion.jpg</image>
 			</Images>
 		</ToolTip>
 	</ToolTips>
