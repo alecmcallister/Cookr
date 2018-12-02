@@ -89,13 +89,6 @@
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="1">
 			<StepText>In a large skillet over medium heat combine chicken, 2 tablespoons butter, 2 cloves garlic (About half of the minced garlic), and 1 tbsp. Italian seasoning. Cook until chicken is no longer pink inside. Remove from skillet and set aside.</StepText>
-			<Title>Mince Garlic &amp; Dice Onion</Title>
-			<Images>
-				<image>ChickenFettucciniAlfredo-Cook1.png</image>
-			</Images>
-		</RecipeStep>
-		<RecipeStep Type="Cook" Number="1">
-			<StepText>In a large skillet over medium heat combine chicken, 2 tablespoons butter, 2 cloves garlic (About half of the minced garlic), and 1 tbsp. Italian seasoning. Cook until chicken is no longer pink inside. Remove from skillet and set aside.</StepText>
 			<Title>Cook Chicken</Title>
 			<Images>
 				<image>ChickenFettucciniAlfredo-Cook1.png</image>
