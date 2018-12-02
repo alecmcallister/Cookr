@@ -1,0 +1,96 @@
+<Recipe>
+	<Title>Hamburger Steak</Title>
+	<PopularToday>1</PopularToday>
+	<Tags>
+		<Tag>beef</Tag>
+		<Tag>onion</Tag>
+		<Tag>quick and easy</Tag>
+		<Tag>quick</Tag>
+		<Tag>easy</Tag>
+	</Tags>
+	<Rating>4</Rating>
+	<TitleImage>HamburgerSteak-Title.PNG</TitleImage>
+	<RecipeIntroduction>An easy-to-make classic featuring tasty hamburger 'steaks' smothered in gravy and onions. Traditionally served with hot white rice or potatoes, it's a great way to dress up a pound of ground beef and you probably have all the ingredients on hand!</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>25</CookTime>
+	<TotalTime>40</TotalTime>
+	<NumberOfServings>4</NumberOfServings>
+	
+	<Ingredients>
+		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
+		<Ingredient Name="Egg" Quantity="1" Optional="0"/>
+		<Ingredient Name="Bread Crumbs" Quantity="1/4 Cup" Optional="0"/>
+		<Ingredient Name="Ground Black Pepper" Quantity="1/8 teaspoon" Optional="0"/>
+		<Ingredient Name="Seasoned Salt" Quantity="1/2 teaspoon" Optional="0"/>
+		<Ingredient Name="Garlic Powder" Quantity="1/2 teaspoon" Optional="0"/>
+		<Ingredient Name="Onion Powder" Quantity="1/2 teaspoon" Optional="0"/>
+		<Ingredient Name="Worcestershire Sauce" Quantity="1 teaspoon" Optional="0"/>
+		<Ingredient Name="Vegetable Oil" Quantity="1 tablespoon" Optional="0"/>
+		<Ingredient Name="Thinly Sliced Onion" Quantity="1 cup" Optional="0"/>
+		<Ingredient Name="All-purpose Flour" Quantity="2 tablespoons" Optional="0"/>
+		<Ingredient Name="Beef Broth" Quantity="1 cup" Optional="0"/>
+		<Ingredient Name="Cooking Sherry" Quantity="1 tablespoon" Optional="0"/>
+	</Ingredients>
+	
+	<Tools>
+		<Tool Name="Oven"/>
+		<Tool Name="Large Skillet"/>
+		<Tool Name="Plate"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Id="1" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
+			<Images>
+				<image>BrownedGroundMeat-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="3" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium-low heat would be somewhere between 2 and 4 on the knob. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText>In a large bowl, mix together 1 pound ground beef, 1 egg, 1/4 Cup bread crumbs, 1/8 tsp pepper, 1/2 tsp salt, 1/2 tsp onion powder,  1/2 tsp garlic powder, and 1 tsp Worcestershire sauce. Form into 8 balls, and flatten into patties.</StepText>
+			<Title>Make Beef Mixture</Title>
+			<Images>
+				<image>HamburgerSteak-Prep1-1.PNG</image>
+				<image>HamburgerSteak-Prep1-2.PNG</image>
+				<image>HamburgerSteak-Prep1-3.PNG</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText>Heat 1 tbsp. oil in a large skillet over medium heat. Fry the patties and onion in the oil until patties are nicely browned, about 4 minutes per side. Remove the beef patties to a plate, and keep warm.</StepText>
+			<Title>Fry Steak Patties</Title>
+			<Images>
+				<image>HamburgerSteak-Cook1-1.PNG</image>
+				<image>HamburgerSteak-Cook1-2.PNG</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="1" />
+			</StepTips>
+			<StepTips>
+				<StepTip TargetText="browned" ToolTipID="2" />
+			</StepTips>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText>Sprinkle 2 tbsp. flour over the onions and drippings in the skillet. Stir in flour with a fork, scraping bits of beef off of the bottom as you stir. Gradually mix in the 1 cup beef broth and 1 tbsp. sherry. Season with 1/2 tsp. seasoned salt. Simmer and stir over medium-low heat for about 5 minutes, until the gravy thickens. Turn heat to low, return patties to the gravy, cover, and simmer for another 15 minutes.</StepText>
+			<Title>Fry Steak Patties &amp; Make Gravy</Title>
+			<Images>
+				<image>HamburgerSteak-Cook2-1.PNG</image>
+				<image>HamburgerSteak-Cook2-2.PNG</image>
+				<image>HamburgerSteak-Cook2-3.PNG</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="medium-low heat" ToolTipID="3" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

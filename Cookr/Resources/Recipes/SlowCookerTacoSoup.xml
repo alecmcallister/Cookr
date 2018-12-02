@@ -1,0 +1,76 @@
+<Recipe>
+	<Title>Slow Cooker Taco Soup</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>beef</Tag>
+		<Tag>mexican</Tag>
+		<Tag>slow cooker</Tag>
+	</Tags>
+	<Rating>5</Rating>
+	<TitleImage>SlowCookerTacoSoup-Title.PNG</TitleImage>
+	<RecipeIntroduction>This is a quick, throw together slow cooker soup with a Mexican flair. Teenagers love it. Serve topped with corn chips, shredded Cheddar cheese and a dollop of sour cream. Make sure you adjust the amount of chile peppers if you're sensitive about spicy foods.</RecipeIntroduction>
+	<PrepTime>10</PrepTime>
+	<CookTime>480</CookTime>
+	<TotalTime>490</TotalTime>
+	<NumberOfServings>8</NumberOfServings>
+	<Ingredients>
+		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
+		<Ingredient Name="Onion" Quantity="1" Optional="0"/>
+		<Ingredient Name="Chili Beans, with liquid" Quantity="1 (16 Ounce) can" Optional="0"/>
+		<Ingredient Name="Kidney Beans, with liquid" Quantity="1 (15 Ounce) can" Optional="0"/>
+		<Ingredient Name="Whole Kernel Corn, with liquid" Quantity="1 (15 Ounce) can" Optional="0"/>
+		<Ingredient Name="Tomato Sauce" Quantity="1 (8 Ounce) can, with liquid" Optional="0"/>
+		<Ingredient Name="Water" Quantity="2 Cups" Optional="0"/>
+		<Ingredient Name="Peeled and Diced Tomatos" Quantity="2 (14.5 Ounce) cans" Optional="0"/>
+		<Ingredient Name="Diced Green Chile Peppers" Quantity="1 (4 Ounce) can" Optional="0"/>
+		<Ingredient Name="Taco Seasoning Mix" Quantity="1 (1.25 Ounce) Package" Optional="0"/>
+	</Ingredients>
+	
+	<Tools>
+		<Tool Name="Slow Cooker"/>
+		<Tool Name="Medium Skillet"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Id="1" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
+			<Images>
+				<image>BrownedGroundMeat-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText>Chop the onion into cubes</StepText>
+			<Title>Chop Onion</Title>
+			<Images>
+				<image>SlowCookerTacoSoup-Prep1.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText>In a medium skillet, cook 1 pound ground beef until browned over medium heat. Drain, and set aside.
+			</StepText>
+			<Title>Brown Ground Beef</Title>
+			<Images>
+				<image>SlowCookerTacoSoup-Cook1.PNG</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="1" />
+				<StepTip TargetText="browned" ToolTipID="2" />
+			</StepTips>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText>Place the cooked 1 pound ground beef, chipped onion, 16 ounce can chili beans (with liquid), 15 ounch can kidney beans (with liquid), 15 ounce can corn (with liquid), 8 ounce can tomato sauce, 2 cups water, 2 14.5 ounce cans diced tomatoes, 4 ounce can green chile peppers, and 1.25 ounce taco seasoning mix in a slow cooker. Mix to blend, and cook on Low setting for 8 hours.</StepText>
+			<Title>Add Ingredients To Slow Cooker &amp; Cook</Title>
+			<Images>
+				<image>SlowCookerTacoSoup-Cook2-1.PNG</image>
+				<image>SlowCookerTacoSoup-Cook2-2.PNG</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

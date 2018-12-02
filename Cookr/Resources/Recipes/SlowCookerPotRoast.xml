@@ -1,0 +1,49 @@
+<Recipe>
+	<Title>Slow Cooker Pot Roast</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>pot roast</Tag>
+		<Tag>beef</Tag>
+		<Tag>slow cooker</Tag>
+		<Tag>easy prep</Tag>
+	</Tags>
+	<Rating>2</Rating>
+	<TitleImage>SlowCookerPotRoast-Title.PNG</TitleImage>
+	<RecipeIntroduction>This is a very easy recipe for a delicious pot roast. It makes its own gravy. It's designed especially for the working person who does not have time to cook all day, but it tastes like you did. You'll want the cut to be between 5 and 6 pounds.</RecipeIntroduction>
+	
+	<PrepTime>10</PrepTime>
+	<CookTime>480</CookTime>
+	<TotalTime>490</TotalTime>
+	<NumberOfServings>12</NumberOfServings>
+	<Ingredients>
+		<Ingredient Name="Condensed Cream of Mushroom Soup" Quantity="2 (10.75 ounce) cans" Optional="0"/>
+		<Ingredient Name="Dry Onion Soup Mix" Quantity="1 (1 ounce) package" Optional="0"/>
+		<Ingredient Name="Water" Quantity="1 1/4 Cups" Optional="0"/>
+		<Ingredient Name="Pot Roast" Quantity="5 1/2 Pound" Optional="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Slow Cooker"/>
+	</Tools>
+	
+	<ToolTips>
+	</ToolTips>
+	
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText>In a slow cooker, mix 2 10.75 ounce cans cream of mushroom soup, 1 ounce of dry onion soup mix, and 1 1/4 cups water. Place the 5 1/2 pound pot roast in slow cooker and coat with soup mixture.</StepText>
+			<Title>Put Roast in Slow Cooker</Title>
+			<Images>
+				<image>SlowCookerPotRoast-Prep1-1.png</image>
+				<image>SlowCookerPotRoast-Prep1-2.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText>Cook on High setting for 3 to 4 hours, or on Low setting for 8 to 9 hours.</StepText>
+			<Title>Cook Roast</Title>
+			<Images>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+	
+</Recipe>

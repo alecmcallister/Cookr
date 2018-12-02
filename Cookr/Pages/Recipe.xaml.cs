@@ -40,13 +40,17 @@ namespace Cookr.Pages
 
             // Populate Title, time, star rating, TitleImage.
             RecipeTitle.Content = recipe.Title;
-            RecipeTime.Content = recipe.TotalTime.ToString() + " minutes";
+            RecipeTime.Content = hoursAndMinutesString(recipe.TotalTime);
             RecipeStarRating.Value = (int)(recipe.Rating);
             RecipeTitleImage.ImageSource = new BitmapImage(
                                            new Uri("Images/" + recipe.TitleImage, UriKind.Relative));
 
             // Populate recipe introduction, ingredients, and tools.
-            DescriptionTextBlock.Text = recipe.RecipeIntroduction;
+            DescriptionTextBlock.Text = recipe.RecipeIntroduction + "\r\rPrep:\t"
+                                        + hoursAndMinutesString(recipe.PrepTime) + "\rCook:\t"
+                                        + hoursAndMinutesString(recipe.CookTime) + "\rServings: "
+                                        + recipe.NumberOfServings.ToString();
+
             GenerateIngredientsList(IngredientsTextBlock);
             GenerateToolsList(ToolsTextBlock);
 
@@ -56,6 +60,21 @@ namespace Cookr.Pages
 
             SetUpButtonDefaults();
             fillRecipeScrollableNavigationThingyList();
+        }
+
+        private object hoursAndMinutesString(int time)
+        {
+            int hours = (int)time / 60;
+            string result = "";
+            if (hours > 0)
+            {
+                result = hours.ToString() + " hours ";
+            }
+            if(time % 60 > 0)
+            {
+                result += (time % 60).ToString() + " minutes";
+            }
+            return result;
         }
 
         /// <summary>
@@ -285,14 +304,16 @@ namespace Cookr.Pages
                 {
                     return;
                 }
-                PopupContent.TooltipImage.Visibility = Visibility.Collapsed;
-                if(tip.Images.Count > 0)
+                PopupContent.TooltipImageStackPanel.Children.Clear();
+                PopupContent.TooltipImageStackPanel.Visibility = Visibility.Collapsed;
+                foreach(string imgname in tip.Images)
                 {
-                    if (File.Exists("Images/" + tip.Images[0]))
+                    if (File.Exists("Images/" + imgname))
                     {
                         Image img = new Image();
-                        PopupContent.TooltipImage.Source = new BitmapImage(new Uri("/Images/" + tip.Images[0], UriKind.Relative));
-                        PopupContent.TooltipImage.Visibility = Visibility.Visible;
+                        img.Source = new BitmapImage(new Uri("/Images/" + imgname, UriKind.Relative));
+                        PopupContent.TooltipImageStackPanel.Children.Add(img);
+                        PopupContent.TooltipImageStackPanel.Visibility = Visibility.Visible;
                     }
                 }
                 PopupContent.TooltipText.Text = tip.Text;

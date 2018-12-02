@@ -1,0 +1,88 @@
+<Recipe>
+	<Title>Brown Sugar Meatloaf</Title>
+	<PopularToday>1</PopularToday>
+	<Tags>
+		<Tag>beef</Tag>
+		<Tag>meatloaf</Tag>
+	</Tags>
+	<Rating>3</Rating>
+	<TitleImage>BrownSugarMeatloaf-Title.png</TitleImage>
+	<RecipeIntroduction>A simple and tasty meatloaf.</RecipeIntroduction>
+	<PrepTime>30</PrepTime>
+	<CookTime>60</CookTime>
+	<TotalTime>90</TotalTime>
+	<NumberOfServings>8</NumberOfServings>
+	<Ingredients>
+		<Ingredient Name="Packed Brown Sugar" Quantity="1/2 Cup" Optional="0"/>
+		<Ingredient Name="Ketchup" Quantity="1/2 Cup" Optional="0"/>
+		<Ingredient Name="Lean Ground Beef" Quantity="1 1/2 pounds" Optional="0"/>
+		<Ingredient Name="Milk" Quantity="3/4 Cup" Optional="0"/>
+		<Ingredient Name="Eggs" Quantity="2" Optional="0"/>
+		<Ingredient Name="Salt" Quantity="1 1/2 teaspoons" Optional="0"/>
+		<Ingredient Name="Ground Black Pepper" Quantity="1/4 teaspoon" Optional="0"/>
+		<Ingredient Name="Small Onion" Quantity="1" Optional="0"/>
+		<Ingredient Name="Ground Ginger" Quantity="1/4 teaspoon" Optional="0"/>
+		<Ingredient Name="Crushed Saltine Cracker Crumbs" Quantity="3/4 Cup" Optional="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Oven"/>
+		<Tool Name="5x9 Loaf Pan"/>
+		<Tool Name="Non-stick Cooking Spray" ToolTipID="1"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="1" Text="An example cooking spray is PAM.">
+			<Images>
+				<image>Tooltip-CookingSpray.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+			<Images>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="1">
+			<StepText>Chop up 1 small onion</StepText>
+			<Title>Chop onion</Title>
+			<Images>
+				<image>BrownSugarMeatloaf-Prep1.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Prep" Number="2">
+			<StepText ToolTipID="2">Preheat oven to 350 degrees F (175 degrees C). Lightly grease a 5x9 inch loaf pan.</StepText>
+			<Title>Preheat Oven &amp; Grease Pan</Title>
+			<Images>
+				<image>BrownSugarMeatloaf-Prep2.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Preheat" ToolTipID="2" />
+			</StepTips>
+		</RecipeStep>
+				<RecipeStep Type="Cook" Number="1">
+			<StepText>Press 1/2 cup brown sugar in the bottom of the prepared loaf pan and spread 1/2 cup ketchup over the sugar.</StepText>
+			<Title>Add Sugar and Ketchup to Pan</Title>
+			<Images>
+				<image>BrownSugarMeatloaf-Cook1-1.png</image>
+				<image>BrownSugarMeatloaf-Cook1-2.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText>In a mixing bowl, mix 1 1/2 pounds ground beef, 3/4 cup milk, 2 eggs, 1 1/2 tsp. salt, 1/2 tsp. ground black pepper, the chopped up onion, 1/4 tsp. ground ginger, and 3/4 cup crushed saltine cracker crumbs. Shape the mixture into a loaf on top of the ketchup.</StepText>
+			<Title>Mix &amp; Add Remaining Ingredients</Title>
+			<Images>
+				<image>BrownSugarMeatloaf-Cook2-1.png</image>
+				<image>BrownSugarMeatloaf-Cook2-2.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="3">
+			<StepText>Bake in preheated oven for 1 hour or until juices are clear.</StepText>
+			<Title>Bake Meatloaf</Title>
+			<Images>
+				<image>BrownSugarMeatloaf-Cook3.png</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

@@ -31,7 +31,7 @@ namespace Cookr.UserControls
         {
             InitializeComponent();
             StepTitle.Text = step.Number.ToString() + ". " + step.Title;
-            if(step.Warning.Length > 0)
+            if(step.Warning != null && step.Warning.Length > 0)
             {
                 StepWarning.Visibility = Visibility.Visible;
                 StepWarning.Text = step.Warning;
@@ -91,11 +91,15 @@ namespace Cookr.UserControls
 
                         // Process the text following the tooltip
                         tipList = ProcessTextForTips(upperlower[1], tipList, recipePage);
-                        break;
+                        return tipList;
                     }
                 }
             }
-            return null;
+            if (stepText.Length > 0)
+            {
+                StepInstruction.Inlines.Add(stepText);
+            }
+            return tipList;
         }
     }
 }

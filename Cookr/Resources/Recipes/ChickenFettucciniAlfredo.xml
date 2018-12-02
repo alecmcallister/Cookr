@@ -1,0 +1,141 @@
+<Recipe>
+	<Title>Chicken Fettuccini Alfredo</Title>
+	<PopularToday>1</PopularToday>
+	<Tags>
+		<Tag>chicken</Tag>
+		<Tag>pasta</Tag>
+		<Tag>italian</Tag>
+	</Tags>
+	<Rating>4</Rating>
+	<TitleImage>ChickenFettucciniAlfredo-Title.png</TitleImage>
+	<RecipeIntroduction>This is a family favorite. A creamy, cheesy Alfredo dish, great with a salad and garlic bread.</RecipeIntroduction>
+	
+	<PrepTime>30</PrepTime>
+	<CookTime>30</CookTime>
+	<TotalTime>60</TotalTime>
+	<NumberOfServings>8</NumberOfServings>
+	<Ingredients>
+		<Ingredient Name="Skinless, Boneless Chicken Breast Halves" Quantity="6" Optional="0"/>
+		<Ingredient Name="Butter" Quantity="6 Tablespoons" Optional="0"/>
+		<Ingredient Name="Garlic Cloves" Quantity="4" Optional="0"/>
+		<Ingredient Name="Italian seasoning" Quantity="1 Tablespoon" Optional="0" ToolTipID="1"/>
+		<Ingredient Name="Fettuccini Pasta" Quantity="1 Pound" Optional="0" ToolTipID="2"/>
+		<Ingredient Name="Onion" Quantity="1" Optional="0"/>
+		<Ingredient Name="Mushrooms" Quantity="1 (8 ounce) package" Optional="0"/>
+		<Ingredient Name="All-Purpose Flour" Quantity="1/3 cup" Optional="0"/>
+		<Ingredient Name="Salt" Quantity="1 Tablespoon" Optional="0"/>
+		<Ingredient Name="Ground White Pepper" Quantity="3/4 Teaspoon" Optional="0"/>
+		<Ingredient Name="Milk" Quantity="3 Cups" Optional="0"/>
+		<Ingredient Name="Half-and-half" Quantity="1 Cup" Optional="0" ToolTipID="3"/>
+		<Ingredient Name="Grated Parmesan Cheese" Quantity="3/4 Cup" Optional="0"/>
+		<Ingredient Name="Shredded Colby-Montery Jack" Quantity="8 Ounces" Optional="0"/>
+		<Ingredient Name="Roma (Plum) Tomatoes" Quantity="3" Optional="0" ToolTipID="4"/>
+		<Ingredient Name="Sour Cream" Quantity="1/2 Cup" Optional="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Large Skillet"/>
+		<Tool Name="Large Pot"/>
+		<Tool Name="Oven/Stove"/>
+	</Tools>
+	
+	<ToolTips>
+		<ToolTip Id="1" Text="Italian Seasoning is a spice mixture used to flavour many Italian dishes. Most contain basil, oregano, rosemary, and thyme.">
+			<Images>
+				<image>ItalianSeasoning-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="">
+			<Images>
+				<image>Fettuccini-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="3" Text="Also known as 'Half cream', this is a blend of blend of equal parts whole milk and light cream. It is usually sold with milk.">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="4" Text="">
+			<Images>
+				<image>RomaTomatoes-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="5" Text="For this recipe, a small handful of salt should do. Put it in the water and bring it to a boil. This adds flavour to the pasta itself.">
+			<Images>
+				<image>ChickenFettucciniAlfredo-Tooltip5.png</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="6" Text="Al dente means to cook until the pasta is done or 'firm to bite'. This occurs just after the white of the pasta center has disappeared.">
+			<Images>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="7" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+	
+	<RecipeSteps>
+	<RecipeStep Type="Prep" Number="1">
+			<StepText>Cut the 6 Chicken Breast Halves into cubes</StepText>
+			<Title>Cube Chicken Breast</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Prep1.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Prep" Number="2">
+			<StepText>Mince the 4 Garlic Gloves. Then, dice the onion and the 3 roma tomatoes.</StepText>
+			<Title>Mince Garlic, Dice Onion &amp; Tomatoes</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Prep2-1.png</image>
+				<image>ChickenFettucciniAlfredo-Prep2-2.png</image>
+				<image>ChickenFettucciniAlfredo-Prep2-3.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="1">
+			<StepText>In a large skillet over medium heat combine chicken, 2 tablespoons butter, 2 cloves garlic (About half of the minced garlic), and 1 tbsp. Italian seasoning. Cook until chicken is no longer pink inside. Remove from skillet and set aside.</StepText>
+			<Title>Cook Chicken</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook1.png</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="7" />
+			</StepTips>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="2">
+			<StepText>Bring a large pot of lightly salted water to a boil. Add 1 pound fettuccini pasta and cook for 8 to 10 minutes or until al dente; drain. Note that you should continue on to the next step while you wait for the pasta to cook!</StepText>
+			<Title>Boil Fettuccini</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook2.png</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="lightly salted water" ToolTipID="5" />
+				<StepTip TargetText="al dente" ToolTipID="6" />
+			</StepTips>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="3">
+			<StepText>Meanwhile, melt 4 tablespoons butter in the same skillet. Saute the diced onion, 2 cloves minced garlic, and the 8 ounce package of sliced mushrooms until the onions are transparent.</StepText>
+			<Title>Start Sauce - Add butter, onion, garlic, and mushrooms</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook3.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="4">
+			<StepText>Stir in 1/3 cup flour, 1 tbsp. salt and 3/4 tsp. pepper; cook 2 minutes. Slowly add 3 cups milk and 1 cup half-and-half, stirring until smooth and creamy. Stir in 3/4 cup Parmesan and 8 ounces of Colby-Monterey Jack cheeses; stir until cheese is melted.</StepText>
+			<Title>Add Flour, Salt, Pepper, Milk, and Cheese</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook4.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="5">
+			<StepText>Stir in chicken mixture, 3 diced roma tomatoes and 1/2 cup sour cream. Serve over cooked fettuccini.</StepText>
+			<Title>Add Chicken Mixture, Tomatoes, &amp; Sour Cream</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook5.png</image>
+			</Images>
+		</RecipeStep>
+	</RecipeSteps>
+	
+	
+	
+</Recipe>
