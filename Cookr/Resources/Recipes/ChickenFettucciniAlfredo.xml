@@ -113,10 +113,17 @@
 			</Images>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="4">
-			<StepText>Stir in 1/3 cup flour, 1 tbsp. salt and 3/4 tsp. pepper; cook 2 minutes. Slowly add 3 cups milk and 1 cup half-and-half, stirring until smooth and creamy. Stir in 3/4 cup Parmesan and 8 ounces of Colby-Monterey Jack cheeses; stir until cheese is melted. Stir in chicken mixture, 3 diced roma tomatoes and 1/2 cup sour cream. Serve over cooked fettuccini.</StepText>
-			<Title>Finish Sauce</Title>
+			<StepText>Stir in 1/3 cup flour, 1 tbsp. salt and 3/4 tsp. pepper; cook 2 minutes. Slowly add 3 cups milk and 1 cup half-and-half, stirring until smooth and creamy. Stir in 3/4 cup Parmesan and 8 ounces of Colby-Monterey Jack cheeses; stir until cheese is melted.</StepText>
+			<Title>Add Flour, Salt, Pepper, Milk, and Cheese</Title>
 			<Images>
 				<image>ChickenFettucciniAlfredo-Cook4.png</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="5">
+			<StepText>Stir in chicken mixture, 3 diced roma tomatoes and 1/2 cup sour cream. Serve over cooked fettuccini.</StepText>
+			<Title>Add Chicken Mixture, Tomatoes, &amp; Sour Cream</Title>
+			<Images>
+				<image>ChickenFettucciniAlfredo-Cook5.png</image>
 			</Images>
 		</RecipeStep>
 	</RecipeSteps>
