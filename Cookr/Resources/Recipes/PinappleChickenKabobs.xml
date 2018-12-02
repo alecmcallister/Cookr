@@ -39,15 +39,16 @@
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP cook 1. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<ToolTip Id="2" Text="Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="3" Text="TODO: THIS WILL BE FOR MEDIUM HIGH HEAT IN STEP cook 1. ">
+		<ToolTip Id="3" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium-high heat would be somewhere between 6 and 8 on the knob. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
 			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="4" Text="TODO: THIS WILL BE FOR OIL THE GRILL IN STEP Cook 1. Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
+		<ToolTip Id="4" Text="Dip a paper towel into the cooking oil without saturating it. You want to coat the grate, but do not want the oil dripping. Make sure to use an oven mitt and tongs to run the paper towl over the grate!">
 			<Images>
 				<image>Tooltip-OilGrill.PNG</image>
 			</Images>

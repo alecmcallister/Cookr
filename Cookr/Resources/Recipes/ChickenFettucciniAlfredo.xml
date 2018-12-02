@@ -68,6 +68,11 @@
 			<Images>
 			</Images>
 		</ToolTip>
+		<ToolTip Id="7" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
 	</ToolTips>
 	
 	<RecipeSteps>
@@ -93,6 +98,9 @@
 			<Images>
 				<image>ChickenFettucciniAlfredo-Cook1.png</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="7" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
 			<StepText>Bring a large pot of lightly salted water to a boil. Add 1 pound fettuccini pasta and cook for 8 to 10 minutes or until al dente; drain. Note that you should continue on to the next step while you wait for the pasta to cook!</StepText>

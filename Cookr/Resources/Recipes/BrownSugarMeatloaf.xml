@@ -37,7 +37,7 @@
 				<image>Tooltip-CookingSpray.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="2" Text="TODO: THIS WILL BE FOR PREHEAT IN STEP prep 2. Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
+		<ToolTip Id="2" Text="Preheating means to heat up an oven, grill, or similar appliance before cooking something.">
 			<Images>
 			</Images>
 		</ToolTip>

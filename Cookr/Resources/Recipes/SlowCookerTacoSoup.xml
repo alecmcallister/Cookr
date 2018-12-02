@@ -32,8 +32,9 @@
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Id="1" Text="THIS WILL BE FOR MEDIUM HEAT IN STEP Cook 1 - TODO">
+		<ToolTip Id="1" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
 			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
 			</Images>
 		</ToolTip>
 		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">

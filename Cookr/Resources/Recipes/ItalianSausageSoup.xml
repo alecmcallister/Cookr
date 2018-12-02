@@ -26,10 +26,6 @@
 		<Ingredient Name="Salt" Quantity="1/4 teaspoon" Optional="0"/>
 	</Ingredients>
 	
-    1 clove garlic, minced - TODO - Make prep step to mince it
-    2 small zucchini, cubed - TODO - Prep step to cube
-	TODO - Explain "Italian style Stewed Tomatoes"
-	
 	<Tools>
 		<Tool Name="Stockpot OR Dutch Oven" ToolTipID="2"/>
 	</Tools>

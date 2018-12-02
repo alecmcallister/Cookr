@@ -47,6 +47,16 @@
 				<image>Tooltip-Onion.jpg</image>
 			</Images>
 		</ToolTip>
+		<ToolTip Id="5" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium heat would be 5 on the knob. Generally, you want to choose the middle number. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob.">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="6" Text="Most ovens will have a dial with numbers between 1 and 9. In that case, medium-low heat would be somewhere between 2 and 4 on the knob. Every oven is different however, so pay attention - If your food consistently cooks too quickly, reduce the knob. If it consistently cooks too slow, increase the knob">
+			<Images>
+				<image>StoveTempKnob-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
 	</ToolTips>
 
 	<RecipeSteps>
@@ -74,6 +84,9 @@
 			<Images>
 				<image>AsparagusSoup-Cook1.jpg</image>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="5" />
+			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
 			<StepText>Add 1-1/2 lb. (675 g) trimmed chopped asparagus, 1 minced small garlic clove, and 2-1/2 cups chicken broth to the saucepan/nBring to a boil, stirring occasionally. Then cover and simmer on medium-low heat for 15 minutes, or until vegetables are very tender.</StepText>
@@ -83,6 +96,7 @@
 			</Images>
 			<StepTips>
 				<StepTip TargetText="simmer" ToolTipID="3" />
+				<StepTip TargetText="medium-low heat" ToolTipID="6" />
 			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="3">
@@ -98,6 +112,9 @@
 			<Title>Return mixture to saucepan</Title>
 			<Images>
 			</Images>
+			<StepTips>
+				<StepTip TargetText="medium heat" ToolTipID="5" />
+			</StepTips>
 		</RecipeStep>
 	</RecipeSteps>
 </Recipe>
