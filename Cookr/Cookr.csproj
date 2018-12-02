@@ -266,6 +266,29 @@
     <Resource Include="Images\Simmer-Tooltip.jpg" />
     <Resource Include="Images\Stockpot-Tooltip.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GreatNorthernBeans-Tooltip.jpg" />
+    <Resource Include="Images\SlowCookerPotRoast-Prep1-1.png" />
+    <Resource Include="Images\SlowCookerPotRoast-Prep1-2.png" />
+    <Resource Include="Images\SlowCookerPotRoast-Title.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ItalianSeasoning-Tooltip.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ChickenFettucciniAlfredo-Cook1.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Cook2.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Cook3.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Cook4.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Prep1.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Prep2-1.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Prep2-2.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Prep2-3.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Title.png" />
+    <Resource Include="Images\ChickenFettucciniAlfredo-Tooltip5.png" />
+    <Resource Include="Images\Fettuccini-Tooltip.jpg" />
+    <Resource Include="Images\RomaTomatoes-Tooltip.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>

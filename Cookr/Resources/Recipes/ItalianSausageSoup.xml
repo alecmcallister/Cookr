@@ -19,7 +19,7 @@
 		<Ingredient Name="Beef Broth" Quantity="2 (14 ounce) cans" Optional="0"/>
 		<Ingredient Name="Italian-style Stewed Tomatoes" Quantity="1 (14.5 ounce) can" Optional="0"/>
 		<Ingredient Name="Sliced Carrots" Quantity="1 Cup" Optional="0"/>
-		<Ingredient Name="Great Northern Beans, undrained" Quantity="1 (14.5 ounce) can" Optional="0"/>
+		<Ingredient Name="Great Northern Beans, undrained" Quantity="1 (14.5 ounce) can" Optional="0" ToolTipID="1"/>
 		<Ingredient Name="Small Zucchini" Quantity="2" Optional="0"/>
 		<Ingredient Name="Spinach - Packed, rinsed, and torn" Quantity="2 cups" Optional="0"/>
 		<Ingredient Name="Ground Black Pepper" Quantity="1/4 teaspoon" Optional="0"/>
@@ -31,22 +31,27 @@
 	TODO - Explain "Italian style Stewed Tomatoes"
 	
 	<Tools>
-		<Tool Name="Stockpot OR Dutch Oven" ToolTipID="1"/>
+		<Tool Name="Stockpot OR Dutch Oven" ToolTipID="2"/>
 	</Tools>
 	
 	<ToolTips>
-		<ToolTip Id="1" Text="A stockpot and a dutch oven: ">
+		<ToolTip Id="1" Text="Great Northern Beans are white medium sized beans a bit larger than a navy bean. They may also be referred to as 'White Beans'.">
+			<Images>
+				<image>GreatNorthernBeans-Tooltip.jpg</image>
+			</Images>
+		</ToolTip>
+		<ToolTip Id="2" Text="A stockpot and a dutch oven: ">
 			<Images>
 				<image>Stockpot-Tooltip.jpg</image>
 				<image>DutchOven-Tooltip.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="2" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
+		<ToolTip Id="3" Text="Browning means to cook the surface of meat, which results in a brown colour. Note that this does not necessarily mean the meat is cooked - In most cases it will be further cooked with other ingredients!">
 			<Images>
 				<image>BrownedGroundMeat-Tooltip.jpg</image>
 			</Images>
 		</ToolTip>
-		<ToolTip Id="3" Text="Heating just below the boiling point, with only small bubbles.">
+		<ToolTip Id="4" Text="Heating just below the boiling point, with only small bubbles.">
 			<Images>
 				<image>Simmer-Tooltip.jpg</image>
 			</Images>
@@ -71,8 +76,8 @@
 				<image>ItalianSausageSoup-Cook1-2.png</image>
 			</Images>
 			<StepTips>
-				<StepTip TargetText="brown" ToolTipID="2" />
-				<StepTip TargetText="simmer" ToolTipID="3" />
+				<StepTip TargetText="brown" ToolTipID="3" />
+				<StepTip TargetText="simmer" ToolTipID="4" />
 			</StepTips>
 		</RecipeStep>
 		<RecipeStep Type="Cook" Number="2">
