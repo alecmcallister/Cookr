@@ -14,7 +14,64 @@
         <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="194,25,0,0" VerticalAlignment="Top" Width="75" Click="HomeBtn_Click"/>
         <TextBox x:Name="SearchField" HorizontalAlignment="Left" Height="23" Margin="295,25,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120" KeyDown="SearchField_KeyDown"/>
         <Button x:Name="button" Content="Search" HorizontalAlignment="Left" Margin="420,25,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <StackPanel Name="SearchResultsStack" Background="Azure" Orientation="Horizontal" HorizontalAlignment="Left" Height="357" Margin="88,203,0,0" VerticalAlignment="Top" Width="694"/>
         <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="580,45,0,0" VerticalAlignment="Top" Width="76" Click="BackBtn_Click"/>
+        
+        <Grid HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="694" Margin="88,203,0,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Expander x:Name="SortFilter" Header="Sort/Filter" >
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Sort by:" />
+                    <TextBlock Grid.Column="1" Text="Min. Rating:" />
+                    <TextBlock Grid.Column="2" Grid.ColumnSpan="4" Text="Max. Cook time:" />
+                    <TextBlock Grid.Column="6" Grid.ColumnSpan="2" Text="Include Ingredients:" />
+                    <TextBlock Grid.Column="8" Grid.ColumnSpan="2" Text="Exclude Ingredients:" />
+                    <ComboBox Grid.Row="1" x:Name="comboBoxSortBy" SelectedIndex="0">
+                        <ComboBoxItem>Rating</ComboBoxItem>
+                        <ComboBoxItem>Cook Time</ComboBoxItem>
+                        <ComboBoxItem>Relevance</ComboBoxItem>
+                    </ComboBox>
+                    <ComboBox Grid.Row="1" Grid.Column="1" x:Name="comboBoxMinRating" SelectedIndex="0">
+                        <ComboBoxItem>1</ComboBoxItem>
+                        <ComboBoxItem>2</ComboBoxItem>
+                        <ComboBoxItem>3</ComboBoxItem>
+                        <ComboBoxItem>4</ComboBoxItem>
+                        <ComboBoxItem>5</ComboBoxItem>
+                    </ComboBox>
+                    <TextBox x:Name="textBoxMaxCookHours" Grid.Row="1" Grid.Column="2"/>
+                    <TextBlock Grid.Row="1" Grid.Column="3" Text="h"/>
+                    <TextBox x:Name="textBoxMaxCookMinutes" Grid.Row="1" Grid.Column="4"/>
+                    <TextBlock Grid.Row="1" Grid.Column="5" Text="m"/>
+                    <TextBox x:Name="textBoxIncludeIngredient" Grid.Row="1" Grid.Column="6"/>
+                    <Button x:Name="buttonIncludeIngredient" Grid.Row="1" Grid.Column="7" Content="+"/>
+                    <TextBox x:Name="textBoxExcludeIngredient" Grid.Row="1" Grid.Column="8"/>
+                    <Button x:Name="buttonExcludeIngredient" Grid.Row="1" Grid.Column="9" Content="+"/>
+                    <ListBox x:Name="listBoxIncludeIngredients" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2"/>
+                    <ListBox x:Name="listBoxExcludeIngredients" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2"/>
+                </Grid>
+            </Expander>
+            <StackPanel Grid.Row="1" Name="SearchResultsStack" Background="Azure" Orientation="Horizontal" />
+            <!-- HorizontalAlignment="Left" Height="357" Margin="0,0,0,0" VerticalAlignment="Top" Width="694"-->
+        </Grid>
+        <Button x:Name="buttonClearFilters" Content="Clear Filters" HorizontalAlignment="Left" Margin="194,205,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Page>
