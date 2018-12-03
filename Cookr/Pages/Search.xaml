@@ -45,7 +45,7 @@
                     <TextBlock Grid.Column="2" Grid.ColumnSpan="4" Text="Max. Cook time:" />
                     <TextBlock Grid.Column="6" Grid.ColumnSpan="2" Text="Include Ingredients:" />
                     <TextBlock Grid.Column="8" Grid.ColumnSpan="2" Text="Exclude Ingredients:" />
-                    <ComboBox Grid.Row="1" x:Name="comboBoxSortBy" SelectedIndex="0">
+                    <ComboBox Grid.Row="1" x:Name="comboBoxSortBy" SelectedIndex="0" SelectedValuePath="Content">
                         <ComboBoxItem>Rating</ComboBoxItem>
                         <ComboBoxItem>Cook Time</ComboBoxItem>
                         <ComboBoxItem>Relevance</ComboBoxItem>
