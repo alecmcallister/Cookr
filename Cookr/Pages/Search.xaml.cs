@@ -153,15 +153,15 @@ namespace Cookr.Pages
         private void ComboBoxSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             SearchEngine.SortBy sortBy;
-            if (comboBoxSortBy.SelectedItem.Equals("Rating"))
+            if (comboBoxSortBy.SelectedValue.Equals("Rating"))
             {
                 sortBy = SearchEngine.SortBy.Rating;
             }
-            else if (comboBoxSortBy.SelectedItem.Equals("Cook Time"))
+            else if (comboBoxSortBy.SelectedValue.Equals("Cook Time"))
             {
                 sortBy = SearchEngine.SortBy.CookTime;
             }
-            else if (comboBoxSortBy.SelectedItem.Equals("Relevance"))
+            else if (comboBoxSortBy.SelectedValue.Equals("Relevance"))
             {
                 sortBy = SearchEngine.SortBy.Relevance;
             }
