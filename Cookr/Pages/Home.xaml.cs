@@ -15,77 +15,38 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cookr.Pages
+namespace Cookr
 {
-    public partial class Home : Page, CookrPage
-    {
-        public Home()
-        {
-            InitializeComponent();
-            Load_PopularToday();
-            BackBtn.Visibility = Visibility.Collapsed;
-        }
+	public partial class Home : Page, CookrPage
+	{
+		public Home()
+		{
+			InitializeComponent();
+			Load_PopularToday();
 
-        private void BtnSearch_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationManager.NavigateToSearch(SearchField.Text);
-        }
+			Searchbar.SearchEvent += (s => { NavigationManager.NavigateToSearch(s); Searchbar.Text = ""; });
+		}
 
-        private void SearchField_GotFocus(object sender, RoutedEventArgs e)
-        {
-            if (SearchField.Text == "Search")
-            {
-                SearchField.Text = "";
-                SearchField.Foreground = Brushes.Black;
-            }
-        }
+		private void Load_PopularToday()
+		{
+			List<RecipeObject> recipes = RecipeManager.GetRecipes();
+			List<RecipeCard> popularToday = new List<RecipeCard>();
+			recipes.ForEach(recipe =>
+			{
+				if (recipe.PopularToday)
+					popularToday.Add(new RecipeCard(recipe));
+			});
+			popularToday.ForEach(recipe => PopularTodayStack.Children.Add(recipe));
+		}
 
-        private void Load_PopularToday()
-        {
-            List<RecipeObject> recipes = RecipeManager.GetRecipes();
-            List<RecipeCard> popularToday = new List<RecipeCard>();
-            recipes.ForEach(recipe => {
-                if (recipe.PopularToday)
-                    popularToday.Add(new RecipeCard(recipe));
-            });
-            popularToday.ForEach(recipe => PopularTodayStack.Children.Add(recipe));
-        }
+		private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+			NavigationManager.NavigateToSearch("Pizza");
+		}
 
-        private void SearchField_LostFocus(object sender, RoutedEventArgs e)
-        {
-            if (SearchField.Text == "")
-            {
-                SearchField.Text = "Search";
-                SearchField.Foreground = Brushes.LightGray;
-            }
-        }
+		public void SetBackButton()
+		{
 
-        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            NavigationManager.NavigateToSearch("Pizza");
-        }
-
-        private void SearchField_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.Key == Key.Enter)
-            {
-                NavigationManager.NavigateToSearch(SearchField.Text);
-            }
-        }
-
-        private void BackButton_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationManager.NavigateToPrev();
-        }
-
-        public void SetBackButton()
-        {
-            if (!NavigationManager.allowPrev())
-            {
-                BackBtn.Visibility = Visibility.Collapsed;
-            }
-            else
-                BackBtn.Visibility = Visibility.Visible;
-        }
-    }
+		}
+	}
 }

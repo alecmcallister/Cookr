@@ -1,13 +1,80 @@
-﻿<UserControl x:Class="Cookr.UserControls.RecipeCard"
+﻿<UserControl x:Class="Cookr.RecipeCard"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Cookr.UserControls"
+             xmlns:local="clr-namespace:Cookr"
              mc:Ignorable="d" 
-             d:DesignHeight="75" d:DesignWidth="150">
-    <Grid Height="75" Width="150"  Background="LightGray" Margin="3" MouseDown="Grid_MouseDown">
-        <Label Name="Title"  Content="Recipe Name" HorizontalAlignment="Left" Margin="3,0,0,0" VerticalAlignment="Top"/>
+             d:DesignHeight="150" d:DesignWidth="150"
+			 Height="305" Width="305">
+	<UserControl.Resources>
 
-    </Grid>
+	</UserControl.Resources>
+
+	<Grid x:Name="RecipeCardGrid" Margin="10" >
+
+		<Border Background="{StaticResource FG-Brush}" CornerRadius="{StaticResource CornerRadius}" MouseDown="RecipeCardMouseDown" >
+			<Border.Effect>
+				<DropShadowEffect x:Name="RecipeCardShadow" BlurRadius="3" Opacity="0.3" Direction="270" ShadowDepth="1"/>
+			</Border.Effect>
+			<Grid>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="*"/>
+					<RowDefinition Height="40"/>
+				</Grid.RowDefinitions>
+
+				<Border Margin="5" CornerRadius="10">
+					<Border Name="RecipeCardImage" CornerRadius="10">
+						<Border.Background>
+							<ImageBrush>
+								<ImageBrush.RelativeTransform>
+									<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1" ScaleY="1" />
+								</ImageBrush.RelativeTransform>
+							</ImageBrush>
+						</Border.Background>
+					</Border>
+				</Border>
+				
+				<TextBlock x:Name="RecipeCardTitle" 
+						   HorizontalAlignment="Center"
+						   Margin="{StaticResource MarginThickness}"
+						   TextWrapping="Wrap"
+						   FontSize="{StaticResource Text-Large}"
+						   Foreground="{StaticResource Text-Light-Brush}"
+						   Text="Recipe"/>
+				
+				
+				<Grid Grid.Row="1" Margin="10,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<Grid Grid.Column="0" Margin="10,0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="0"/>
+						<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="1"/>
+						<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="2"/>
+						<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="3"/>
+						<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="4"/>
+					</Grid>
+
+					<Grid Grid.Column="1" Margin="10,0">
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+							<TextBlock Style="{DynamicResource Icon}" Text="{DynamicResource Time-Icon}" Foreground="{StaticResource Text-Dark-Brush}" />
+							<TextBlock x:Name="RecipeDurationText" VerticalAlignment="Center" Text="0:00" Margin="2,0,0,0" FontFamily="{StaticResource RobotoLight}"/>
+						</StackPanel>
+					</Grid>
+
+				</Grid>
+				
+
+			</Grid>
+		</Border>
+	</Grid>
 </UserControl>

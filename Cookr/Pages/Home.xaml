@@ -1,27 +1,47 @@
-﻿<Page x:Class="Cookr.Pages.Home"
+﻿<Page x:Class="Cookr.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Cookr.Pages"
+      xmlns:local="clr-namespace:Cookr"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="900"
-      Title="Home"
-      Background="White">
+      d:DesignHeight="900" d:DesignWidth="1200"
+      Title="Home">
+	<Page.Resources>
 
-    <Grid >
-        <Label x:Name="label" Content="Cookr" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" FontFamily="MV Boli"/>
-        <TextBox x:Name="SearchField" HorizontalAlignment="Left" Height="36" Margin="256,69,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="164" FontSize="24" FontFamily="MV Boli" Foreground="#FF8B8B8B" GotFocus="SearchField_GotFocus" LostFocus="SearchField_LostFocus" KeyDown="SearchField_KeyDown"/>
-        <Button x:Name="BtnSearch" Content="Search" HorizontalAlignment="Left" Margin="435,82,0,0" VerticalAlignment="Top" Width="75" Click="BtnSearch_Click"/>
-        <StackPanel Name="PopularTodayStack" Orientation="Vertical" HorizontalAlignment="Left" Background="AntiqueWhite" Height="467" Margin="51,192,0,0" VerticalAlignment="Top" Width="161"
-          >
-        </StackPanel>
-        <Label Content="Popular Today" HorizontalAlignment="Left" Margin="51,160,0,0" VerticalAlignment="Top"/>
-        <Label Content="Categories" HorizontalAlignment="Left" Margin="300,174,0,0" VerticalAlignment="Top" Height="30" Width="93"/>
-        <Grid HorizontalAlignment="Left" Height="55" Background="Beige"  Margin="312,209,0,0" VerticalAlignment="Top" Width="108" MouseDown="Grid_MouseDown">
-            <TextBlock Text="Pizza" HorizontalAlignment="Center"
-                       VerticalAlignment="Center" TextAlignment="Center"/>
-        </Grid>
-        <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="641,54,0,0" VerticalAlignment="Top" Width="97" Click="BackButton_Click"/>
-    </Grid>
+	</Page.Resources>
+
+	<Grid>
+		<Grid Background="{StaticResource BG-Brush}">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="200"/>
+				<RowDefinition Height="60"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Grid Grid.Row="0" Background="{StaticResource Primary-Brush}">
+
+				<local:SearchbarControl x:Name="Searchbar" />
+
+			</Grid>
+
+			<StackPanel Grid.Row="1" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}" Effect="{DynamicResource DropShadow}" Panel.ZIndex="1">
+				<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0">
+					<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Category" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
+				</Border>
+			</StackPanel>
+
+			<ScrollViewer Grid.Row="2">
+
+				<WrapPanel x:Name="PopularTodayStack" 
+					   Orientation="Horizontal"
+					   VerticalAlignment="Top"
+					   Margin="10">
+					<local:RecipeCard />
+				</WrapPanel>
+			</ScrollViewer>
+		</Grid>
+
+
+	</Grid>
 </Page>

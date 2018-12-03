@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Cookr">
+
+
+	<Color x:Key="Primary">#448aff</Color>
+	<SolidColorBrush x:Key="Primary-Brush" Color="{StaticResource Primary}" />
+
+	<Color x:Key="Primary-Light">#83b9ff</Color>
+	<SolidColorBrush x:Key="Primary-Light-Brush" Color="{StaticResource Primary-Light}" />
+
+	<Color x:Key="Primary-Dark">#005ecb</Color>
+	<SolidColorBrush x:Key="Primary-Dark-Brush" Color="{StaticResource Primary-Dark}" />
+
+	<Color x:Key="FG">#ffffff</Color>
+	<SolidColorBrush x:Key="FG-Brush" Color="{StaticResource FG}" />
+
+	<Color x:Key="BG">#eeeeee</Color>
+	<SolidColorBrush x:Key="BG-Brush" Color="{StaticResource BG}" />
+
+	<Color x:Key="BG-Dark">#bcbcbc</Color>
+	<SolidColorBrush x:Key="BG-Dark-Brush" Color="{StaticResource BG-Dark}" />
+
+	<Color x:Key="Text-Light">#fff</Color>
+	<SolidColorBrush x:Key="Text-Light-Brush" Color="{StaticResource Text-Light}" />
+
+	<Color x:Key="Text-Dark">#222222</Color>
+	<SolidColorBrush x:Key="Text-Dark-Brush" Color="{StaticResource Text-Dark}" />
+
+	<Color x:Key="Star">#fff176</Color>
+	<SolidColorBrush x:Key="Star-Brush" Color="{StaticResource Star}" />
+
+	<Color x:Key="Inactive">#888888</Color>
+	<SolidColorBrush x:Key="Inactive-Brush" Color="{StaticResource Inactive}" />
+
+	<Color x:Key="Inactive-Light">#ccc</Color>
+	<SolidColorBrush x:Key="Inactive-Light-Brush" Color="{StaticResource Inactive-Light}" />
+
+	<LinearGradientBrush x:Key="RecipeStepBrush" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FFE5E5E5" Offset="0"/>
+		<GradientStop Color="#FFD4D4D4" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BlueGradient" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FF57A3E5" Offset="0"/>
+		<GradientStop Color="#FF445DFF" Offset="1"/>
+	</LinearGradientBrush>
+
+	<DropShadowEffect x:Key="DropShadow" BlurRadius="3" Opacity="0.3" Direction="270" ShadowDepth="1"/>
+	<DropShadowEffect x:Key="DropShadow-L" BlurRadius="5" Opacity="0.6" Direction="270" ShadowDepth="2"/>
+
+</ResourceDictionary>
