@@ -24,11 +24,11 @@
 				</Grid.RowDefinitions>
 
 				<Border Margin="5" CornerRadius="10">
-					<Border Name="RecipeCardImage" CornerRadius="10">
+					<Border Name="RecipeCardImage" CornerRadius="10,10,0,0">
 						<Border.Background>
 							<ImageBrush>
 								<ImageBrush.RelativeTransform>
-									<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1" ScaleY="1" />
+									<ScaleTransform CenterX="0.5" CenterY="0.5" ScaleX="1.05" ScaleY="1.05" />
 								</ImageBrush.RelativeTransform>
 							</ImageBrush>
 						</Border.Background>

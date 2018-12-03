@@ -41,7 +41,7 @@ namespace Cookr
 			string duration = total.ToString("g");
 			RecipeDurationText.Text = duration.Substring(0, duration.LastIndexOf(':'));
 
-			ScaleTransform st = new ScaleTransform(1f, 1f, 0.5f, 0.5f);
+			ScaleTransform st = new ScaleTransform(1.05f, 1.05f, 0.5f, 0.5f);
 			RecipeCardImage.Background.RelativeTransform = st;
 		}
 
@@ -80,7 +80,7 @@ namespace Cookr
 		{
 			DoubleAnimation scalex = new DoubleAnimation()
 			{
-				To = 1.05f,
+				To = 1.1f,
 				Duration = new Duration(TimeSpan.FromSeconds(upTime)),
 				EasingFunction = upEase
 			};
@@ -120,7 +120,7 @@ namespace Cookr
 		{
 			DoubleAnimation scalex = new DoubleAnimation()
 			{
-				To = 1f,
+				To = 1.05f,
 				Duration = new Duration(TimeSpan.FromSeconds(downTime)),
 				EasingFunction = downEase
 			};
