@@ -11,6 +11,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -24,7 +25,8 @@ namespace Cookr
 			InitializeComponent();
 			Load_PopularToday();
 
-			Searchbar.SearchEvent += (s => { NavigationManager.NavigateToSearch(s); Searchbar.Text = ""; });
+			Searchbar.SearchEvent += s => { NavigationManager.NavigateToSearch(s); Searchbar.Text = ""; };
+			ExpandCategoriesButton.ToggleButtonEvent += b => { ExpandTheThing(null, null); };
 		}
 
 		private void Load_PopularToday()
@@ -48,5 +50,44 @@ namespace Cookr
 		{
 
 		}
+
+		#region Animation
+
+		bool animating;
+		bool expanded;
+		IEasingFunction easeFunction = new CubicEase();
+		float animationTime = 0.3f;
+
+		async void ExpandTheThing(object sender, RoutedEventArgs e)
+		{
+			if (animating)
+				return;
+
+			animating = true;
+
+			expanded = !expanded;
+			double height = expanded ? 150f : 0f;
+
+			await ChangeExpandableGridHeight(height);
+
+			animating = false;
+		}
+
+		async Task ChangeExpandableGridHeight(double height)
+		{
+			DoubleAnimation animation = new DoubleAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(animationTime)),
+				From = AllCategoriesExpandablePanel.ActualHeight,
+				To = height,
+				EasingFunction = easeFunction
+			};
+
+			AllCategoriesExpandablePanel.BeginAnimation(HeightProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(animationTime));
+		}
+
+		#endregion
 	}
 }

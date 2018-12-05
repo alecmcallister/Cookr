@@ -8,12 +8,12 @@
              d:DesignHeight="150" d:DesignWidth="150"
 			 Height="305" Width="305">
 	<UserControl.Resources>
-
+		<SolidColorBrush x:Key="BGNormal" Color="{StaticResource FG}"></SolidColorBrush>
 	</UserControl.Resources>
 
 	<Grid x:Name="RecipeCardGrid" Margin="10" >
 
-		<Border Background="{StaticResource FG-Brush}" CornerRadius="{StaticResource CornerRadius}" MouseDown="RecipeCardMouseDown" >
+		<Border Background="{DynamicResource BGNormal}" CornerRadius="{StaticResource CornerRadius}" MouseDown="RecipeCardMouseDown" >
 			<Border.Effect>
 				<DropShadowEffect x:Name="RecipeCardShadow" BlurRadius="3" Opacity="0.3" Direction="270" ShadowDepth="1"/>
 			</Border.Effect>

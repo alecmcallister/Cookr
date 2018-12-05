@@ -1,77 +1,115 @@
-﻿<Page x:Class="Cookr.Pages.Search"
+﻿<Page x:Class="Cookr.Search"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Cookr.Pages"
+      xmlns:local="clr-namespace:Cookr"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="900"
-      Background="White"
+      d:DesignHeight="900" d:DesignWidth="1200"
       Title="Search">
 
-    <Grid>
-        <Label x:Name="SearchedLabel" Content="Label" HorizontalAlignment="Left" Margin="295,77,0,0" VerticalAlignment="Top" FontSize="72" FontWeight="Bold" FontFamily="MV Boli"/>
-        <Button x:Name="HomeBtn" Content="Home" HorizontalAlignment="Left" Margin="194,25,0,0" VerticalAlignment="Top" Width="75" Click="HomeBtn_Click"/>
-        <TextBox x:Name="SearchField" HorizontalAlignment="Left" Height="23" Margin="295,25,0,0" TextWrapping="Wrap" Text="Search" VerticalAlignment="Top" Width="120" KeyDown="SearchField_KeyDown"/>
-        <Button x:Name="button" Content="Search" HorizontalAlignment="Left" Margin="420,25,0,0" VerticalAlignment="Top" Width="75" Click="button_Click"/>
-        <Button Name="BackBtn" Content="Back" HorizontalAlignment="Left" Margin="580,45,0,0" VerticalAlignment="Top" Width="76" Click="BackBtn_Click"/>
-        
-        <Grid HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="694" Margin="88,203,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="Auto" />
-            </Grid.RowDefinitions>
-            <Expander x:Name="SortFilter" Header="Sort/Filter" >
-                <Grid Background="#FFE5E5E5">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Text="Sort by:" />
-                    <TextBlock Grid.Column="1" Text="Min. Rating:" />
-                    <TextBlock Grid.Column="2" Grid.ColumnSpan="4" Text="Max. Cook time:" />
-                    <TextBlock Grid.Column="6" Grid.ColumnSpan="2" Text="Include Ingredients:" />
-                    <TextBlock Grid.Column="8" Grid.ColumnSpan="2" Text="Exclude Ingredients:" />
-                    <ComboBox Grid.Row="1" x:Name="comboBoxSortBy" SelectedIndex="0" SelectedValuePath="Content">
-                        <ComboBoxItem>Rating</ComboBoxItem>
-                        <ComboBoxItem>Cook Time</ComboBoxItem>
-                        <ComboBoxItem>Relevance</ComboBoxItem>
-                    </ComboBox>
-                    <ComboBox Grid.Row="1" Grid.Column="1" x:Name="comboBoxMinRating" SelectedIndex="0">
-                        <ComboBoxItem>1</ComboBoxItem>
-                        <ComboBoxItem>2</ComboBoxItem>
-                        <ComboBoxItem>3</ComboBoxItem>
-                        <ComboBoxItem>4</ComboBoxItem>
-                        <ComboBoxItem>5</ComboBoxItem>
-                    </ComboBox>
-                    <TextBox x:Name="textBoxMaxCookHours" Grid.Row="1" Grid.Column="2"/>
-                    <TextBlock Grid.Row="1" Grid.Column="3" Text="h"/>
-                    <TextBox x:Name="textBoxMaxCookMinutes" Grid.Row="1" Grid.Column="4"/>
-                    <TextBlock Grid.Row="1" Grid.Column="5" Text="m"/>
-                    <TextBox x:Name="textBoxIncludeIngredient" Grid.Row="1" Grid.Column="6"/>
-                    <Button x:Name="buttonIncludeIngredient" Grid.Row="1" Grid.Column="7" Content="+"/>
-                    <TextBox x:Name="textBoxExcludeIngredient" Grid.Row="1" Grid.Column="8"/>
-                    <Button x:Name="buttonExcludeIngredient" Grid.Row="1" Grid.Column="9" Content="+"/>
-                    <ListBox x:Name="listBoxIncludeIngredients" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2"/>
-                    <ListBox x:Name="listBoxExcludeIngredients" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2"/>
-                </Grid>
-            </Expander>
-            <StackPanel Grid.Row="1" Name="SearchResultsStack" Background="Azure" Orientation="Horizontal" />
-            <!-- HorizontalAlignment="Left" Height="357" Margin="0,0,0,0" VerticalAlignment="Top" Width="694"-->
-        </Grid>
-        <Button x:Name="buttonClearFilters" Content="Clear Filters" HorizontalAlignment="Left" Margin="194,205,0,0" VerticalAlignment="Top" Width="75"/>
-    </Grid>
+	<Page.Resources>
+
+	</Page.Resources>
+
+	<Grid>
+
+		<Grid.RowDefinitions>
+			<RowDefinition Height="60"/>
+			<RowDefinition Height="140"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Grid Grid.Row="0" Background="{StaticResource Primary-Brush}" Effect="{StaticResource DropShadow-L}" Panel.ZIndex="1">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<local:SearchbarControl x:Name="Searchbar" Grid.Column="1" Margin="5"/>
+			<local:HomeButton HorizontalAlignment="Left" Margin="20,0"/>
+			<local:BackButton HorizontalAlignment="Right" Margin="5"/>
+		</Grid>
+
+		<Grid Grid.Row="1" Background="{StaticResource Primary-Dark-Brush}">
+			<TextBlock 
+				FontSize="{StaticResource Text-Title}" 
+				Foreground="{StaticResource Text-Light-Brush}" 
+				FontFamily="{StaticResource RobotoLight}"
+				Margin="5" 
+				Text='" Search result "'
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Effect="{StaticResource DropShadow}"/>
+		</Grid>
+
+		<Grid Grid.Row="2" Background="{StaticResource BG-Brush}">
+			<StackPanel Orientation="Vertical">
+				<Grid x:Name="ExpandableGrid" Height="0">
+					<!-- Put filter stuff in here -->
+				</Grid>
+				<local:ToggleButtonControl/>
+			</StackPanel>
+		</Grid>
+
+		<Label x:Name="SearchedLabel" Content="Label" VerticalAlignment="Top" FontSize="72"/>
+
+		<Grid HorizontalAlignment="Left" Height="357" VerticalAlignment="Top" Width="694" Margin="88,203,0,0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+			</Grid.RowDefinitions>
+			<Expander x:Name="SortFilter" Header="Sort/Filter" >
+				<Grid Background="#FFE5E5E5">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+						<RowDefinition Height="Auto" />
+					</Grid.RowDefinitions>
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+						<ColumnDefinition Width="Auto" />
+					</Grid.ColumnDefinitions>
+					<TextBlock Text="Sort by:" />
+					<TextBlock Grid.Column="1" Text="Min. Rating:" />
+					<TextBlock Grid.Column="2" Grid.ColumnSpan="4" Text="Max. Cook time:" />
+					<TextBlock Grid.Column="6" Grid.ColumnSpan="2" Text="Include Ingredients:" />
+					<TextBlock Grid.Column="8" Grid.ColumnSpan="2" Text="Exclude Ingredients:" />
+					<ComboBox Grid.Row="1" x:Name="comboBoxSortBy" SelectedIndex="0" SelectedValuePath="Content">
+						<ComboBoxItem>Rating</ComboBoxItem>
+						<ComboBoxItem>Cook Time</ComboBoxItem>
+						<ComboBoxItem>Relevance</ComboBoxItem>
+					</ComboBox>
+					<ComboBox Grid.Row="1" Grid.Column="1" x:Name="comboBoxMinRating" SelectedIndex="0">
+						<ComboBoxItem>1</ComboBoxItem>
+						<ComboBoxItem>2</ComboBoxItem>
+						<ComboBoxItem>3</ComboBoxItem>
+						<ComboBoxItem>4</ComboBoxItem>
+						<ComboBoxItem>5</ComboBoxItem>
+					</ComboBox>
+					<TextBox x:Name="textBoxMaxCookHours" Grid.Row="1" Grid.Column="2"/>
+					<TextBlock Grid.Row="1" Grid.Column="3" Text="h"/>
+					<TextBox x:Name="textBoxMaxCookMinutes" Grid.Row="1" Grid.Column="4"/>
+					<TextBlock Grid.Row="1" Grid.Column="5" Text="m"/>
+					<TextBox x:Name="textBoxIncludeIngredient" Grid.Row="1" Grid.Column="6"/>
+					<Button x:Name="buttonIncludeIngredient" Grid.Row="1" Grid.Column="7" Content="+"/>
+					<TextBox x:Name="textBoxExcludeIngredient" Grid.Row="1" Grid.Column="8"/>
+					<Button x:Name="buttonExcludeIngredient" Grid.Row="1" Grid.Column="9" Content="+"/>
+					<ListBox x:Name="listBoxIncludeIngredients" Grid.Row="2" Grid.Column="6" Grid.ColumnSpan="2"/>
+					<ListBox x:Name="listBoxExcludeIngredients" Grid.Row="2" Grid.Column="8" Grid.ColumnSpan="2"/>
+				</Grid>
+			</Expander>
+			<StackPanel Grid.Row="1" Name="SearchResultsStack" Background="Azure" Orientation="Horizontal" />
+			<!-- HorizontalAlignment="Left" Height="357" Margin="0,0,0,0" VerticalAlignment="Top" Width="694"-->
+		</Grid>
+		<Button x:Name="buttonClearFilters" Content="Clear Filters" HorizontalAlignment="Left" Margin="194,205,0,0" VerticalAlignment="Top" Width="75"/>
+	</Grid>
 </Page>

@@ -15,30 +15,69 @@
 		<Grid Background="{StaticResource BG-Brush}">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="200"/>
-				<RowDefinition Height="60"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
 
-			<Grid Grid.Row="0" Background="{StaticResource Primary-Brush}">
+			<Grid Grid.Row="0" Background="{StaticResource Primary-Brush}" Effect="{StaticResource DropShadow-L}" Panel.ZIndex="1">
 
-				<local:SearchbarControl x:Name="Searchbar" />
+				<StackPanel>
+					<TextBlock 
+						FontSize="{StaticResource Text-Title}" 
+						Effect="{StaticResource DropShadow}" 
+						Foreground="{StaticResource Text-Light-Brush}" 
+						HorizontalAlignment="Center" 
+						Margin="20" >
+						Cook<Run 
+							Foreground="{StaticResource Inactive-Light-Brush}">\
+						</Run><Run 
+							Foreground="{StaticResource Star-Brush}">r
+						</Run>
+					</TextBlock>
+					
+					<!-- Searchbar thing -->
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<local:SearchbarControl x:Name="Searchbar" Grid.Column="1" />
+						<StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+							<local:HomeButton HorizontalAlignment="Right"/>
+							<local:BackButton HorizontalAlignment="Right"/>
+
+						</StackPanel>
+					</Grid>
+
+				</StackPanel>
 
 			</Grid>
 
-			<StackPanel Grid.Row="1" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}" Effect="{DynamicResource DropShadow}" Panel.ZIndex="1">
-				<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0">
-					<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Category" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
-				</Border>
-			</StackPanel>
+			<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
 
-			<ScrollViewer Grid.Row="2">
+				<StackPanel Orientation="Vertical">
 
-				<WrapPanel x:Name="PopularTodayStack" 
+					<StackPanel Height="60" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}">
+						<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0" Effect="{StaticResource DropShadow}">
+							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Category" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
+						</Border>
+					</StackPanel>
+
+					<Grid x:Name="AllCategoriesExpandablePanel" Background="{StaticResource BG-Dark-Brush}" Height="0">
+
+					</Grid>
+
+					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" />
+
+					<WrapPanel x:Name="PopularTodayStack" 
 					   Orientation="Horizontal"
 					   VerticalAlignment="Top"
 					   Margin="10">
-					<local:RecipeCard />
-				</WrapPanel>
+						<local:RecipeCard />
+					</WrapPanel>
+
+				</StackPanel>
+
 			</ScrollViewer>
 		</Grid>
 

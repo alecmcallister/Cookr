@@ -15,7 +15,7 @@
 				<ResourceDictionary Source="Style/Fonts.xaml"/>
 				<ResourceDictionary Source="Style/Icons.xaml"/>
 				<ResourceDictionary Source="Style/Buttons.xaml"/>
-				<ResourceDictionary Source="Style/Templates.xaml"/>
+				<ResourceDictionary Source="Style/ConverterKeys.xaml"/>
 				
 			</ResourceDictionary.MergedDictionaries>
 		</ResourceDictionary>

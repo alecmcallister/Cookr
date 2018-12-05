@@ -56,6 +56,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Animation\AnimationEnums.cs" />
+    <Compile Include="Converters\Converters.cs" />
     <Compile Include="Style\ColorHelper.cs" />
     <Compile Include="Animation\Extensions.cs" />
     <Compile Include="Logic\MultiplyConverter.cs" />
@@ -68,6 +69,12 @@
     <Compile Include="Logic\RecipeManager.cs" />
     <Compile Include="Logic\RecipeObject.cs" />
     <Compile Include="Logic\SearchEngine.cs" />
+    <Compile Include="UserControls\BackButton.xaml.cs">
+      <DependentUpon>BackButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\HomeButton.xaml.cs">
+      <DependentUpon>HomeButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\InfoPopup.xaml.cs">
       <DependentUpon>InfoPopup.xaml</DependentUpon>
     </Compile>
@@ -97,6 +104,9 @@
     </Compile>
     <Compile Include="UserControls\RecipeStepLayout.xaml.cs">
       <DependentUpon>RecipeStepLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ToggleButtonControl.xaml.cs">
+      <DependentUpon>ToggleButtonControl.xaml</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -142,7 +152,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Style\Templates.xaml">
+    <Page Include="Style\ConverterKeys.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\BackButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\HomeButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\RecipeStepLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ToggleButtonControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

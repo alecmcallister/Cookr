@@ -7,228 +7,216 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
 
-namespace Cookr.Pages
+namespace Cookr
 {
-    public partial class Search : Page, CookrPage
-    {
-        String searchString;
-        List<RecipeObject> searchResults;
+	public partial class Search : Page, CookrPage
+	{
+		string searchString;
+		List<RecipeObject> searchResults;
 
-        public Search()
-        {
-            InitializeComponent();
-        }
-        public Search(String _search)
-        {
-            InitializeComponent();
+		public Search()
+		{
+			InitializeComponent();
+		}
 
-            searchString = _search;
-            SearchField.Text = searchString;
-            SearchedLabel.Content = "\"" + searchString + "\"";
+		public Search(string _search)
+		{
+			InitializeComponent();
 
-            buttonClearFilters.Click += ButtonClearFilters_Click;
-            comboBoxSortBy.SelectionChanged += ComboBoxSortBy_SelectionChanged;
-            comboBoxMinRating.SelectionChanged += ComboBoxMinRating_SelectionChanged;
-            textBoxMaxCookHours.PreviewTextInput += TextBoxMaxCookHours_PreviewTextInput;
-            textBoxMaxCookHours.TextChanged += TextBoxMaxCookHours_TextChanged;
-            textBoxMaxCookMinutes.PreviewTextInput += TextBoxMaxCookMinutes_PreviewTextInput;
-            textBoxMaxCookMinutes.TextChanged += TextBoxMaxCookMinutes_TextChanged;
-            listBoxIncludeIngredients.ItemsSource = SearchEngine.filter.mustIncludeIngredients;
-            listBoxIncludeIngredients.MouseDoubleClick += ListBoxIncludeIngredients_MouseDoubleClick;
-            listBoxExcludeIngredients.ItemsSource = SearchEngine.filter.mustExcludeIngredients;
-            listBoxExcludeIngredients.MouseDoubleClick += ListBoxExcludeIngredients_MouseDoubleClick;
-            buttonIncludeIngredient.Click += ButtonIncludeIngredient_Click;
-            buttonExcludeIngredient.Click += ButtonExcludeIngredient_Click;
+			searchString = _search;
+			//SearchField.Text = searchString;
+			SearchedLabel.Content = "\"" + searchString + "\"";
 
-            search(searchString);
-            LoadSearchResults(searchResults);
-            
-        }
+			buttonClearFilters.Click += ButtonClearFilters_Click;
+			comboBoxSortBy.SelectionChanged += ComboBoxSortBy_SelectionChanged;
+			comboBoxMinRating.SelectionChanged += ComboBoxMinRating_SelectionChanged;
+			textBoxMaxCookHours.PreviewTextInput += TextBoxMaxCookHours_PreviewTextInput;
+			textBoxMaxCookHours.TextChanged += TextBoxMaxCookHours_TextChanged;
+			textBoxMaxCookMinutes.PreviewTextInput += TextBoxMaxCookMinutes_PreviewTextInput;
+			textBoxMaxCookMinutes.TextChanged += TextBoxMaxCookMinutes_TextChanged;
+			listBoxIncludeIngredients.ItemsSource = SearchEngine.filter.mustIncludeIngredients;
+			listBoxIncludeIngredients.MouseDoubleClick += ListBoxIncludeIngredients_MouseDoubleClick;
+			listBoxExcludeIngredients.ItemsSource = SearchEngine.filter.mustExcludeIngredients;
+			listBoxExcludeIngredients.MouseDoubleClick += ListBoxExcludeIngredients_MouseDoubleClick;
+			buttonIncludeIngredient.Click += ButtonIncludeIngredient_Click;
+			buttonExcludeIngredient.Click += ButtonExcludeIngredient_Click;
 
-        private void ListBoxExcludeIngredients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if(listBoxExcludeIngredients.SelectedItem != null)
-            {
-                SearchEngine.filter.mustExcludeIngredients.Remove((string)listBoxExcludeIngredients.SelectedItem);
-                search(searchString);
-                LoadSearchResults(searchResults);
-            }
-        }
+			search(searchString);
+			LoadSearchResults(searchResults);
 
-        private void ListBoxIncludeIngredients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (listBoxIncludeIngredients.SelectedItem != null)
-            {
-                SearchEngine.filter.mustIncludeIngredients.Remove((string)listBoxIncludeIngredients.SelectedItem);
-                search(searchString);
-                LoadSearchResults(searchResults);
-            }
-        }
+		}
 
-        private void TextBoxMaxCookMinutes_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            updateFilterMaxCookTime();
-        }
+		void ListBoxExcludeIngredients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			if (listBoxExcludeIngredients.SelectedItem != null)
+			{
+				SearchEngine.filter.mustExcludeIngredients.Remove((string)listBoxExcludeIngredients.SelectedItem);
+				search(searchString);
+				LoadSearchResults(searchResults);
+			}
+		}
 
-        private void TextBoxMaxCookMinutes_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
-        }
+		void ListBoxIncludeIngredients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+		{
+			if (listBoxIncludeIngredients.SelectedItem != null)
+			{
+				SearchEngine.filter.mustIncludeIngredients.Remove((string)listBoxIncludeIngredients.SelectedItem);
+				search(searchString);
+				LoadSearchResults(searchResults);
+			}
+		}
 
-        private void TextBoxMaxCookHours_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            updateFilterMaxCookTime();
-        }
+		void TextBoxMaxCookMinutes_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			updateFilterMaxCookTime();
+		}
 
-        private void TextBoxMaxCookHours_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-            e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
-        }
+		void TextBoxMaxCookMinutes_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+			e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
+		}
 
-        private void updateFilterMaxCookTime()
-        {
-            string hours = textBoxMaxCookHours.Text;
-            string minutes = textBoxMaxCookMinutes.Text;
+		void TextBoxMaxCookHours_TextChanged(object sender, TextChangedEventArgs e)
+		{
+			updateFilterMaxCookTime();
+		}
 
-            if (hours.Equals("") && minutes.Equals(""))
-            {
-                SearchEngine.filter.maxTime = int.MaxValue;
-            }
-            else if (hours.Equals(""))
-            {
-                SearchEngine.filter.maxTime = Convert.ToInt32(minutes);
-            }
-            else if (minutes.Equals(""))
-            {
-                SearchEngine.filter.maxTime = 60 * Convert.ToInt32(hours);
-            }
-            else
-            {
-                SearchEngine.filter.maxTime = 60 * Convert.ToInt32(hours) + Convert.ToInt32(minutes);
-            }
+		void TextBoxMaxCookHours_PreviewTextInput(object sender, TextCompositionEventArgs e)
+		{
+			e.Handled = Regex.IsMatch(e.Text, "[^0-9]+");
+		}
 
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+		void updateFilterMaxCookTime()
+		{
+			string hours = textBoxMaxCookHours.Text;
+			string minutes = textBoxMaxCookMinutes.Text;
 
-        private void ButtonExcludeIngredient_Click(object sender, RoutedEventArgs e)
-        {
-            string ingredient = textBoxExcludeIngredient.Text;
-            textBoxExcludeIngredient.Text = "";
-            SearchEngine.filter.mustExcludeIngredients.Add(ingredient);
+			if (hours.Equals("") && minutes.Equals(""))
+				SearchEngine.filter.maxTime = int.MaxValue;
 
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+			else if (hours.Equals(""))
+				SearchEngine.filter.maxTime = Convert.ToInt32(minutes);
 
-        private void ButtonIncludeIngredient_Click(object sender, RoutedEventArgs e)
-        {
-            string ingredient = textBoxIncludeIngredient.Text;
-            textBoxIncludeIngredient.Text = "";
-            SearchEngine.filter.mustIncludeIngredients.Add(ingredient);
+			else if (minutes.Equals(""))
+				SearchEngine.filter.maxTime = 60 * Convert.ToInt32(hours);
 
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+			else
+				SearchEngine.filter.maxTime = 60 * Convert.ToInt32(hours) + Convert.ToInt32(minutes);
 
-        private void ComboBoxMinRating_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SearchEngine.filter.minRating = Convert.ToInt32(((ComboBoxItem)(comboBoxMinRating.SelectedItem)).Content);
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
 
-        private void ButtonClearFilters_Click(object sender, RoutedEventArgs e)
-        {
-            comboBoxSortBy.SelectedIndex = 0;
-            comboBoxMinRating.SelectedIndex = 0;
-            textBoxMaxCookHours.Text = "";
-            textBoxMaxCookMinutes.Text = "";
+		void ButtonExcludeIngredient_Click(object sender, RoutedEventArgs e)
+		{
+			string ingredient = textBoxExcludeIngredient.Text;
+			textBoxExcludeIngredient.Text = "";
+			SearchEngine.filter.mustExcludeIngredients.Add(ingredient);
 
-            SearchEngine.clearFilters();
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
 
-        private void ComboBoxSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            SearchEngine.SortBy sortBy;
-            if (comboBoxSortBy.SelectedValue.Equals("Rating"))
-            {
-                sortBy = SearchEngine.SortBy.Rating;
-            }
-            else if (comboBoxSortBy.SelectedValue.Equals("Cook Time"))
-            {
-                sortBy = SearchEngine.SortBy.CookTime;
-            }
-            else if (comboBoxSortBy.SelectedValue.Equals("Relevance"))
-            {
-                sortBy = SearchEngine.SortBy.Relevance;
-            }
-            else
-            {
-                sortBy = SearchEngine.SortBy.Relevance;
-            }
+		void ButtonIncludeIngredient_Click(object sender, RoutedEventArgs e)
+		{
+			string ingredient = textBoxIncludeIngredient.Text;
+			textBoxIncludeIngredient.Text = "";
+			SearchEngine.filter.mustIncludeIngredients.Add(ingredient);
 
-            SearchEngine.filter.sortBy = sortBy;
-            search(searchString);
-            LoadSearchResults(searchResults);
-        }
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
 
-        private void search(string searchString)
-        {
-            searchString = searchString.ToLower();
-            string[] delimiters = { " ", "," };
-            string[] tagStrings = searchString.Split(delimiters, StringSplitOptions.None);
-            List<string> tags = new List<string>(tagStrings);
+		void ComboBoxMinRating_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			SearchEngine.filter.minRating = Convert.ToInt32(((ComboBoxItem)(comboBoxMinRating.SelectedItem)).Content);
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
 
-            searchResults = SearchEngine.TagSearch(RecipeManager.GetRecipes(),tags);
-        }
+		void ButtonClearFilters_Click(object sender, RoutedEventArgs e)
+		{
+			comboBoxSortBy.SelectedIndex = 0;
+			comboBoxMinRating.SelectedIndex = 0;
+			textBoxMaxCookHours.Text = "";
+			textBoxMaxCookMinutes.Text = "";
 
-        private void LoadSearchResults(List<RecipeObject> searchResults)
-        {
-            SearchResultsStack.Children.Clear();
-            if (searchResults.Count == 0)
-            {
-                TextBlock noResults = new TextBlock();
-                noResults.Text = "Sorry! No recipes were found!!";
-                SearchResultsStack.Children.Add(noResults);
-                return;
-            }
-            searchResults.ForEach(recipe => SearchResultsStack.Children.Add(new RecipeCard(recipe)));
-        }
+			SearchEngine.clearFilters();
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
 
-        private void HomeBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationManager.NavigateToHome();
-        }
+		void ComboBoxSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+		{
+			SearchEngine.SortBy sortBy;
+			if (comboBoxSortBy.SelectedValue.Equals("Rating"))
+				sortBy = SearchEngine.SortBy.Rating;
 
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationManager.NavigateToSearch(SearchField.Text);
-        }
+			else if (comboBoxSortBy.SelectedValue.Equals("Cook Time"))
+				sortBy = SearchEngine.SortBy.CookTime;
 
-        private void SearchField_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.Key == Key.Enter)
-            {
-                NavigationManager.NavigateToSearch(SearchField.Text);
-            }
-        }
+			else if (comboBoxSortBy.SelectedValue.Equals("Relevance"))
+				sortBy = SearchEngine.SortBy.Relevance;
 
-        private void BackBtn_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationManager.NavigateToPrev();
-        }
+			else
+				sortBy = SearchEngine.SortBy.Relevance;
 
-        public void SetBackButton()
-        {
-            if (!NavigationManager.allowPrev())
-            {
-                BackBtn.Visibility = Visibility.Collapsed;
-            }
-            else
-                BackBtn.Visibility = Visibility.Visible;
-        }
-    }
+			SearchEngine.filter.sortBy = sortBy;
+			search(searchString);
+			LoadSearchResults(searchResults);
+		}
+
+		void search(string searchString)
+		{
+			searchString = searchString.ToLower();
+			string[] delimiters = { " ", "," };
+			string[] tagStrings = searchString.Split(delimiters, StringSplitOptions.None);
+			List<string> tags = new List<string>(tagStrings);
+
+			searchResults = SearchEngine.TagSearch(RecipeManager.GetRecipes(), tags);
+		}
+
+		void LoadSearchResults(List<RecipeObject> searchResults)
+		{
+			SearchResultsStack.Children.Clear();
+			if (searchResults.Count == 0)
+			{
+				TextBlock noResults = new TextBlock();
+				noResults.Text = "Sorry! No recipes were found!!";
+				SearchResultsStack.Children.Add(noResults);
+				return;
+			}
+			searchResults.ForEach(recipe => SearchResultsStack.Children.Add(new RecipeCard(recipe)));
+		}
+
+		void HomeBtn_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationManager.NavigateToHome();
+		}
+
+		void button_Click(object sender, RoutedEventArgs e)
+		{
+			//NavigationManager.NavigateToSearch(SearchField.Text);
+		}
+
+		void SearchField_KeyDown(object sender, KeyEventArgs e)
+		{
+			//if (e.Key == Key.Enter)
+			//	NavigationManager.NavigateToSearch(SearchField.Text);
+		}
+
+		void BackBtn_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationManager.NavigateToPrev();
+		}
+
+		public void SetBackButton()
+		{
+			//if (!NavigationManager.allowPrev())
+			//	BackBtn.Visibility = Visibility.Collapsed;
+
+			//else
+			//	BackBtn.Visibility = Visibility.Visible;
+		}
+	}
 }

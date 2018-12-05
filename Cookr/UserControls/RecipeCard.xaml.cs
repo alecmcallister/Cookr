@@ -26,7 +26,6 @@ namespace Cookr
 		public RecipeCard()
 		{
 			InitializeComponent();
-
 		}
 
 		public RecipeCard(RecipeObject _recipe)
@@ -54,107 +53,47 @@ namespace Cookr
 		{
 			base.OnMouseEnter(e);
 
-			await DoMouseEnter();
+			await DoHover(true);
 		}
 
 		protected override async void OnMouseLeave(MouseEventArgs e)
 		{
 			base.OnMouseLeave(e);
 
-			await DoMouseExit();
+			await DoHover(false);
 		}
-
-
-		// TODO: Actually finish the animations...
 
 		#region Animation
 
-		float upTime = 0.3f;
-		float downTime = 0.2f;
+		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("BGNormal"); } }
+		Color bgNormalColor { get { return (Color)TryFindResource("FG"); } }
+		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
 
-		//IEasingFunction upEase = new BackEase();
-		IEasingFunction upEase = new CubicEase();
-		IEasingFunction downEase = new CubicEase();
+		TimeSpan enterTime { get { return TimeSpan.FromSeconds(0.3f); } }
+		TimeSpan exitTime { get { return TimeSpan.FromSeconds(0.2f); } }
 
-		async Task DoMouseEnter()
+		IEasingFunction enterEaseFunction = new CubicEase();
+		IEasingFunction exitEaseFunction = new CubicEase();
+
+		async Task DoHover(bool entered)
 		{
-			DoubleAnimation scalex = new DoubleAnimation()
-			{
-				To = 1.1f,
-				Duration = new Duration(TimeSpan.FromSeconds(upTime)),
-				EasingFunction = upEase
-			};
-			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scalex);
-			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scalex);
+			TimeSpan duration = entered ? enterTime : exitTime;
+			IEasingFunction ease = entered ? enterEaseFunction : exitEaseFunction;
 
-			DoubleAnimation depthAnimation = new DoubleAnimation()
-			{
-				To = 4,
-				Duration = new Duration(TimeSpan.FromSeconds(upTime)),
-				EasingFunction = upEase
-			};
+			Color toBGColor = entered ? bgHoveredColor : bgNormalColor;
+			double toScaleX = entered ? 1.1f : 1.05f;
+			double toDepth = entered ? 4f : 1f;
+			double toBlur = entered ? 8f : 3f;
+			Thickness toMargin = entered ? new Thickness(10, 5, 10, 15) : new Thickness(10);
 
-			DoubleAnimation blurAnimation = new DoubleAnimation()
-			{
-				To = 8,
-				Duration = new Duration(TimeSpan.FromSeconds(upTime)),
-				EasingFunction = upEase
-			};
+			bgBrush.BeginAnimation(SolidColorBrush.ColorProperty, new ColorAnimation(toBGColor, duration) { EasingFunction = ease });
+			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation(toScaleX, duration) { EasingFunction = ease });
+			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleYProperty, new DoubleAnimation(toScaleX, duration) { EasingFunction = ease });
+			RecipeCardShadow.BeginAnimation(DropShadowEffect.ShadowDepthProperty, new DoubleAnimation(toDepth, duration) { EasingFunction = ease });
+			RecipeCardShadow.BeginAnimation(DropShadowEffect.BlurRadiusProperty, new DoubleAnimation(toBlur, duration) { EasingFunction = ease });
+			RecipeCardGrid.BeginAnimation(MarginProperty, new ThicknessAnimation(toMargin, duration) { EasingFunction = ease });
 
-			ThicknessAnimation marginAnimation = new ThicknessAnimation()
-			{
-				To = new Thickness(10, 5, 10, 15),
-				Duration = new Duration(TimeSpan.FromSeconds(upTime)),
-				EasingFunction = upEase
-			};
-
-			RecipeCardShadow.BeginAnimation(DropShadowEffect.ShadowDepthProperty, depthAnimation);
-			RecipeCardShadow.BeginAnimation(DropShadowEffect.BlurRadiusProperty, blurAnimation);
-
-			RecipeCardGrid.BeginAnimation(MarginProperty, marginAnimation);
-
-			await Task.Delay(TimeSpan.FromSeconds(upTime));
-		}
-
-		async Task DoMouseExit()
-		{
-			DoubleAnimation scalex = new DoubleAnimation()
-			{
-				To = 1.05f,
-				Duration = new Duration(TimeSpan.FromSeconds(downTime)),
-				EasingFunction = downEase
-			};
-			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleXProperty, scalex);
-			RecipeCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleYProperty, scalex);
-
-
-			DoubleAnimation depthAnimation = new DoubleAnimation()
-			{
-				To = 1,
-				Duration = new Duration(TimeSpan.FromSeconds(downTime)),
-				EasingFunction = downEase
-			};
-
-			DoubleAnimation blurAnimation = new DoubleAnimation()
-			{
-				To = 3,
-				Duration = new Duration(TimeSpan.FromSeconds(downTime)),
-				EasingFunction = downEase
-			};
-
-			ThicknessAnimation marginAnimation = new ThicknessAnimation()
-			{
-				To = new Thickness(10),
-				Duration = new Duration(TimeSpan.FromSeconds(downTime)),
-				EasingFunction = downEase
-			};
-
-			RecipeCardShadow.BeginAnimation(DropShadowEffect.ShadowDepthProperty, depthAnimation);
-			RecipeCardShadow.BeginAnimation(DropShadowEffect.BlurRadiusProperty, blurAnimation);
-
-			RecipeCardGrid.BeginAnimation(MarginProperty, marginAnimation);
-
-			await Task.Delay(TimeSpan.FromSeconds(downTime));
+			await Task.Delay(duration);
 		}
 
 		#endregion

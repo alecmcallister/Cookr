@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Cookr.HomeButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Cookr"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="50"
+			 Height="40" Width="40">
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="FGNormal" Color="{StaticResource Text-Light}"></SolidColorBrush>
+	</UserControl.Resources>
+
+	<Grid>
+
+		<TextBlock 
+			Style="{StaticResource Icon}" 
+			Text="{StaticResource Home-Icon}" 
+			FontSize="{StaticResource Icon-Large}" 
+			Foreground="{DynamicResource FGNormal}"
+			Effect="{StaticResource DropShadow}"/>
+
+		<Button 
+			Style="{StaticResource EmptyButton}" 
+			Click="HomeButtonClick" />
+
+	</Grid>
+</UserControl>
