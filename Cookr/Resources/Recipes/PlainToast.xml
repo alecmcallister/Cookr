@@ -1,0 +1,54 @@
+<Recipe>
+	<Title>Plain Toast</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>toast</Tag>
+		<Tag>bread</Tag>
+		<Tag>breakfast</Tag>
+		<Tag>quick</Tag>
+	</Tags>
+	<Rating>1</Rating>
+	<TitleImage>BurntToast.jpg</TitleImage>
+	<RecipeIntroduction>Plain Ol' Toast.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>15</CookTime>
+	<TotalTime>15</TotalTime>
+	<NumberOfServings>1</NumberOfServings>
+
+	<Ingredients>
+		<Ingredient Name="Toast Bread" Quantity="2" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Toaster"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>
