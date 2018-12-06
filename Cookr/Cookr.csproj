@@ -333,6 +333,47 @@
   <ItemGroup>
     <Resource Include="Images\StoveTempKnob-Tooltip.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\blank.jpg" />
+    <Resource Include="Images\BurntToast.jpg" />
+    <Resource Include="Images\FishAndChips-Title.jpg" />
+    <Resource Include="Images\PumpkinPancakes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Categories\Asian-Category.jpg" />
+    <Resource Include="Images\Categories\Beef-Category.jpg" />
+    <Resource Include="Images\Categories\Breakfast-Category.jpg" />
+    <Resource Include="Images\Categories\Chicken-Category.jpg" />
+    <Resource Include="Images\Categories\Chinese-Category.jpg" />
+    <Resource Include="Images\Categories\Dessert-Category.jpg" />
+    <Resource Include="Images\Categories\Dinner-Category.jpg" />
+    <Resource Include="Images\Categories\Healthy-Category.jpg" />
+    <Resource Include="Images\Categories\Indian-Category.jpg" />
+    <Resource Include="Images\Categories\Italian-Category.jpg" />
+    <Resource Include="Images\Categories\Lunch-Category.jpg" />
+    <Resource Include="Images\Categories\Mexican-Category.jpg" />
+    <Resource Include="Images\Categories\Pasta-Category.jpg" />
+    <Resource Include="Images\Categories\Pizza-Category.jpg" />
+    <Resource Include="Images\Categories\Potatoes-Category.jpg" />
+    <Resource Include="Images\Categories\Quick-Category.jpg" />
+    <Resource Include="Images\Categories\Rice-Category.jpg" />
+    <Resource Include="Images\Categories\Salad-Category.jpg" />
+    <Resource Include="Images\Categories\Seafood-Category.jpg" />
+    <Resource Include="Images\Categories\Soup-Category.jpg" />
+    <Resource Include="Images\Categories\Thai-Category.jpg" />
+    <Resource Include="Images\Categories\Turkey-Category.jpg" />
+    <Resource Include="Images\Categories\Vegetarian-Category.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BagelWithCreamCheese-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SalmonSushi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DessertCrepes-Title.jpg" />
+    <Resource Include="Images\SesameChicken-Title.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>
