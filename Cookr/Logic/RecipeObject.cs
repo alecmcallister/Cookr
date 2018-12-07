@@ -49,7 +49,10 @@ namespace Cookr
 		[XmlElement("NumberOfServings")]
 		public int NumberOfServings { get; set; }
 
-		[XmlArray("Ingredients"), XmlArrayItem("Ingredient")]
+        [XmlElement("FakeRecipe")]
+        public int FakeRecipe { get; set; }
+
+        [XmlArray("Ingredients"), XmlArrayItem("Ingredient")]
 		public List<Ingredient> Ingredients { get; set; }
 
 		[XmlArray("Tools"), XmlArrayItem("Tool")]
