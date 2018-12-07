@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cookr.UserControls
+namespace Cookr
 {
     /// <summary>
     /// Interaction logic for StarRating.xaml

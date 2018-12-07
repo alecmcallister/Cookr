@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="Cookr.UserControls.RecipeStepButtonCustom"
+﻿<UserControl x:Class="Cookr.RecipeStepButtonCustom"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Cookr.UserControls"
+             xmlns:local="clr-namespace:Cookr"
              mc:Ignorable="d" 
              d:DesignWidth="190">
   <UserControl.Resources>
@@ -87,7 +87,14 @@
           </LinearGradientBrush>
         </Rectangle.Fill>
       </Rectangle>
-      <TextBlock x:Name="Content" HorizontalAlignment="Left" Margin="0" Padding="5,0,0,0" TextWrapping="Wrap" Text="Step Description" VerticalAlignment="Center" Foreground="#FFCBCBCB"/>
+      <TextBlock x:Name="Content" 
+				 HorizontalAlignment="Left"
+				 Padding="5,0,0,0" 
+				 TextWrapping="Wrap"  
+				 VerticalAlignment="Center" 
+				 Foreground="{StaticResource Text-Light-Brush}" 
+				 FontSize="{StaticResource Text-V-Small}"
+				 Text="Step Description"/>
     </Grid>
   </Border>
 </UserControl>

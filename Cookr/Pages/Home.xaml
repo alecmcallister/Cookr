@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cookr"
       mc:Ignorable="d" 
-      d:DesignHeight="900" d:DesignWidth="1200"
+      d:DesignHeight="700" d:DesignWidth="1300"
       Title="Home">
 	<Page.Resources>
 
@@ -13,32 +13,53 @@
 
 	<Grid>
 		<Grid Background="{StaticResource BG-Brush}">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="200"/>
-				<RowDefinition Height="60"/>
-				<RowDefinition Height="*"/>
-			</Grid.RowDefinitions>
 
-			<Grid Grid.Row="0" Background="{StaticResource Primary-Brush}">
+			<ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
 
-				<local:SearchbarControl x:Name="Searchbar" />
+				<StackPanel Orientation="Vertical">
 
-			</Grid>
+					<StackPanel Height="60" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}">
+						<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0" Effect="{StaticResource DropShadow}">
+							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="TODO: Change to a picture" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
+						</Border>
+					</StackPanel>
 
-			<StackPanel Grid.Row="1" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}" Effect="{DynamicResource DropShadow}" Panel.ZIndex="1">
-				<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0">
-					<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="Category" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
-				</Border>
-			</StackPanel>
+					<Grid x:Name="AllCategoriesExpandablePanel" Background="{StaticResource BG-Dark-Brush}" Height="0">
 
-			<ScrollViewer Grid.Row="2">
+					</Grid>
 
-				<WrapPanel x:Name="PopularTodayStack" 
+					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" Margin="0,-20,0,0" />
+
+					<StackPanel Margin="30,5,0,5" Orientation="Horizontal" HorizontalAlignment="Left">
+
+						<!-- What we <3 -->
+						
+						<TextBlock 
+							FontSize="{StaticResource Text-Large}" 
+							Foreground="{StaticResource Text-Dark-Brush}" 
+							Effect="{StaticResource DropShadow}"
+							FontFamily="{StaticResource RobotoLight}">
+							Recipes we 
+						</TextBlock>
+
+						<TextBlock 
+							FontSize="{StaticResource Icon-Regular}"
+							Foreground="{StaticResource Text-Dark-Brush}"
+							Effect="{StaticResource DropShadow}"
+							FontFamily="{StaticResource MaterialIcon}"
+							Text="{StaticResource Heart-Full-Icon}"
+							Margin="7,2,0,0"/>
+
+					</StackPanel>
+					<WrapPanel x:Name="PopularTodayStack" 
 					   Orientation="Horizontal"
 					   VerticalAlignment="Top"
 					   Margin="10">
-					<local:RecipeCard />
-				</WrapPanel>
+						<local:RecipeCard />
+					</WrapPanel>
+
+				</StackPanel>
+
 			</ScrollViewer>
 		</Grid>
 

@@ -1,6 +1,4 @@
-﻿using Cookr.Logic.RecipeComponents;
-using Cookr.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -16,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cookr.UserControls
+namespace Cookr
 {
     /// <summary>
     /// Interaction logic for RecipeStepLayout.xaml

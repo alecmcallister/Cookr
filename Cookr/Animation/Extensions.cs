@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 using System.Windows.Media.Animation;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace Cookr
 {
 	public static partial class Extensions
 	{
+
+		#region Frame transitioning
+
 		public static async Task TransitionToFrame(this Frame from, Frame to, PageAnimationType direction, float time, IEasingFunction ease)
 		{
-			Storyboard fromStoryboard = new Storyboard();
-			Storyboard toStoryboard = new Storyboard();
-
 			double width = from.ActualWidth;
 
 			if (from.Parent.GetType().IsSubclassOf(typeof(FrameworkElement)))
 				width = ((FrameworkElement)from.Parent).ActualWidth;
 
-			fromStoryboard.AnimateFrameOut(width, direction, time, ease);
-			toStoryboard.AnimateFrameIn(width, direction, time, ease);
-
-
-			fromStoryboard.Begin(from);
-			toStoryboard.Begin(to);
+			from.AnimateFrameOut(width, direction, time, ease);
+			to.AnimateFrameIn(width, direction, time, ease);
 
 			to.Visibility = Visibility.Visible;
 
@@ -35,11 +32,11 @@ namespace Cookr
 			from.Visibility = Visibility.Collapsed;
 		}
 
+		#endregion
+
 		#region Animate frame in/ out
 
-		// TODO: Cleanup duplicate code
-
-		public static void AnimateFrameIn(this Storyboard storyboard, double width, PageAnimationType animType, float time, IEasingFunction ease)
+		public static void AnimateFrameIn(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
 		{
 			float x = animType == PageAnimationType.Right ? -1f : 1f;
 
@@ -53,12 +50,10 @@ namespace Cookr
 				To = to,
 				EasingFunction = ease
 			};
-
-			storyboard.Children.Add(animation);
-			Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+			element.BeginAnimation(FrameworkElement.MarginProperty, animation);
 		}
 
-		public static void AnimateFrameOut(this Storyboard storyboard, double width, PageAnimationType animType, float time, IEasingFunction ease)
+		public static void AnimateFrameOut(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
 		{
 			float x = animType == PageAnimationType.Left ? -1f : 1f;
 
@@ -72,9 +67,57 @@ namespace Cookr
 				To = to,
 				EasingFunction = ease
 			};
+			element.BeginAnimation(FrameworkElement.MarginProperty, animation);
+		}
 
-			storyboard.Children.Add(animation);
-			Storyboard.SetTargetProperty(animation, new PropertyPath("Margin"));
+		#endregion
+
+		#region Generic Animation
+
+		public static async Task AnimateDoubleProperty<T>(this T element, DependencyProperty property, double to, float time, IEasingFunction easeFunction) where T : IAnimatable
+		{
+			DoubleAnimation animation = new DoubleAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(time)),
+				To = to,
+				EasingFunction = easeFunction
+			};
+
+			element.BeginAnimation(property, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
+		}
+
+		public static async Task AnimateThicknessProperty(this FrameworkElement element, DependencyProperty property, Thickness to, float time, IEasingFunction easeFunction)
+		{
+			ThicknessAnimation animation = new ThicknessAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(time)),
+				To = to,
+				EasingFunction = easeFunction
+			};
+
+			element.BeginAnimation(property, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
+		}
+
+		#endregion
+
+		#region Animate color
+
+		public static async Task AnimateToColor(this SolidColorBrush element, Color to, float time, IEasingFunction easeFunction)
+		{
+			ColorAnimation animation = new ColorAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(time)),
+				To = to,
+				EasingFunction = easeFunction
+			};
+
+			element.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
 		}
 
 		#endregion

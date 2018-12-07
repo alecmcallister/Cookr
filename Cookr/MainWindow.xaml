@@ -6,11 +6,58 @@
         xmlns:local="clr-namespace:Cookr"
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen"
-        Title="Cookr" Height="900" Width="1200">
-    <Grid>
-  
-        <Frame x:Name="MainFrame" Content="Frame"
-               NavigationUIVisibility="Hidden"
-               Source="/Cookr;component/Pages/Home.xaml" />
-    </Grid>
+        Title="Cookr" Height="900" Width="1315"
+		MinWidth="650" MinHeight="600">
+	<Window.Resources>
+
+	</Window.Resources>
+	<Grid>
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+
+			<Grid x:Name="Header" 
+				  Height="200" 
+				  Background="{StaticResource Primary-Brush}" 
+				  Effect="{StaticResource DropShadow-L}" 
+				  Panel.ZIndex="2">
+
+				<TextBlock 
+						FontSize="{StaticResource Text-Title}" 
+						Effect="{StaticResource DropShadow}" 
+						Foreground="{StaticResource Text-Light-Brush}" 
+						HorizontalAlignment="Center" 
+						Margin="25" >
+						Cook<Run 
+							Foreground="{StaticResource Inactive-Light-Brush}">\
+						</Run><Run 
+							Foreground="{StaticResource Star-Brush}">r
+						</Run>
+				</TextBlock>
+
+				<Grid x:Name="HeaderControlsGrid" Margin="15" Height="60" VerticalAlignment="Bottom">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition Width="*"/>
+						<ColumnDefinition Width="Auto"/>
+						<ColumnDefinition Width="*"/>
+					</Grid.ColumnDefinitions>
+					<local:BackButton x:Name="BackButton" HorizontalAlignment="Right" Margin="0,0,-60,0" Grid.Column="0" Visibility="Hidden"/>
+					<local:HomeButton x:Name="HomeButton" HorizontalAlignment="Left" Margin="-60,0,0,0" Grid.Column="0" Visibility="Hidden"/>
+					<local:BackToRecipeButton x:Name="RecipeButton" HorizontalAlignment="Left" Margin="-60,0,0,0" Grid.Column="2" Visibility="Hidden"/>
+					<local:SearchbarControl x:Name="Searchbar" Grid.Column="1"/>
+
+
+				</Grid>
+
+
+			</Grid>
+
+
+			<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed"/>
+			<Frame x:Name="SearchFrame" Grid.Row="1" Visibility="Collapsed" />
+			<Frame x:Name="HomeFrame"  Grid.Row="1"/>
+		</Grid>
+	</Grid>
 </Window>

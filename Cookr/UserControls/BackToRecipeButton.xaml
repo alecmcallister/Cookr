@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="Cookr.BackToRecipeButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:system="clr-namespace:System;assembly=mscorlib"
+             xmlns:local="clr-namespace:Cookr"
+             mc:Ignorable="d" 
+			 Height="40" Width="Auto">
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="FGNormal" Color="{StaticResource Red-Normal}"></SolidColorBrush>
+	</UserControl.Resources>
+
+	<Grid>
+
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="40"/>
+			<ColumnDefinition Width="Auto"/>
+		</Grid.ColumnDefinitions>
+		<TextBlock 
+			Style="{StaticResource Icon}" 
+			Text="{StaticResource Fire-Icon}" 
+			FontSize="{StaticResource Icon-Large}" 
+			Foreground="{DynamicResource FGNormal}"
+			Effect="{StaticResource DropShadow}"/>
+
+
+		<!--<TextBlock x:Name="CurrentRecipeNameText" 
+				   Grid.Column="1"
+				   VerticalAlignment="Center"
+				   Foreground="{DynamicResource FGNormal}"
+				   Effect="{StaticResource DropShadow}"
+				   FontSize="{StaticResource Text-Regular}"
+				   Margin="0,0,10,0">
+			In-progress
+		</TextBlock>-->
+
+
+		<Button 
+			Style="{StaticResource EmptyButton}" 
+			Click="BackToRecipeClick" Grid.ColumnSpan="2"/>
+
+	</Grid>
+</UserControl>

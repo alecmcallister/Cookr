@@ -1,10 +1,9 @@
-﻿using Cookr.Logic.RecipeComponents;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Media.Imaging;
 using System.Xml.Serialization;
 
-namespace Cookr.Logic
+namespace Cookr
 {
 	[Serializable, XmlRoot("Recipe")]
 	public class RecipeObject

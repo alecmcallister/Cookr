@@ -3,6 +3,7 @@
 					xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:local="clr-namespace:Cookr">
 
+	<system:Double x:Key="Text-V-Small">14</system:Double>
 	<system:Double x:Key="Text-Small">16</system:Double>
 	<system:Double x:Key="Text-Regular">20</system:Double>
 	<system:Double x:Key="Text-Large">24</system:Double>
@@ -10,6 +11,7 @@
 
 	<system:Double x:Key="Icon-Small">20</system:Double>
 	<system:Double x:Key="Icon-Regular">24</system:Double>
+	<system:Double x:Key="Icon-Large">36</system:Double>
 
 	<CornerRadius x:Key="CornerRadius">10</CornerRadius>
 	<Thickness x:Key="MarginThickness">10</Thickness>
