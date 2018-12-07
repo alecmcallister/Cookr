@@ -374,6 +374,24 @@
     <Resource Include="Images\DessertCrepes-Title.jpg" />
     <Resource Include="Images\SesameChicken-Title.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\GardenSalad-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CoconutOatmeal-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\IndianShrimpCurry-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BBQChickenPizza-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PepperoniPizza-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RicePilaf-Title.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>
