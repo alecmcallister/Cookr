@@ -422,9 +422,6 @@
     <Resource Include="Images\RicePilaf-Title.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Images\PearAndGorgonzolaCheesePizza-Title.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Images\Broccoli-Title.jpg" />
     <Resource Include="Images\BroccoliSalad-Title.jpg" />
     <Resource Include="Images\ChickenTikkaMasala-Title.jpg" />
@@ -446,6 +443,9 @@
     <Resource Include="Images\ThaiSteamedMussels-Title.jpg" />
     <Resource Include="Images\TresLeches-Title.jpg" />
     <Resource Include="Images\TwiceBakedPotatoes-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PearAndGorgonzolaPizza-Title.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
