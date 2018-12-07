@@ -1,6 +1,4 @@
-﻿using Cookr.Logic;
-using Cookr.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,6 +19,8 @@ namespace Cookr
 {
 	public partial class RecipeCard : UserControl
 	{
+		public static event Action<RecipeObject> RecipeSelectedEvent;
+
 		RecipeObject recipe;
 
 		public RecipeCard()
@@ -46,7 +46,7 @@ namespace Cookr
 
 		void RecipeCardMouseDown(object sender, MouseButtonEventArgs e)
 		{
-			NavigationManager.NavigateToRecipe(recipe);
+			RecipeSelectedEvent?.Invoke(recipe);
 		}
 
 		protected override async void OnMouseEnter(MouseEventArgs e)
@@ -67,7 +67,8 @@ namespace Cookr
 
 		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("BGNormal"); } }
 		Color bgNormalColor { get { return (Color)TryFindResource("FG"); } }
-		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
+		//Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
+		Color bgHoveredColor { get { return (Color)TryFindResource("FG-Hover"); } }
 
 		TimeSpan enterTime { get { return TimeSpan.FromSeconds(0.3f); } }
 		TimeSpan exitTime { get { return TimeSpan.FromSeconds(0.2f); } }

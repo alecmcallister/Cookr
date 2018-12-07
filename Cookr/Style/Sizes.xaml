@@ -3,6 +3,7 @@
 					xmlns:system="clr-namespace:System;assembly=mscorlib"
                     xmlns:local="clr-namespace:Cookr">
 
+	<system:Double x:Key="Text-V-Small">14</system:Double>
 	<system:Double x:Key="Text-Small">16</system:Double>
 	<system:Double x:Key="Text-Regular">20</system:Double>
 	<system:Double x:Key="Text-Large">24</system:Double>

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cookr.UserControls
+namespace Cookr
 {
 
     public enum VisibilityStyleState { invisible, partial, full, };

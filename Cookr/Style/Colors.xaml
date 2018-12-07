@@ -15,6 +15,9 @@
 	<Color x:Key="FG">#ffffff</Color>
 	<SolidColorBrush x:Key="FG-Brush" Color="{StaticResource FG}" />
 
+	<Color x:Key="FG-Hover">#f9f9f9</Color>
+	<SolidColorBrush x:Key="FG-Hover-Brush" Color="{StaticResource FG-Hover}" />
+
 	<Color x:Key="BG">#eeeeee</Color>
 	<SolidColorBrush x:Key="BG-Brush" Color="{StaticResource BG}" />
 
@@ -36,6 +39,15 @@
 	<Color x:Key="Inactive-Light">#ccc</Color>
 	<SolidColorBrush x:Key="Inactive-Light-Brush" Color="{StaticResource Inactive-Light}" />
 
+	<Color x:Key="Red-Normal">#ff5252</Color>
+	<SolidColorBrush x:Key="Red-Normal-Brush" Color="{StaticResource Red-Normal}" />
+
+	<Color x:Key="Red-Light">#ff867f</Color>
+	<SolidColorBrush x:Key="Red-Light-Brush" Color="{StaticResource Red-Light}" />
+
+	<Color x:Key="Red-Dark">#c50e29</Color>
+	<SolidColorBrush x:Key="Red-Dark-Brush" Color="{StaticResource Red-Dark}" />
+
 	<LinearGradientBrush x:Key="RecipeStepBrush" StartPoint="0,0" EndPoint="0,1">
 		<GradientStop Color="#FFE5E5E5" Offset="0"/>
 		<GradientStop Color="#FFD4D4D4" Offset="1"/>
@@ -49,4 +61,5 @@
 	<DropShadowEffect x:Key="DropShadow" BlurRadius="3" Opacity="0.3" Direction="270" ShadowDepth="1"/>
 	<DropShadowEffect x:Key="DropShadow-L" BlurRadius="5" Opacity="0.6" Direction="270" ShadowDepth="2"/>
 
+	<DropShadowEffect x:Key="DropShadow-F" BlurRadius="3" Opacity="0.3" ShadowDepth="0"/>
 </ResourceDictionary>

@@ -1,6 +1,4 @@
-﻿using Cookr.Logic;
-using Cookr.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,14 +16,13 @@ using System.Windows.Shapes;
 
 namespace Cookr
 {
-	public partial class Home : Page, CookrPage
+	public partial class Home : Page
 	{
 		public Home()
 		{
 			InitializeComponent();
 			Load_PopularToday();
 
-			Searchbar.SearchEvent += s => { NavigationManager.NavigateToSearch(s); Searchbar.Text = ""; };
 			ExpandCategoriesButton.ToggleButtonEvent += b => { ExpandTheThing(null, null); };
 		}
 
@@ -39,16 +36,6 @@ namespace Cookr
 					popularToday.Add(new RecipeCard(recipe));
 			});
 			popularToday.ForEach(recipe => PopularTodayStack.Children.Add(recipe));
-		}
-
-		private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
-		{
-			NavigationManager.NavigateToSearch("Pizza");
-		}
-
-		public void SetBackButton()
-		{
-
 		}
 
 		#region Animation
@@ -75,17 +62,7 @@ namespace Cookr
 
 		async Task ChangeExpandableGridHeight(double height)
 		{
-			DoubleAnimation animation = new DoubleAnimation()
-			{
-				Duration = new Duration(TimeSpan.FromSeconds(animationTime)),
-				From = AllCategoriesExpandablePanel.ActualHeight,
-				To = height,
-				EasingFunction = easeFunction
-			};
-
-			AllCategoriesExpandablePanel.BeginAnimation(HeightProperty, animation);
-
-			await Task.Delay(TimeSpan.FromSeconds(animationTime));
+			await AllCategoriesExpandablePanel.AnimateDoubleProperty(HeightProperty, height, animationTime, easeFunction);
 		}
 
 		#endregion

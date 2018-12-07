@@ -1,7 +1,4 @@
-﻿using Cookr.Logic;
-using Cookr.Logic.RecipeComponents;
-using Cookr.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,12 +14,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Cookr.Pages
+namespace Cookr
 {
 	enum RecipeUserVisible { invisible, partial, full, };
 
 	// ANDY - All the changes you need to make would be on this page.
-	public partial class Recipe : Page, CookrPage
+	public partial class Recipe : Page
 	{
 		public RecipeObject recipe;
 
@@ -32,16 +29,19 @@ namespace Cookr.Pages
 		// List of the elements in the recipe's RecipeStepStack that can be used for navigation.
 		public List<UIElement> recipeScrollableNavigationThingys;
 
-		public Recipe(RecipeObject _recipe)
+		public Recipe()
 		{
-			// This incoming RecipeObject contains all the information from a single XML files including steps, tools, igredients, filepaths etc..
 			InitializeComponent();
+		}
+
+		public void SetRecipe(RecipeObject _recipe)
+		{
 			recipe = _recipe;
 
 			// Populate Title, time, star rating, TitleImage.
 			RecipeTitle.Content = recipe.Title;
 			RecipeTime.Content = hoursAndMinutesString(recipe.TotalTime);
-			RecipeStarRating.Value = (int)(recipe.Rating);
+			//RecipeStarRating.Value = (int)(recipe.Rating);
 			RecipeTitleImage.ImageSource = new BitmapImage(
 										   new Uri("Images/" + recipe.TitleImage, UriKind.Relative));
 
@@ -299,7 +299,7 @@ namespace Cookr.Pages
 			Run link = (Run)sender;
 			if ((int)link.Tag != 0)
 			{
-				Logic.RecipeComponents.ToolTip tip = recipe.GetToolTip((int)link.Tag);
+				ToolTip tip = recipe.GetToolTip((int)link.Tag);
 				if (tip == null)
 				{
 					return;
@@ -326,59 +326,6 @@ namespace Cookr.Pages
 		{
 			InformationPopup.IsOpen = false;
 			RunButtonsListUpdate();
-		}
-
-
-		private void RecipeBtnSearch_Click(object sender, RoutedEventArgs e)
-		{
-			NavigationManager.NavigateToSearch(RecipeSearchField.Text);
-		}
-
-
-		private void RecipeSearchField_GotFocus(object sender, RoutedEventArgs e)
-		{
-			if (RecipeSearchField.Text == "Search")
-			{
-				RecipeSearchField.Text = "";
-				RecipeSearchField.Foreground = Brushes.Black;
-			}
-		}
-
-		private void RecipeSearchField_LostFocus(object sender, RoutedEventArgs e)
-		{
-			if (RecipeSearchField.Text == "")
-			{
-				RecipeSearchField.Text = "Search";
-				RecipeSearchField.Foreground = Brushes.LightGray;
-			}
-		}
-
-		private void RecipeSearchField_KeyDown(object sender, KeyEventArgs e)
-		{
-			if (e.Key == Key.Enter)
-			{
-				NavigationManager.NavigateToSearch(RecipeSearchField.Text);
-			}
-		}
-
-		private void HomeBtn_Click(object sender, RoutedEventArgs e)
-		{
-			NavigationManager.NavigateToHome();
-		}
-
-		private void Button_Click(object sender, RoutedEventArgs e)
-		{
-			NavigationManager.NavigateToPrev();
-		}
-
-		public void SetBackButton()
-		{
-			if (!NavigationManager.allowPrev())
-			{
-				BackBtn.Visibility = Visibility.Collapsed;
-			}
-			else
-				BackBtn.Visibility = Visibility.Visible;
 		}
 
 	}

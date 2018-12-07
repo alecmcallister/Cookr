@@ -16,21 +16,18 @@ using System.Windows.Shapes;
 
 namespace Cookr
 {
-	/// <summary>
-	/// Interaction logic for HomeButton.xaml
-	/// </summary>
-	public partial class HomeButton : UserControl
+	public partial class BackToRecipeButton : UserControl
 	{
-		public event Action HomeButtonClickedEvent = new Action(() => { });
+		public event Action BackToRecipeClicked = new Action(() => { });
 
-		public HomeButton()
+		public BackToRecipeButton()
 		{
 			InitializeComponent();
 		}
 
-		void HomeButtonClick(object sender, RoutedEventArgs e)
+		void BackToRecipeClick(object sender, RoutedEventArgs e)
 		{
-			HomeButtonClickedEvent();
+			BackToRecipeClicked();
 		}
 
 		protected async override void OnMouseEnter(MouseEventArgs e)
@@ -48,8 +45,8 @@ namespace Cookr
 		}
 
 		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("FGNormal"); } }
-		Color bgNormalColor { get { return (Color)TryFindResource("Text-Light"); } }
-		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
+		Color bgNormalColor { get { return (Color)TryFindResource("Red-Normal"); } }
+		Color bgHoveredColor { get { return (Color)TryFindResource("Red-Dark"); } }
 
 		float enterTime = 0.3f;
 		float exitTime = 0.2f;

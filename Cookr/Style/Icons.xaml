@@ -15,6 +15,7 @@
 	</Style>
 
 	<system:String x:Key="Heart-Icon">&#xe87e;</system:String>
+	<system:String x:Key="Heart-Full-Icon">&#xe87d;</system:String>
 	<system:String x:Key="Home-Icon">&#xe88a;</system:String>
 	<system:String x:Key="Back-Icon">&#xe408;</system:String>
 	<system:String x:Key="Forward-Icon">&#xe409;</system:String>
@@ -28,6 +29,7 @@
 	<system:String x:Key="Search-Icon">&#xe8b6;</system:String>
 	<system:String x:Key="UpArrow-Icon">&#xe5ce;</system:String>
 	<system:String x:Key="DownArrow-Icon">&#xe5cf;</system:String>
+	<system:String x:Key="Fire-Icon">&#xe80e;</system:String>
 
 
 </ResourceDictionary>

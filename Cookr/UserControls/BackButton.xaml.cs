@@ -48,22 +48,20 @@ namespace Cookr
 		Color bgNormalColor { get { return (Color)TryFindResource("Text-Light"); } }
 		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
 
-		TimeSpan enterTime { get { return TimeSpan.FromSeconds(0.3f); } }
-		TimeSpan exitTime { get { return TimeSpan.FromSeconds(0.2f); } }
+		float enterTime = 0.3f;
+		float exitTime = 0.2f;
 
 		IEasingFunction enterEaseFunction = new CubicEase();
 		IEasingFunction exitEaseFunction = new CubicEase();
 
 		async Task DoHover(bool entered)
 		{
-			TimeSpan duration = entered ? enterTime : exitTime;
+			float duration = entered ? enterTime : exitTime;
 			IEasingFunction ease = entered ? enterEaseFunction : exitEaseFunction;
 
 			Color toBGColor = entered ? bgHoveredColor : bgNormalColor;
 
-			bgBrush.BeginAnimation(SolidColorBrush.ColorProperty, new ColorAnimation(toBGColor, duration) { EasingFunction = ease });
-
-			await Task.Delay(duration);
+			await bgBrush.AnimateToColor(toBGColor, duration, ease);
 		}
 	}
 }

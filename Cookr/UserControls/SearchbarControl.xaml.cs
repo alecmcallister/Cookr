@@ -40,6 +40,7 @@ namespace Cookr
 				return;
 
 			SearchEvent(SearchbarTextBox.Text);
+			Text = "";
 		}
 
 		void SearchbarTextBox_KeyDown(object sender, KeyEventArgs e)

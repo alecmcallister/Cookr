@@ -1,33 +1,32 @@
-﻿using Cookr.Logic;
-using Cookr.UserControls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Windows.Media.Animation;
 
 namespace Cookr
 {
-	public partial class Search : Page, CookrPage
+	public partial class Search : Page
 	{
-		string searchString;
+		string _currentSearch;
+		public string CurrentSearch { get { return _currentSearch; } set { _currentSearch = value; ResultText = value; } }
+
+		public string ResultText { get { return SearchResultText.Text; } set { SearchResultText.Text = '"' + value + '"'; } }
+
 		List<RecipeObject> searchResults;
 
 		public Search()
 		{
 			InitializeComponent();
-		}
+			CurrentSearch = "";
 
-		public Search(string _search)
-		{
-			InitializeComponent();
+			ExpandButton.ToggleButtonEvent += async (b) => { await ToggleFilterPanelVisibility(b); };
 
-			searchString = _search;
-			//SearchField.Text = searchString;
-			SearchedLabel.Content = "\"" + searchString + "\"";
+			#region OLD CODE: CHANGE THIS
 
-			buttonClearFilters.Click += ButtonClearFilters_Click;
 			comboBoxSortBy.SelectionChanged += ComboBoxSortBy_SelectionChanged;
 			comboBoxMinRating.SelectionChanged += ComboBoxMinRating_SelectionChanged;
 			textBoxMaxCookHours.PreviewTextInput += TextBoxMaxCookHours_PreviewTextInput;
@@ -41,18 +40,47 @@ namespace Cookr
 			buttonIncludeIngredient.Click += ButtonIncludeIngredient_Click;
 			buttonExcludeIngredient.Click += ButtonExcludeIngredient_Click;
 
-			search(searchString);
-			LoadSearchResults(searchResults);
-
+			#endregion
 		}
+
+		public void DoSearch(string value)
+		{
+			CurrentSearch = value.ToLower();
+
+			string[] delimiters = { " ", "," };
+			string[] tagStrings = CurrentSearch.Split(delimiters, StringSplitOptions.None);
+			List<string> tags = new List<string>(tagStrings);
+
+			searchResults = SearchEngine.TagSearch(RecipeManager.GetRecipes(), tags);
+			LoadSearchResults(searchResults);
+		}
+
+		public void UpdateSearchResults()
+		{
+			DoSearch(CurrentSearch);
+		}
+
+		#region Animation
+
+		double filterPanelExpandedHeight = 150f;
+		float animationTime = 0.3f;
+		IEasingFunction ease = new CubicEase();
+
+		async Task ToggleFilterPanelVisibility(bool visible)
+		{
+			await ExpandableGrid.AnimateDoubleProperty(HeightProperty, visible ? filterPanelExpandedHeight : 0f, animationTime, ease);
+		}
+
+		#endregion
+
+		#region HOLY SHIT CHANGE THIS
 
 		void ListBoxExcludeIngredients_MouseDoubleClick(object sender, MouseButtonEventArgs e)
 		{
 			if (listBoxExcludeIngredients.SelectedItem != null)
 			{
 				SearchEngine.filter.mustExcludeIngredients.Remove((string)listBoxExcludeIngredients.SelectedItem);
-				search(searchString);
-				LoadSearchResults(searchResults);
+				UpdateSearchResults();
 			}
 		}
 
@@ -61,8 +89,7 @@ namespace Cookr
 			if (listBoxIncludeIngredients.SelectedItem != null)
 			{
 				SearchEngine.filter.mustIncludeIngredients.Remove((string)listBoxIncludeIngredients.SelectedItem);
-				search(searchString);
-				LoadSearchResults(searchResults);
+				UpdateSearchResults();
 			}
 		}
 
@@ -103,8 +130,7 @@ namespace Cookr
 			else
 				SearchEngine.filter.maxTime = 60 * Convert.ToInt32(hours) + Convert.ToInt32(minutes);
 
-			search(searchString);
-			LoadSearchResults(searchResults);
+			UpdateSearchResults();
 		}
 
 		void ButtonExcludeIngredient_Click(object sender, RoutedEventArgs e)
@@ -113,8 +139,7 @@ namespace Cookr
 			textBoxExcludeIngredient.Text = "";
 			SearchEngine.filter.mustExcludeIngredients.Add(ingredient);
 
-			search(searchString);
-			LoadSearchResults(searchResults);
+			UpdateSearchResults();
 		}
 
 		void ButtonIncludeIngredient_Click(object sender, RoutedEventArgs e)
@@ -123,15 +148,14 @@ namespace Cookr
 			textBoxIncludeIngredient.Text = "";
 			SearchEngine.filter.mustIncludeIngredients.Add(ingredient);
 
-			search(searchString);
-			LoadSearchResults(searchResults);
+			UpdateSearchResults();
 		}
 
 		void ComboBoxMinRating_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
 			SearchEngine.filter.minRating = Convert.ToInt32(((ComboBoxItem)(comboBoxMinRating.SelectedItem)).Content);
-			search(searchString);
-			LoadSearchResults(searchResults);
+
+			UpdateSearchResults();
 		}
 
 		void ButtonClearFilters_Click(object sender, RoutedEventArgs e)
@@ -142,8 +166,7 @@ namespace Cookr
 			textBoxMaxCookMinutes.Text = "";
 
 			SearchEngine.clearFilters();
-			search(searchString);
-			LoadSearchResults(searchResults);
+			UpdateSearchResults();
 		}
 
 		void ComboBoxSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -162,18 +185,7 @@ namespace Cookr
 				sortBy = SearchEngine.SortBy.Relevance;
 
 			SearchEngine.filter.sortBy = sortBy;
-			search(searchString);
-			LoadSearchResults(searchResults);
-		}
-
-		void search(string searchString)
-		{
-			searchString = searchString.ToLower();
-			string[] delimiters = { " ", "," };
-			string[] tagStrings = searchString.Split(delimiters, StringSplitOptions.None);
-			List<string> tags = new List<string>(tagStrings);
-
-			searchResults = SearchEngine.TagSearch(RecipeManager.GetRecipes(), tags);
+			UpdateSearchResults();
 		}
 
 		void LoadSearchResults(List<RecipeObject> searchResults)
@@ -189,34 +201,7 @@ namespace Cookr
 			searchResults.ForEach(recipe => SearchResultsStack.Children.Add(new RecipeCard(recipe)));
 		}
 
-		void HomeBtn_Click(object sender, RoutedEventArgs e)
-		{
-			NavigationManager.NavigateToHome();
-		}
+		#endregion
 
-		void button_Click(object sender, RoutedEventArgs e)
-		{
-			//NavigationManager.NavigateToSearch(SearchField.Text);
-		}
-
-		void SearchField_KeyDown(object sender, KeyEventArgs e)
-		{
-			//if (e.Key == Key.Enter)
-			//	NavigationManager.NavigateToSearch(SearchField.Text);
-		}
-
-		void BackBtn_Click(object sender, RoutedEventArgs e)
-		{
-			NavigationManager.NavigateToPrev();
-		}
-
-		public void SetBackButton()
-		{
-			//if (!NavigationManager.allowPrev())
-			//	BackBtn.Visibility = Visibility.Collapsed;
-
-			//else
-			//	BackBtn.Visibility = Visibility.Visible;
-		}
 	}
 }

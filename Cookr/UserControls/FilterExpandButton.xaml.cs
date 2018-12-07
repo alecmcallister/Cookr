@@ -17,20 +17,33 @@ using System.Windows.Shapes;
 namespace Cookr
 {
 	/// <summary>
-	/// Interaction logic for HomeButton.xaml
+	/// Interaction logic for ToggleButton.xaml
 	/// </summary>
-	public partial class HomeButton : UserControl
+	public partial class FilterExpandButton : UserControl
 	{
-		public event Action HomeButtonClickedEvent = new Action(() => { });
+		public event Action<bool> ToggleButtonEvent = new Action<bool>(b => { });
 
-		public HomeButton()
+		bool toggled;
+
+		public FilterExpandButton()
 		{
 			InitializeComponent();
 		}
 
-		void HomeButtonClick(object sender, RoutedEventArgs e)
+		void ToggleClicked(object sender, RoutedEventArgs e)
 		{
-			HomeButtonClickedEvent();
+			toggled = !toggled;
+
+			ToggleButtonEvent(toggled);
+
+			// TODO: Make async and wait until done animating before changing text
+			ToggleButtonArrowIcon.Text = GetIconString();
+			ToggleButtonText.Text = toggled ? "Less" : "Filter";
+		}
+
+		string GetIconString()
+		{
+			return toggled ? (string)TryFindResource("UpArrow-Icon") : (string)TryFindResource("DownArrow-Icon");
 		}
 
 		protected async override void OnMouseEnter(MouseEventArgs e)
@@ -47,9 +60,9 @@ namespace Cookr
 			await DoHover(false);
 		}
 
-		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("FGNormal"); } }
-		Color bgNormalColor { get { return (Color)TryFindResource("Text-Light"); } }
-		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
+		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("BGNormal"); } }
+		Color bgNormalColor { get { return (Color)TryFindResource("Primary"); } }
+		Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Dark"); } }
 
 		float enterTime = 0.3f;
 		float exitTime = 0.2f;
@@ -66,5 +79,6 @@ namespace Cookr
 
 			await bgBrush.AnimateToColor(toBGColor, duration, ease);
 		}
+
 	}
 }

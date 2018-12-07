@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Cookr.ToggleButtonControl"
+﻿<UserControl x:Class="Cookr.FilterExpandButton"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -24,7 +24,7 @@
 					<ColumnDefinition Width="Auto"/>
 				</Grid.ColumnDefinitions>
 				<TextBlock x:Name="ToggleButtonArrowIcon" Grid.Column="0" Style="{DynamicResource Icon}" Text="{DynamicResource DownArrow-Icon}" Foreground="{StaticResource Text-Light-Brush}"/>
-				<TextBlock x:Name="ToggleButtonText" Grid.Column="1" Margin="-5,0,15,0" VerticalAlignment="Center" Text="Expand" Foreground="{StaticResource Text-Light-Brush}" />
+				<TextBlock x:Name="ToggleButtonText" Grid.Column="1" Margin="-5,0,15,0" VerticalAlignment="Center" Text="Sort / Filter" Foreground="{StaticResource Text-Light-Brush}" />
 
 			</Grid>
 		</Border>
