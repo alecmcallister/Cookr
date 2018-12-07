@@ -52,8 +52,23 @@
 					
 					<!-- Change this stuff -->
 					
-					<local:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" />
-					<Label x:Name="RecipeTime" Content="YY minutes" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFEEEEEE"/>
+					<!--local:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Loaded="RecipeStarRating_Loaded" -->
+
+                    <Grid Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock x:Name="Star1" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="0"/>
+                        <TextBlock x:Name="Star2" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="1"/>
+                        <TextBlock x:Name="Star3" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Icon}" Foreground="{StaticResource Star-Brush}" Grid.Column="2"/>
+                        <TextBlock x:Name="Star4" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="3"/>
+                        <TextBlock x:Name="Star5" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="4"/>
+                    </Grid>
+                    <Label x:Name="RecipeTime" Content="YY minutes" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFEEEEEE"/>
 					<Label x:Name="RecipeTitle" Content="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Foreground="#FFEEEEEE" />
 				</Grid>
 				

@@ -41,7 +41,11 @@ namespace Cookr
 			// Populate Title, time, star rating, TitleImage.
 			RecipeTitle.Content = recipe.Title;
 			RecipeTime.Content = hoursAndMinutesString(recipe.TotalTime);
-			//RecipeStarRating.Value = (int)(recipe.Rating);
+            //RecipeStarRating.Value = (int)(recipe.Rating);
+
+            // Populate the star rating
+            PopulateStarRating((int)recipe.Rating);
+
 			RecipeTitleImage.ImageSource = new BitmapImage(
 										   new Uri("Images/" + recipe.TitleImage, UriKind.Relative));
 
@@ -62,7 +66,32 @@ namespace Cookr
 			fillRecipeScrollableNavigationThingyList();
 		}
 
-		private string hoursAndMinutesString(int time)
+
+        /// <summary>
+        /// Go ham on that star rating.
+        /// </summary>
+        /// <param name="rating"></param>
+        private void PopulateStarRating(int rating)
+        {
+            // Put all the stars in a list
+            List<TextBlock> stars = new List<TextBlock>() { Star1, Star2, Star3, Star4, Star5 };
+            for(int i = 0; i < 5; i++)
+            {
+                if(rating > i)
+                {
+                    stars[i].Text = (string)FindResource("Star-Icon");
+                    stars[i].Foreground = (SolidColorBrush)FindResource("Star-Brush");
+                }
+                else
+                {
+                    stars[i].Text = (string)FindResource("Star-Empty-Icon");
+                    stars[i].Foreground = (SolidColorBrush)FindResource("Inactive-Light-Brush");
+                }
+            }
+        }
+
+
+        private string hoursAndMinutesString(int time)
 		{
 			int hours = time / 60;
 			string result = "";
@@ -163,11 +192,22 @@ namespace Cookr
 
 		private void LoadRecipeSteps()
 		{
-			// Use the list of RecipeSteps to populate the list of buttons and recipe steps
 
-			// Keep track of the current step type so we know when to add in the little extra bars
-			// That say Cook or Prep or whatever.
-			string currentType = "";
+            // Clear out old Recipe buttons
+            while (RecipeButtonStack.Children.Count > 2)
+            {
+                RecipeButtonStack.Children.RemoveAt(RecipeButtonStack.Children.Count - 1);
+            }
+            while (RecipeStepStack.Children.Count > 4)
+            {
+                RecipeStepStack.Children.RemoveAt(RecipeStepStack.Children.Count - 1);
+            }
+
+            // Use the list of RecipeSteps to populate the list of buttons and recipe steps
+
+            // Keep track of the current step type so we know when to add in the little extra bars
+            // That say Cook or Prep or whatever.
+            string currentType = "";
 			foreach (RecipeStep rs in recipe.RecipeSteps)
 			{
 				if (!rs.Type.Equals(currentType))
@@ -327,6 +367,6 @@ namespace Cookr
 			InformationPopup.IsOpen = false;
 			RunButtonsListUpdate();
 		}
-
-	}
+        
+    }
 }
