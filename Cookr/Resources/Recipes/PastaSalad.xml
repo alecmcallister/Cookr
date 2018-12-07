@@ -1,24 +1,25 @@
 <Recipe>
-	<Title>Coconut Oatmeal</Title>
+	<Title>Pasta Salad</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>coconut</Tag>
-		<Tag>oatmeal</Tag>
-		<Tag>healthy</Tag>
-		<Tag>breakfast</Tag>
-		<Tag>quick</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>pasta</Tag>
+		<Tag>salad</Tag>
+		<Tag>lunch</Tag>
 	</Tags>
 	<Rating>4</Rating>
-	<TitleImage>CoconutOatmeal-Title.jpg</TitleImage>
-	<RecipeIntroduction>Oatnut. Oatanut. Nokacut.</RecipeIntroduction>
-	<PrepTime>5</PrepTime>
-	<CookTime>10</CookTime>
-	<TotalTime>15</TotalTime>
-	<NumberOfServings>6</NumberOfServings>
+	<TitleImage>PastaSalad-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>40</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Fusili Pasta" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Bell Pepper" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Pepperoni" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Olives" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

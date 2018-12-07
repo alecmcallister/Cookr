@@ -1,24 +1,24 @@
 <Recipe>
-	<Title>Coconut Oatmeal</Title>
+	<Title>Spicy Baked Tofu</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>coconut</Tag>
-		<Tag>oatmeal</Tag>
-		<Tag>healthy</Tag>
-		<Tag>breakfast</Tag>
-		<Tag>quick</Tag>
+		<Tag>spicy</Tag>
+		<Tag>asian</Tag>
 		<Tag>vegetarian</Tag>
+		<Tag>dinner</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>CoconutOatmeal-Title.jpg</TitleImage>
-	<RecipeIntroduction>Oatnut. Oatanut. Nokacut.</RecipeIntroduction>
-	<PrepTime>5</PrepTime>
-	<CookTime>10</CookTime>
-	<TotalTime>15</TotalTime>
-	<NumberOfServings>6</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>SpicyBakedTofu-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>105</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Hoisin" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Tofu" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

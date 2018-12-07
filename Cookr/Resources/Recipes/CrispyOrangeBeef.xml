@@ -1,0 +1,62 @@
+<Recipe>
+	<Title>Crispy Orange Beef</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>asian</Tag>
+		<Tag>beef</Tag>
+		<Tag>dinner</Tag>
+		<Tag>lunch</Tag>
+		<Tag>chinese</Tag>
+	</Tags>
+	<Rating>5</Rating>
+	<TitleImage>CrispyOrangeBeef-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>65</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
+
+	<Ingredients>
+		<Ingredient Name="Beef" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Sugar" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Salt" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Soy Sauce" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Rice" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Broccoli" Quantity="0" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Blender"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

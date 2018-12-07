@@ -1,24 +1,23 @@
 <Recipe>
-	<Title>Coconut Oatmeal</Title>
+	<Title>Potato Salad</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>coconut</Tag>
-		<Tag>oatmeal</Tag>
-		<Tag>healthy</Tag>
-		<Tag>breakfast</Tag>
-		<Tag>quick</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>salad</Tag>
+		<Tag>potatoes</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>CoconutOatmeal-Title.jpg</TitleImage>
-	<RecipeIntroduction>Oatnut. Oatanut. Nokacut.</RecipeIntroduction>
-	<PrepTime>5</PrepTime>
-	<CookTime>10</CookTime>
-	<TotalTime>15</TotalTime>
-	<NumberOfServings>6</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>PotatoSalad-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>390</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Potatoes" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Mayonnaise" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Eggs" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Onion" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>
