@@ -1,16 +1,19 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Spicy Chicken Thai Soup</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>spicy</Tag>
+		<Tag>chicken</Tag>
+		<Tag>thai</Tag>
+		<Tag>soup</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>SpicyChickenThaiSoup-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is gonna burn.</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>60</CookTime>
+	<TotalTime>75</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

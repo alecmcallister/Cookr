@@ -1,20 +1,30 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Curried Coconut Chicken</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>asian</Tag>
+		<Tag>indian</Tag>
+		<Tag>chicken</Tag>
+		<Tag>rice</Tag>
+		<Tag>spicy</Tag>
+		<Tag>dinner</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
+	<Rating>4</Rating>
+	<TitleImage>CurriedCoconutChicken-Title.jpg</TitleImage>
 	<RecipeIntroduction>This is a template.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
+	<TotalTime>70</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Chicken" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Onion" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Tomatoes" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Coconut" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Sugar" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

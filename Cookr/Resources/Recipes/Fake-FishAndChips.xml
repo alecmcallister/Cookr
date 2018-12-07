@@ -1,16 +1,20 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Fish and Chips</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>fish</Tag>
+		<Tag>seafood</Tag>
+		<Tag>chips</Tag>
+		<Tag>fries</Tag>
+		<Tag>quick</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>FishAndChips-Title.jpg</TitleImage>
+	<RecipeIntroduction>Fish is fried and fries are fried</RecipeIntroduction>
+	<PrepTime>5</PrepTime>
+	<CookTime>10</CookTime>
+	<TotalTime>15</TotalTime>
+	<NumberOfServings>4</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

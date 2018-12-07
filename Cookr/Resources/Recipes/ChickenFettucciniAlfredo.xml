@@ -20,6 +20,8 @@
 	<CookTime>30</CookTime>
 	<TotalTime>60</TotalTime>
 	<NumberOfServings>8</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
+	
 	<Ingredients>
 		<Ingredient Name="Skinless, Boneless Chicken Breast Halves" Quantity="6" Optional="0"/>
 		<Ingredient Name="Butter" Quantity="6 Tablespoons" Optional="0"/>

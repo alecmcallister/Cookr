@@ -18,6 +18,8 @@
 	<CookTime>480</CookTime>
 	<TotalTime>490</TotalTime>
 	<NumberOfServings>12</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
+	
 	<Ingredients>
 		<Ingredient Name="Condensed Cream of Mushroom Soup" Quantity="2 (10.75 ounce) cans" Optional="0"/>
 		<Ingredient Name="Dry Onion Soup Mix" Quantity="1 (1 ounce) package" Optional="0"/>

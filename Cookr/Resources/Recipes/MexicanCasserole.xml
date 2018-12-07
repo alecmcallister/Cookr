@@ -18,6 +18,8 @@
 	<CookTime>20</CookTime>
 	<TotalTime>35</TotalTime>
 	<NumberOfServings>6</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
+	
 	<Ingredients>
 		<Ingredient Name="Refried Beans" Quantity="1 (16 ounce) can" Optional="0"/>
 		<Ingredient Name="Onion" Quantity="1 (3/4 of a cup worth)" Optional="0" ToolTipID="4"/>

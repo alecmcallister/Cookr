@@ -18,6 +18,8 @@
 	<CookTime>15</CookTime>
 	<TotalTime>30</TotalTime>
 	<NumberOfServings>2</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
+	
 	<Ingredients>
 		<Ingredient Name="Oil" Quantity="" Optional="0" ToolTipID="1"/>
 		<Ingredient Name="Green Bell Pepper" Quantity="1" Optional="0"/>

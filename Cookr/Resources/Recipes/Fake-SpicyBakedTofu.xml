@@ -1,20 +1,26 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Spicy Baked Tofu</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>spicy</Tag>
+		<Tag>asian</Tag>
+		<Tag>vegetarian</Tag>
+		<Tag>dinner</Tag>
+		<Tag>tofu</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
+	<Rating>3</Rating>
+	<TitleImage>SpicyBakedTofu-Title.jpg</TitleImage>
 	<RecipeIntroduction>This is a template.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
+	<TotalTime>105</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Hoisin" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Tofu" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

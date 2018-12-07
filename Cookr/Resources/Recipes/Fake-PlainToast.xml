@@ -1,24 +1,28 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Plain Toast</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>toast</Tag>
+		<Tag>bread</Tag>
+		<Tag>breakfast</Tag>
+		<Tag>quick</Tag>
+		<Tag>vegetarian</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<Rating>1</Rating>
+	<TitleImage>BurntToast.jpg</TitleImage>
+	<RecipeIntroduction>Plain Ol' Toast.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<CookTime>15</CookTime>
+	<TotalTime>15</TotalTime>
+	<NumberOfServings>1</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Toast Bread" Quantity="2" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>
-		<Tool Name="Blender"/>
+		<Tool Name="Toaster"/>
 	</Tools>
 
 	<ToolTips>

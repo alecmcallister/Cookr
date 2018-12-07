@@ -1,20 +1,31 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Szechwan Shrimp</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>asian</Tag>
+		<Tag>seafood</Tag>
+		<Tag>spicy</Tag>
+		<Tag>chinese</Tag>
+		<Tag>asian</Tag>
+		<Tag>rice</Tag>
+		<Tag>lunch</Tag>
+		<Tag>shrimp</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<Rating>5</Rating>
+	<TitleImage>SzechwanShrimp-Title.jpg</TitleImage>
+	<RecipeIntroduction>IT'S SZECHWAN MORTY!!!!</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
+	<TotalTime>20</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Rice" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Shrimp" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Honey" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

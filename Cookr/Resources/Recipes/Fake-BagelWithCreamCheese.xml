@@ -1,16 +1,20 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Bagel With Cream Cheese</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>bagel</Tag>
+		<Tag>grain</Tag>
+		<Tag>cream cheese</Tag>
+		<Tag>breakfast</Tag>
+		<Tag>lunch</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>BagelWithCreamCheese-Title.jpg</TitleImage>
+	<RecipeIntroduction>Put cheese on the bagel or something. Maybe toast it.</RecipeIntroduction>
+	<PrepTime>2</PrepTime>
+	<CookTime>3</CookTime>
+	<TotalTime>5</TotalTime>
+	<NumberOfServings>1</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
@@ -18,7 +22,7 @@
 	</Ingredients>
 
 	<Tools>
-		<Tool Name="Blender"/>
+		<Tool Name="Toaster"/>
 	</Tools>
 
 	<ToolTips>

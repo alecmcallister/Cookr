@@ -1,20 +1,31 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Crispy Orange Beef</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>asian</Tag>
+		<Tag>beef</Tag>
+		<Tag>dinner</Tag>
+		<Tag>lunch</Tag>
+		<Tag>chinese</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
+	<Rating>5</Rating>
+	<TitleImage>CrispyOrangeBeef-Title.jpg</TitleImage>
 	<RecipeIntroduction>This is a template.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
+	<TotalTime>65</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Beef" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Sugar" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Salt" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Soy Sauce" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Rice" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Broccoli" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

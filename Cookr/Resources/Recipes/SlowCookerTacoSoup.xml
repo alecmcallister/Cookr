@@ -20,6 +20,8 @@
 	<CookTime>480</CookTime>
 	<TotalTime>490</TotalTime>
 	<NumberOfServings>8</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
+	
 	<Ingredients>
 		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>
 		<Ingredient Name="Onion" Quantity="1" Optional="0"/>

@@ -1,16 +1,18 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Pad Thai</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>thai</Tag>
+		<Tag>noodle</Tag>
+		<Tag>chicken</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>4</Rating>
+	<TitleImage>PadThai-Title.jpg</TitleImage>
+	<RecipeIntroduction>Traditional recipe. You can change up the meat if you like.</RecipeIntroduction>
+	<PrepTime>40</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>60</TotalTime>
+	<NumberOfServings>4</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

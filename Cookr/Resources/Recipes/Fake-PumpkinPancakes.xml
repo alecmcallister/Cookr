@@ -1,0 +1,63 @@
+<Recipe>
+	<Title>Pumpkin Pancakes</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>breakfast</Tag>
+		<Tag>pancake</Tag>
+		<Tag>pumpkin</Tag>
+	</Tags>
+	<Rating>4</Rating>
+	<TitleImage>PumpkinPancakes.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>20</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>40</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
+	<FakeRecipe>1</FakeRecipe>
+
+	<Ingredients>
+		<Ingredient Name="Milk" Quantity="1 1/2 cups" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Pumpkin puree" Quantity="1 cup" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Egg" Quantity="1" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Vegetable Oil" Quantity="2 tbsp" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Flour" Quantity="2 cups" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Brown Sugar" Quantity="3 tbsp" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ground Allspice" Quantity="1 tsp" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ground Cinnamon" Quantity="1 tsp" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ground Ginger" Quantity="1/2 tsp" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Salt" Quantity="1/2 tsp" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Blender"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

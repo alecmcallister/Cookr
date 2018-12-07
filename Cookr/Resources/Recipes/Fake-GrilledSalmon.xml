@@ -1,16 +1,19 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Grilled Salmon</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>fish</Tag>
+		<Tag>seafood</Tag>
+		<Tag>salmon</Tag>
+		<Tag>dinner</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>2</Rating>
+	<TitleImage>GrilledSalmon-Title.jpg</TitleImage>
+	<RecipeIntroduction>It tastes a bit fishy to be honest.</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>15</CookTime>
+	<TotalTime>30</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

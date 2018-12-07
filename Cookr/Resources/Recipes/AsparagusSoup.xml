@@ -14,6 +14,7 @@
 	<CookTime>15</CookTime>
 	<TotalTime>40</TotalTime>
 	<NumberOfServings>6</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
 
 	<Ingredients>
 		<Ingredient Name="Oil" Quantity="1 Tbsp" Optional="0" ToolTipID="1"/>

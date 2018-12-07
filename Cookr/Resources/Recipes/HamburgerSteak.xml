@@ -15,6 +15,7 @@
 	<CookTime>25</CookTime>
 	<TotalTime>40</TotalTime>
 	<NumberOfServings>4</NumberOfServings>
+	<FakeRecipe>0</FakeRecipe>
 	
 	<Ingredients>
 		<Ingredient Name="Ground Beef" Quantity="1 pound" Optional="0"/>

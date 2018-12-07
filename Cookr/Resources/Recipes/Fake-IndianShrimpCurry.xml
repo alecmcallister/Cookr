@@ -1,16 +1,19 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Indian Shrimp Curry</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>shrimp</Tag>
+		<Tag>indian</Tag>
+		<Tag>curry</Tag>
+		<Tag>seafood</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>IndianShrimpCurry-Title.jpg</TitleImage>
+	<RecipeIntroduction>Curry in the shrimpy shrimps.</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>15</CookTime>
+	<TotalTime>30</TotalTime>
+	<NumberOfServings>4</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

@@ -1,16 +1,19 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Sesame Chicken</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>chicken</Tag>
+		<Tag>sesame</Tag>
+		<Tag>asian</Tag>
+		<Tag>chinese</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>SesameChicken-Title.jpg</TitleImage>
+	<RecipeIntroduction>Additive.</RecipeIntroduction>
+	<PrepTime>30</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>50</TotalTime>
+	<NumberOfServings>4</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

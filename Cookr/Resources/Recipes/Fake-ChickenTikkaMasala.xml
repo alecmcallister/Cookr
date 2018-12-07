@@ -1,20 +1,31 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Chicken Tikka Masala</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>indian</Tag>
+		<Tag>spicy</Tag>
+		<Tag>dinner</Tag>
+		<Tag>asian</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
+	<Rating>3</Rating>
+	<TitleImage>ChickenTikkaMasala-Title.jpg</TitleImage>
 	<RecipeIntroduction>This is a template.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
+	<TotalTime>140</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Chicken" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Yogurt" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Paprika" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cumin" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cinnamon" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cayenne" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Jalapeno" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

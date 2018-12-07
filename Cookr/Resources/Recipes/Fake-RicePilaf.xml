@@ -1,16 +1,16 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Rice Pilaf</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>rice</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>RicePilaf-Title.jpg</TitleImage>
+	<RecipeIntroduction>What's a pilaf? This is a pilaf</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>45</CookTime>
+	<TotalTime>60</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>

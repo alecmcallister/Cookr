@@ -1,17 +1,20 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>BBQ Chicken Pizza</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>bbq</Tag>
+		<Tag>chicken</Tag>
+		<Tag>pizza</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>4</Rating>
+	<TitleImage>BBQChickenPizza-Title.jpg</TitleImage>
+	<RecipeIntroduction>Beats pepperoni!</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>35</CookTime>
+	<TotalTime>50</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
+
 
 	<Ingredients>
 		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>

@@ -1,16 +1,17 @@
 <Recipe>
-	<Title>Recipe Template</Title>
+	<Title>Broccoli</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>blank</Tag>
+		<Tag>broccoli</Tag>
+		<Tag>vegetarian</Tag>
 	</Tags>
-	<Rating>0</Rating>
-	<TitleImage>blank.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>0</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>1</Rating>
+	<TitleImage>Broccoli-Title.jpg</TitleImage>
+	<RecipeIntroduction>It's RAW!</RecipeIntroduction>
+	<PrepTime>1</PrepTime>
+	<CookTime>1</CookTime>
+	<TotalTime>2</TotalTime>
+	<NumberOfServings>1</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
