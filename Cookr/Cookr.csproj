@@ -421,6 +421,32 @@
   <ItemGroup>
     <Resource Include="Images\RicePilaf-Title.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\PearAndGorgonzolaCheesePizza-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Broccoli-Title.jpg" />
+    <Resource Include="Images\BroccoliSalad-Title.jpg" />
+    <Resource Include="Images\ChickenTikkaMasala-Title.jpg" />
+    <Resource Include="Images\CrispyOrangeBeef-Title.jpg" />
+    <Resource Include="Images\CurriedCoconutChicken-Title.jpg" />
+    <Resource Include="Images\GrilledSalmon-Title.jpg" />
+    <Resource Include="Images\MargheritaPizza-Title.jpg" />
+    <Resource Include="Images\PadThai-Title.jpg" />
+    <Resource Include="Images\PastaSalad-Title.jpg" />
+    <Resource Include="Images\PorkDumplings-Title.jpg" />
+    <Resource Include="Images\PotatoSalad-Title.jpg" />
+    <Resource Include="Images\RoastedTurkey-Title.jpg" />
+    <Resource Include="Images\SpanishRice-Title.jpg" />
+    <Resource Include="Images\SpicyBakedTofu-Title.jpg" />
+    <Resource Include="Images\SpicyChickenThaiSoup-Title.jpg" />
+    <Resource Include="Images\SpicyVeganPotatoCurry-Title.jpg" />
+    <Resource Include="Images\SzechwanShrimp-Title.jpg" />
+    <Resource Include="Images\ThaiCoconutSoup-Title.jpg" />
+    <Resource Include="Images\ThaiSteamedMussels-Title.jpg" />
+    <Resource Include="Images\TresLeches-Title.jpg" />
+    <Resource Include="Images\TwiceBakedPotatoes-Title.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>XCOPY "$(ProjectDir)Resources" "$(TargetDir)" /S /Y</PostBuildEvent>
