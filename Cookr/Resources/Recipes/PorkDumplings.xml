@@ -1,24 +1,24 @@
 <Recipe>
-	<Title>Coconut Oatmeal</Title>
+	<Title>Pork Dumplings</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>coconut</Tag>
-		<Tag>oatmeal</Tag>
-		<Tag>healthy</Tag>
-		<Tag>breakfast</Tag>
-		<Tag>quick</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>chinese</Tag>
+		<Tag>asian</Tag>
+		<Tag>lunch</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>CoconutOatmeal-Title.jpg</TitleImage>
-	<RecipeIntroduction>Oatnut. Oatanut. Nokacut.</RecipeIntroduction>
-	<PrepTime>5</PrepTime>
-	<CookTime>10</CookTime>
-	<TotalTime>15</TotalTime>
-	<NumberOfServings>6</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>PorkDumplings-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>80</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
 
 	<Ingredients>
-		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Pork" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Egg" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Soy Sauce" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

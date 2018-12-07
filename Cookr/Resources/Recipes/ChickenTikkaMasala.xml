@@ -1,0 +1,62 @@
+<Recipe>
+	<Title>Chicken Tikka Masala</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>indian</Tag>
+		<Tag>spicy</Tag>
+		<Tag>dinner</Tag>
+		<Tag>asian</Tag>
+	</Tags>
+	<Rating>3</Rating>
+	<TitleImage>ChickenTikkaMasala-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<PrepTime>0</PrepTime>
+	<CookTime>0</CookTime>
+	<TotalTime>140</TotalTime>
+	<NumberOfServings>0</NumberOfServings>
+
+	<Ingredients>
+		<Ingredient Name="Chicken" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Yogurt" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Paprika" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cumin" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Ginger" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cinnamon" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Cayenne" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Jalapeno" Quantity="0" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Blender"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>
