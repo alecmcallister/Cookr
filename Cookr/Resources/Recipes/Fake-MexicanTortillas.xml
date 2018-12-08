@@ -1,0 +1,54 @@
+<Recipe>
+	<Title>Mexican Tortillas</Title>
+	<PopularToday>0</PopularToday>
+	<Tags>
+		<Tag>mexican</Tag>
+		<Tag>tortillas</Tag>		
+		<Tag>tortilla</Tag>		
+	</Tags>
+	<Rating>4</Rating>
+	<TitleImage>MexicanTortillas-Title.jpg</TitleImage>
+	<RecipeIntroduction>These are not green. No spinach here, nosiree. They're like a pasty yellow almost corny colour, like all that is good and right should be.</RecipeIntroduction>
+	<PrepTime>30</PrepTime>
+	<CookTime>25</CookTime>
+	<TotalTime>55</TotalTime>
+	<NumberOfServings>12</NumberOfServings>
+	<FakeRecipe>1</FakeRecipe>
+
+	<Ingredients>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Blender"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>

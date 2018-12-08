@@ -1,0 +1,55 @@
+<Recipe>
+    <Title>Potato Soup</Title>
+    <PopularToday>0</PopularToday>
+    <Tags>
+        <Tag>potato</Tag>
+        <Tag>potatoes</Tag>
+        <Tag>soup</Tag>
+    </Tags>
+    <Rating>3</Rating>
+    <TitleImage>PotatoSoup-Title.jpg</TitleImage>
+    <RecipeIntroduction>potatopotatopotato. potatopotatopotatopotatopotato potatopotato. potatopotatopotatopotatopotatopotato potatopotatopotato potato potato potatopotato potatopotatopotatopotatopotato potatopotato. potatopotatopotato. potato. potato. potatopotatopotato. potatopotatopotato potatopotato potatopotatopotatopotato potato potatopotato potatopotatopotato. potato potato potato potatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotatopotato.</RecipeIntroduction>
+    <PrepTime>30</PrepTime>
+    <CookTime>50</CookTime>
+    <TotalTime>120</TotalTime>
+    <NumberOfServings>1</NumberOfServings>
+    <FakeRecipe>1</FakeRecipe>
+
+
+	<Ingredients>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
+	</Ingredients>
+
+	<Tools>
+		<Tool Name="Blender"/>
+	</Tools>
+
+	<ToolTips>
+		<ToolTip Id="0" Text="This is a tooltip template.">
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</ToolTip>
+	</ToolTips>
+
+	<RecipeSteps>
+		<RecipeStep Type="Prep" Number="0">
+			<StepText>This is a prep step.</StepText>
+			<Title>Prep Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+		</RecipeStep>
+		<RecipeStep Type="Cook" Number="0">
+			<Warning>THIS IS A WARNING!</Warning>
+			<StepText>This is a cook step.</StepText>
+			<Title>Cook Step</Title>
+			<Images>
+				<image>blank.jpg</image>
+			</Images>
+			<StepTips>
+				<StepTip TargetText="Tooltip" ToolTipID="0" />
+			</StepTips>
+		</RecipeStep>
+	</RecipeSteps>
+</Recipe>
