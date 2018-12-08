@@ -128,6 +128,9 @@
     <Compile Include="UserControls\FilterExpandButton.xaml.cs">
       <DependentUpon>FilterExpandButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ClearFiltersButton.xaml.cs">
+      <DependentUpon>ClearFiltersButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ToggleButtonControl.xaml.cs">
       <DependentUpon>ToggleButtonControl.xaml</DependentUpon>
     </Compile>
@@ -252,6 +255,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\FilterExpandButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ClearFiltersButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

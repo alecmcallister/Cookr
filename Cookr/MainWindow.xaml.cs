@@ -55,7 +55,7 @@ namespace Cookr
 
 			RecipeButton.BackToRecipeClicked += async () => { await GoToRecipe(); };
 
-			RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); await GoToRecipe(); };
+			RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); RecipeButton.SetCurrentRecipt(r.Title); await GoToRecipe(); };
 		}
 
 		public async Task BackPressed()
@@ -122,7 +122,7 @@ namespace Cookr
 		Thickness headerSmallMargin = new Thickness(15, 0, 15, 0);
 		Thickness backButtonFullMargin = new Thickness(0, 0, -60f, 0);
 		Thickness homeButtonFullMargin = new Thickness(-60f, 0, 0, 0);
-		Thickness recipeButtonFullMargin = new Thickness(-60f, 0, 0, 0);
+		Thickness recipeButtonFullMargin = new Thickness(0, 0, -400f, 0);
 		Thickness ButtonSmallMargin = new Thickness(0);
 
 		#region Button Visibility

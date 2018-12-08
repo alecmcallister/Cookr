@@ -10,25 +10,26 @@
 	<UserControl.Resources>
 	</UserControl.Resources>
 
-	<Grid Width="400" HorizontalAlignment="Left">
+	<Grid Width="400" Height="200"  HorizontalAlignment="Left">
 
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="190"/>
 			<ColumnDefinition Width="*"/>
 		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="32"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
 
-		<Grid Effect="{StaticResource DropShadow}">
-			<Grid.RowDefinitions>
-				<RowDefinition Height="32"/>
-				<RowDefinition Height="60"/>
-			</Grid.RowDefinitions>
-
-			<TextBlock Margin="15,0"
+		<TextBlock Margin="15,0"
 				   FontSize="{StaticResource Text-Regular}"
 				   Foreground="{StaticResource Text-Light-Brush}"
-				   Text="Must not contain" />
+				   Text="Must not contain" Grid.ColumnSpan="2"
+				   HorizontalAlignment="Center"  Effect="{StaticResource DropShadow}"/>
+		
+		<Grid Effect="{StaticResource DropShadow}" Grid.Row="1">
 
-			<Border Grid.Row="1" Height="60" Background="{StaticResource BG-Brush}"  CornerRadius="30">
+			<Border Height="60" Background="{StaticResource BG-Brush}" VerticalAlignment="Top" CornerRadius="30">
 				<Grid>
 					<TextBox Text="Fish"
 						 Foreground="{StaticResource Text-Dark-Brush}" 
@@ -48,7 +49,7 @@
 
 		</Grid>
 
-		<Grid Effect="{StaticResource DropShadow}" Grid.Column="1">
+		<Grid Effect="{StaticResource DropShadow}" Grid.Column="1" Grid.Row="1" >
 			<Border Margin="10,0" CornerRadius="20" Background="{StaticResource BG-Dark-Brush}">
 				<ScrollViewer VerticalScrollBarVisibility="Hidden">
 
