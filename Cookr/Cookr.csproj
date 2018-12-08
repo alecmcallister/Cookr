@@ -57,6 +57,7 @@
     </ApplicationDefinition>
     <Compile Include="Animation\AnimationEnums.cs" />
     <Compile Include="Converters\Converters.cs" />
+    <Compile Include="Logic\Categories.cs" />
     <Compile Include="Style\ColorHelper.cs" />
     <Compile Include="Animation\Extensions.cs" />
     <Compile Include="Logic\RecipeComponents\Ingredient.cs" />
@@ -80,6 +81,10 @@
     </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\RecipeCategoryCard.xaml.cs">
+      <DependentUpon>RecipeCategoryCard.xaml</DependentUpon>
+      <SubType>Code</SubType>
     </Compile>
     <Compile Include="UserControls\RecipePhase.xaml.cs">
       <DependentUpon>RecipePhase.xaml</DependentUpon>
@@ -177,6 +182,10 @@
     <Page Include="UserControls\RecipeCard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\RecipeCategoryCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
     </Page>
     <Page Include="UserControls\RecipePhase.xaml">
       <SubType>Designer</SubType>

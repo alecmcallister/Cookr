@@ -55,8 +55,9 @@ namespace Cookr
 
 			RecipeButton.BackToRecipeClicked += async () => { await GoToRecipe(); };
 
-			RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); await GoToRecipe(); };
-		}
+            RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); await GoToRecipe(); };
+            RecipeCategoryCard.CategorySelectedEvent += async c => { theSearch.DoSearch(c); if (currentFrame != SearchFrame) await GoToSearch(); };
+        }
 
 		public async Task BackPressed()
 		{

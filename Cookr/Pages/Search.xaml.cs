@@ -194,7 +194,7 @@ namespace Cookr
 			if (searchResults.Count == 0)
 			{
 				TextBlock noResults = new TextBlock();
-				noResults.Text = "Sorry! No recipes were found!!";
+				noResults.Text = "Sorry! No recipes were found for the search\"" + CurrentSearch + "\".";
 				SearchResultsStack.Children.Add(noResults);
 				return;
 			}

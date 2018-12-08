@@ -1,10 +1,10 @@
 ﻿<Page x:Class="Cookr.Home"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:local="clr-namespace:Cookr"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       d:DesignHeight="700" d:DesignWidth="1300"
       Title="Home">
 	<Page.Resources>
@@ -18,31 +18,35 @@
 
 				<StackPanel Orientation="Vertical">
 
-					<StackPanel Height="60" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}">
-						<Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0" Effect="{StaticResource DropShadow}">
+                    <StackPanel x:Name="CategoryPictureStack" Height="170" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}">
+                        <local:RecipeCategoryCard></local:RecipeCategoryCard>
+                        <!--Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0" Effect="{StaticResource DropShadow}">
 							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="TODO: Change to a picture" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
-						</Border>
+						</-->
 					</StackPanel>
 
 					<Grid x:Name="AllCategoriesExpandablePanel" Background="{StaticResource BG-Dark-Brush}" Height="0">
-
-					</Grid>
+                        <!--ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Stretch" Visibility="Collapsed">
+                            <StackPanel x:Name="CategoriesButtonStack" HorizontalAlignment="Left" Orientation="Vertical" Background="{StaticResource BG-Dark-Brush}">
+                            </StackPanel>
+                        </-->
+                    </Grid>
 
 					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" Margin="0,-20,0,0" />
 
 					<StackPanel Margin="30,5,0,5" Orientation="Horizontal" HorizontalAlignment="Left">
 
 						<!-- What we <3 -->
-						
-						<TextBlock 
-							FontSize="{StaticResource Text-Large}" 
-							Foreground="{StaticResource Text-Dark-Brush}" 
+
+						<TextBlock
+							FontSize="{StaticResource Text-Large}"
+							Foreground="{StaticResource Text-Dark-Brush}"
 							Effect="{StaticResource DropShadow}"
 							FontFamily="{StaticResource RobotoLight}">
-							Recipes we 
+							Recipes we
 						</TextBlock>
 
-						<TextBlock 
+						<TextBlock
 							FontSize="{StaticResource Icon-Regular}"
 							Foreground="{StaticResource Text-Dark-Brush}"
 							Effect="{StaticResource DropShadow}"
@@ -51,7 +55,7 @@
 							Margin="7,2,0,0"/>
 
 					</StackPanel>
-					<WrapPanel x:Name="PopularTodayStack" 
+					<WrapPanel x:Name="PopularTodayStack"
 					   Orientation="Horizontal"
 					   VerticalAlignment="Top"
 					   Margin="10">

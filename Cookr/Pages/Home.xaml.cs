@@ -13,6 +13,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Cookr.Categories;
 
 namespace Cookr
 {
@@ -22,9 +23,20 @@ namespace Cookr
 		{
 			InitializeComponent();
 			Load_PopularToday();
+            Load_Categories();
 
-			ExpandCategoriesButton.ToggleButtonEvent += b => { ExpandTheThing(null, null); };
+
+            ExpandCategoriesButton.ToggleButtonEvent += b => { ExpandTheThing(null, null); };
 		}
+
+        private void Load_Categories()
+        {
+            Categories categories = RecipeManager.GetCategories();
+            foreach(Category c in categories.ListedCategories)
+            {
+                CategoryPictureStack.Children.Add(new RecipeCategoryCard(c));
+            }
+        }
 
 		private void Load_PopularToday()
 		{
