@@ -4,9 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cookr"
-             mc:Ignorable="d"
-			 Height="300" Width="300">
-    <Grid>
+             mc:Ignorable="d">
+    <Grid x:Name="RoundedCornerImageGrid" Margin="5,0,10,5">
         <Border Margin="5" CornerRadius="10">
             <Border Name="ImageBrushContent" CornerRadius="10,10,10,10">
                 <Border.Background>

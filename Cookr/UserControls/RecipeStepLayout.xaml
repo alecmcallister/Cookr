@@ -32,13 +32,6 @@
                 </Border>
                 <TextBlock x:Name="StepInstruction" Grid.Row="2" HorizontalAlignment="Left"  Margin="15,0,10,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Instructions" VerticalAlignment="Top" FontSize="14" Visibility="Visible"/>
                 <WrapPanel x:Name="ImageStackPanel" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,10">
-                    <WrapPanel.Resources>
-                        <Style TargetType="{x:Type Image}">
-                            <Setter Property="Margin" Value="10,0,0,5" />
-                            <Setter Property="Height" Value="180.0" />
-                            <Setter Property="Stretch" Value="Uniform" />
-                        </Style>
-                    </WrapPanel.Resources>
                 </WrapPanel>
 
             </StackPanel>
