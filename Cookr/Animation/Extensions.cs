@@ -120,6 +120,36 @@ namespace Cookr
 			await Task.Delay(TimeSpan.FromSeconds(time));
 		}
 
+		public static async Task AnimateBGToColor(this Border element, Color to, float time, IEasingFunction easeFunction)
+		{
+			element.Background = new SolidColorBrush(((SolidColorBrush)element.Background).Color);
+			ColorAnimation animation = new ColorAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(time)),
+				To = to,
+				EasingFunction = easeFunction
+			};
+
+			element.Background.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
+		}
+
+		public static async Task AnimateIconToColor(this TextBlock element, Color to, float time, IEasingFunction easeFunction)
+		{
+			element.Foreground = new SolidColorBrush(((SolidColorBrush)element.Foreground).Color);
+			ColorAnimation animation = new ColorAnimation()
+			{
+				Duration = new Duration(TimeSpan.FromSeconds(time)),
+				To = to,
+				EasingFunction = easeFunction
+			};
+
+			element.Foreground.BeginAnimation(SolidColorBrush.ColorProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
+		}
+
 		#endregion
 	}
 }

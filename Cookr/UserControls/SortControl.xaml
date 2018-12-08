@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Cookr.SortControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Cookr"
+             mc:Ignorable="d" 
+			 Margin="10"
+             d:DesignWidth="150">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid HorizontalAlignment="Left" Effect="{StaticResource DropShadow}" >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="40"/>
+			<RowDefinition Height="40"/>
+		</Grid.RowDefinitions>
+
+		<Border Background="{StaticResource BG-Brush}" Grid.Row="1" Grid.RowSpan="3" CornerRadius="10"/>
+
+		<TextBlock Margin="15,0,15,10"
+				   FontSize="{StaticResource Text-Regular}"
+				   Foreground="{StaticResource Text-Light-Brush}"
+				   Text="Sort by:" />
+
+		<Border Grid.Row="1" x:Name="RatingBG" Background="{StaticResource Green-Normal-Brush}" CornerRadius="10,10,0,0">
+			<Grid Margin="15,5">
+				<TextBlock VerticalAlignment="Center" Foreground="{StaticResource Text-Dark-Brush}" FontSize="{StaticResource Text-Regular}" Text="Rating"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="0" />
+			</Grid>
+		</Border>
+		<Border Grid.Row="2" x:Name="CookTimeBG" Background="{DynamicResource BG-Brush}">
+			<Grid Margin="15,5">
+				<TextBlock VerticalAlignment="Center" Foreground="{StaticResource Text-Dark-Brush}" FontSize="{StaticResource Text-Regular}" Text="Cook time"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="1" />
+			</Grid>
+		</Border>
+		<Border Grid.Row="3" x:Name="RelevanceBG" Background="{DynamicResource BG-Brush}" CornerRadius="0,0,10,10">
+			<Grid>
+				<TextBlock Margin="15,5" VerticalAlignment="Center" Foreground="{StaticResource Text-Dark-Brush}" FontSize="{StaticResource Text-Regular}" Text="Relevance"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="2" />
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

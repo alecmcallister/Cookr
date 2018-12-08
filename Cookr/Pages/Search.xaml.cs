@@ -23,7 +23,7 @@ namespace Cookr
 			InitializeComponent();
 			CurrentSearch = "";
 
-			ExpandButton.ToggleButtonEvent += async (b) => { await ToggleFilterPanelVisibility(b); };
+			Subscribe();
 
 			#region OLD CODE: CHANGE THIS
 
@@ -41,6 +41,14 @@ namespace Cookr
 			buttonExcludeIngredient.Click += ButtonExcludeIngredient_Click;
 
 			#endregion
+		}
+
+		void Subscribe()
+		{
+			ExpandButton.ToggleButtonEvent += async (b) => { await ToggleFilterPanelVisibility(b); };
+
+			FilterControl.SortByEvent += s => { SearchEngine.filter.sortBy = s; UpdateSearchResults(); };
+			FilterControl.MinStarRatingEvent += r => { SearchEngine.filter.minRating = r;UpdateSearchResults(); };
 		}
 
 		public void DoSearch(string value)
@@ -62,7 +70,7 @@ namespace Cookr
 
 		#region Animation
 
-		double filterPanelExpandedHeight = 150f;
+		double filterPanelExpandedHeight = 250f;
 		float animationTime = 0.3f;
 		IEasingFunction ease = new CubicEase();
 
@@ -171,21 +179,21 @@ namespace Cookr
 
 		void ComboBoxSortBy_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			SearchEngine.SortBy sortBy;
-			if (comboBoxSortBy.SelectedValue.Equals("Rating"))
-				sortBy = SearchEngine.SortBy.Rating;
+			//SearchEngine.SortBy sortBy;
+			//if (comboBoxSortBy.SelectedValue.Equals("Rating"))
+			//	sortBy = SearchEngine.SortBy.Rating;
 
-			else if (comboBoxSortBy.SelectedValue.Equals("Cook Time"))
-				sortBy = SearchEngine.SortBy.CookTime;
+			//else if (comboBoxSortBy.SelectedValue.Equals("Cook Time"))
+			//	sortBy = SearchEngine.SortBy.CookTime;
 
-			else if (comboBoxSortBy.SelectedValue.Equals("Relevance"))
-				sortBy = SearchEngine.SortBy.Relevance;
+			//else if (comboBoxSortBy.SelectedValue.Equals("Relevance"))
+			//	sortBy = SearchEngine.SortBy.Relevance;
 
-			else
-				sortBy = SearchEngine.SortBy.Relevance;
+			//else
+			//	sortBy = SearchEngine.SortBy.Relevance;
 
-			SearchEngine.filter.sortBy = sortBy;
-			UpdateSearchResults();
+			//SearchEngine.filter.sortBy = sortBy;
+			//UpdateSearchResults();
 		}
 
 		void LoadSearchResults(List<RecipeObject> searchResults)

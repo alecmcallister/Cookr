@@ -11,6 +11,7 @@
 
 	<system:Double x:Key="Icon-Small">20</system:Double>
 	<system:Double x:Key="Icon-Regular">24</system:Double>
+	<system:Double x:Key="Icon-Filter-Size">28</system:Double>
 	<system:Double x:Key="Icon-Large">36</system:Double>
 
 	<CornerRadius x:Key="CornerRadius">10</CornerRadius>

@@ -23,6 +23,8 @@
 	<system:String x:Key="Close-Icon">&#xe5cd;</system:String>
 	<system:String x:Key="Maximize-Icon">&#xe835;</system:String>
 	<system:String x:Key="Remove-Icon">&#xe15b;</system:String>
+	<system:String x:Key="Remove-Circle-Icon">&#xe15c;</system:String>
+	<system:String x:Key="Remove-Circle-Outline-Icon">&#xe15d;</system:String>
 	<system:String x:Key="Add-Icon">&#xe145;</system:String>
 	<system:String x:Key="Star-Icon">&#xe838;</system:String>
 	<system:String x:Key="Star-Empty-Icon">&#xe83a;</system:String>

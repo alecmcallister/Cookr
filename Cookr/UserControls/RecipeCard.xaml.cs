@@ -67,7 +67,6 @@ namespace Cookr
 
 		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("BGNormal"); } }
 		Color bgNormalColor { get { return (Color)TryFindResource("FG"); } }
-		//Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Light"); } }
 		Color bgHoveredColor { get { return (Color)TryFindResource("FG-Hover"); } }
 
 		TimeSpan enterTime { get { return TimeSpan.FromSeconds(0.3f); } }

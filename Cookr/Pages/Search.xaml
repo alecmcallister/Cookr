@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Cookr"
       mc:Ignorable="d" 
-      d:DesignHeight="840" d:DesignWidth="1200"
+      d:DesignHeight="840" d:DesignWidth="1315"
       Title="Search">
 
 	<Page.Resources>
@@ -35,11 +35,13 @@
 
 		<Grid Grid.Row="1" Background="{StaticResource BG-Brush}">
 			<StackPanel Orientation="Vertical">
-				<Grid x:Name="ExpandableGrid" Height="0" 
-					  Background="{StaticResource BG-Dark-Brush}">
+				<Grid x:Name="ExpandableGrid" Height="250" 
+					  Background="{StaticResource BG-Darker-Brush}">
+
+					<local:FilterControlPanel x:Name="FilterControl" />
 
 					<!-- Put filter stuff in here -->
-					<Grid Margin="20">
+					<Grid Margin="200">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto" />
 							<RowDefinition Height="Auto" />
@@ -57,6 +59,7 @@
 							<ColumnDefinition Width="Auto" />
 							<ColumnDefinition Width="Auto" />
 						</Grid.ColumnDefinitions>
+						
 						<TextBlock Text="Sort by:" />
 						<TextBlock Grid.Column="1" Text="Min. Rating:" />
 						<TextBlock Grid.Column="2" Grid.ColumnSpan="4" Text="Max. Cook time:" />
