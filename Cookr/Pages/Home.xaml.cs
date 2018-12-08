@@ -104,17 +104,17 @@ namespace Cookr
             CategoryGroups.Add(new CategoryGroup()
             {
                 GroupName = "Ingredients",
-                categories = new List<string>(new string[] { "Chicken", "Beef", "Fish", "Fruit", "Asparagus", "eggs" })
+                categories = new List<string>(new string[] { "Chicken", "Beef", "Pork", "Fish", "Rice", "Fruit", "Potatoes", "Turkey", "Egg", "Onion", "Tomato" })
             });
             CategoryGroups.Add(new CategoryGroup()
             {
                 GroupName = "Cuisine",
-                categories = new List<string>(new string[] { "Italian", "Indian", "Chinese", "French", "Greek" })
+                categories = new List<string>(new string[] { "Italian", "Indian", "Chinese", "French", "Greek", "Thai" })
             });
             CategoryGroups.Add(new CategoryGroup()
             {
                 GroupName = "Other",
-                categories = new List<string>(new string[] { "Salad" })
+                categories = new List<string>(new string[] { "Salad", "Soup", "Pizza", "Pasta", "Seafood", "Spicy", "Quick" })
             });
 
 
@@ -129,7 +129,7 @@ namespace Cookr
                 categoryGroup.Text = CategoryGroups[i].GroupName;
                 AllCategoriesStackPanel.Children.Add(categoryGroup);
 
-                StackPanel categoryButtonStack = new StackPanel();
+                WrapPanel categoryButtonStack = new WrapPanel();
                 categoryButtonStack.HorizontalAlignment = HorizontalAlignment.Left;
                 categoryButtonStack.VerticalAlignment = VerticalAlignment.Top;
                 categoryButtonStack.Orientation = Orientation.Horizontal;
