@@ -13,7 +13,7 @@
 
 	<Grid HorizontalAlignment="Left" Effect="{StaticResource DropShadow}" >
 		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="32"/>
 			<RowDefinition Height="40"/>
 			<RowDefinition Height="40"/>
 			<RowDefinition Height="40"/>
@@ -21,7 +21,7 @@
 
 		<Border Background="{StaticResource BG-Brush}" Grid.Row="1" Grid.RowSpan="3" CornerRadius="10"/>
 
-		<TextBlock Margin="15,0,15,10"
+		<TextBlock Margin="15,0"
 				   FontSize="{StaticResource Text-Regular}"
 				   Foreground="{StaticResource Text-Light-Brush}"
 				   Text="Sort by:" />

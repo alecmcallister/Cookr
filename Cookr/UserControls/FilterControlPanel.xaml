@@ -5,36 +5,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cookr"
              mc:Ignorable="d" 
-             d:DesignHeight="250" d:DesignWidth="1315">
+             d:DesignHeight="235" d:DesignWidth="1315">
 	<UserControl.Resources>
 	</UserControl.Resources>
 
 	<Grid>
 
-		<Grid>
+		<Grid HorizontalAlignment="Center">
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="Auto"/>
 				<ColumnDefinition Width="Auto"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
-				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="Auto"/>
 			</Grid.ColumnDefinitions>
 
 			<local:SortControl x:Name="Sort" />
 
-			<Grid Grid.Column="1">
-				<Grid.RowDefinitions>
-					<RowDefinition Height="*"/>
-					<RowDefinition Height="*"/>
-				</Grid.RowDefinitions>
+			<StackPanel Grid.Column="1">
 
-				<local:MinRatingControl x:Name="MinRating" Grid.Row="0" />
+				<local:MinRatingControl x:Name="MinRating" Height="100"/>
 
-				<local:MaxCookTimeControl x:Name="MaxCookTime" Grid.Row="1" />
+				<local:MaxCookTimeControl x:Name="MaxCookTime" Height="100"/>
 
-			</Grid>
+			</StackPanel>
 
 
+			<local:ExcludeIngredientControl x:Name="MustExclude" Grid.Column="3" VerticalAlignment="Top" Height="215" />
+
+			<local:MustIncludeIngredientControl x:Name="MustInclude" Grid.Column="2" VerticalAlignment="Top" Height="215" />
 
 		</Grid>
 

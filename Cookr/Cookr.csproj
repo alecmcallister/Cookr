@@ -89,6 +89,12 @@
     <Compile Include="UserControls\MinRatingControl.xaml.cs">
       <DependentUpon>MinRatingControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\ExcludeIngredientControl.xaml.cs">
+      <DependentUpon>ExcludeIngredientControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MustIncludeIngredientControl.xaml.cs">
+      <DependentUpon>MustIncludeIngredientControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
     </Compile>
@@ -194,6 +200,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\MinRatingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ExcludeIngredientControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\MustIncludeIngredientControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

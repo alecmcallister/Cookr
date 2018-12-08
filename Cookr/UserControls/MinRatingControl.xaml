@@ -12,16 +12,16 @@
 
 	<Grid HorizontalAlignment="Left" Effect="{StaticResource DropShadow}">
 		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="32"/>
 			<RowDefinition Height="60"/>
 		</Grid.RowDefinitions>
 
-		<TextBlock Margin="15,0,15,10"
+		<TextBlock Margin="15,0"
 				   FontSize="{StaticResource Text-Regular}"
 				   Foreground="{StaticResource Text-Light-Brush}"
 				   Text="Min rating" />
 
-		<Border Grid.Row="1" Width="250" Height="60" Background="{StaticResource BG-Brush}"  CornerRadius="30" >
+		<Border Grid.Row="1" Width="250" Height="60" Background="{StaticResource BG-Brush}"  CornerRadius="30">
 
 			<Grid HorizontalAlignment="Center">
 
