@@ -1,27 +1,22 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Stollen (German Christmas Fruitcake)</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>dessert</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
+	<Rating>1</Rating>
+	<TitleImage>Stollen-Title.jpg</TitleImage>
+	<RecipeIntroduction>A SENG 511 delicacy. Perfect snack for when you're working on your control diagram (chart).</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
+	<TotalTime>180</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Fruit" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Egg" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Sugar" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>
