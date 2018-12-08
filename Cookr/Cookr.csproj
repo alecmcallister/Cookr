@@ -73,6 +73,9 @@
     <Compile Include="UserControls\BackToRecipeButton.xaml.cs">
       <DependentUpon>BackToRecipeButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CategoryTextButton.xaml.cs">
+      <DependentUpon>CategoryTextButton.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeButton.xaml.cs">
       <DependentUpon>HomeButton.xaml</DependentUpon>
     </Compile>
@@ -170,6 +173,10 @@
     <Page Include="UserControls\BackToRecipeButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\CategoryTextButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\HomeButton.xaml">
       <SubType>Designer</SubType>

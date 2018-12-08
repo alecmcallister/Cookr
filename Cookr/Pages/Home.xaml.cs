@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Media.Effects;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -36,6 +37,10 @@ namespace Cookr
             {
                 CategoryPictureStack.Children.Add(new RecipeCategoryCard(c));
             }
+
+            BrutalCategoryHardcode();
+            
+
         }
 
 		private void Load_PopularToday()
@@ -76,6 +81,52 @@ namespace Cookr
 		{
 			await AllCategoriesExpandablePanel.AnimateDoubleProperty(HeightProperty, height, animationTime, easeFunction);
 		}
+
+        public struct CategoryGroup
+        {
+            public string GroupName;
+            public List<string> categories;
+
+        }
+
+        /// <summary>
+        /// Forgive me...
+        /// </summary>
+        private void BrutalCategoryHardcode()
+        {
+
+            List<CategoryGroup> CategoryGroups = new List<CategoryGroup>();
+
+            CategoryGroups.Add(new CategoryGroup() {
+                GroupName = "Time of Day",
+                categories = new List<string>(new string[] { "Breakfast", "Lunch", "Dinner", "Dessert" })
+            });
+            
+            
+            for (int i = 0; i < CategoryGroups.Count; i++)
+            {
+                // Add in a bunch of categories...
+                TextBlock categoryGroup = new TextBlock();
+                categoryGroup.FontSize = (double)FindResource("Text-Large");
+                categoryGroup.Foreground = (Brush)FindResource("Text-Light-Brush");
+                categoryGroup.Effect = (Effect)FindResource("DropShadow");
+                categoryGroup.FontFamily = (FontFamily)FindResource("RobotoLight");
+                categoryGroup.Text = CategoryGroups[i].GroupName;
+                AllCategoriesExpandablePanel.Children.Add(categoryGroup);
+
+                StackPanel categoryButtonStack = new StackPanel();
+                categoryButtonStack.HorizontalAlignment = HorizontalAlignment.Left;
+                categoryButtonStack.VerticalAlignment = VerticalAlignment.Top;
+                categoryButtonStack.Orientation = Orientation.Horizontal;
+
+                for (int c = 0; c < CategoryGroups[i].categories.Count; c++)
+                {
+                    CategoryTextButton categoryButton = new CategoryTextButton(CategoryGroups[i].categories[c]);
+                    categoryButtonStack.Children.Add(categoryButton);
+                }
+                AllCategoriesExpandablePanel.Children.Add(categoryButtonStack);
+            }
+        }
 
 		#endregion
 	}

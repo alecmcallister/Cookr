@@ -26,10 +26,10 @@
 					</StackPanel>
 
 					<Grid x:Name="AllCategoriesExpandablePanel" Background="{StaticResource BG-Dark-Brush}" Height="0">
-                        <!--ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Stretch" Visibility="Collapsed">
-                            <StackPanel x:Name="CategoriesButtonStack" HorizontalAlignment="Left" Orientation="Vertical" Background="{StaticResource BG-Dark-Brush}">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Stretch" Visibility="Visible">
+                            <StackPanel Margin="10">
                             </StackPanel>
-                        </-->
+                        </ScrollViewer>
                     </Grid>
 
 					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" Margin="0,-20,0,0" />
