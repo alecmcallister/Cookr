@@ -354,11 +354,25 @@ namespace Cookr
 				{
 					if (File.Exists("Images/" + imgname))
 					{
-						Image img = new Image();
-						img.Source = new BitmapImage(new Uri("/Images/" + imgname, UriKind.Relative));
-						PopupContent.TooltipImageStackPanel.Children.Add(img);
-						PopupContent.TooltipImageStackPanel.Visibility = Visibility.Visible;
-					}
+
+                        RoundedCornerImage roundedImage = new RoundedCornerImage();
+                        Image img = new Image();
+                        img.Source = new BitmapImage(new Uri("Images/" + imgname, UriKind.Relative));
+                        Thickness margin = roundedImage.RoundedCornerImageGrid.Margin;
+                        margin.Right = 0;
+                        roundedImage.RoundedCornerImageGrid.Margin = margin;
+                        roundedImage.RoundedCornerImageGrid.Height = 180;
+                        roundedImage.RoundedCornerImageGrid.Width = (180.0 / img.Source.Height) * img.Source.Width;
+
+                        ImageBrush image = new ImageBrush(img.Source) { Stretch = Stretch.UniformToFill, };
+                        roundedImage.ImageBrushContent.Background = image;
+
+                        ScaleTransform st = new ScaleTransform(1.05f, 1.05f, 0.5f, 0.5f);
+                        roundedImage.ImageBrushContent.Background.RelativeTransform = st;
+
+                        PopupContent.TooltipImageStackPanel.Children.Add(roundedImage);
+                        PopupContent.TooltipImageStackPanel.Visibility = Visibility.Visible;
+                    }
 				}
 				PopupContent.TooltipText.Text = tip.Text;
 				InformationPopup.IsOpen = true;
