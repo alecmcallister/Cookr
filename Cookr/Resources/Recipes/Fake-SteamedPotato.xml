@@ -1,33 +1,21 @@
 <Recipe>
-	<Title>Spicy Vegan Potato Curry</Title>
+	<Title>Steamed Potato</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>indian</Tag>
-		<Tag>asian</Tag>
-		<Tag>spicy</Tag>
-		<Tag>vegetarian</Tag>
-		<Tag>rice</Tag>
-		<Tag>healthy</Tag>
-		<Tag>dinner</Tag>
-		<Tag>potatoes</Tag>
 		<Tag>potato</Tag>
+		<Tag>potatoes</Tag>
 	</Tags>
 	<Rating>2</Rating>
-	<TitleImage>SpicyVeganPotatoCurry-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
+	<TitleImage>SteamedPotato-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a plain potato. It was subjected to steam. And thus, it is steamed.</RecipeIntroduction>
+	<PrepTime>5</PrepTime>
+	<CookTime>55</CookTime>
 	<TotalTime>60</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<NumberOfServings>1</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Rice" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Potatoes" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Onion" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Cumin" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Cayenne" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>
