@@ -19,7 +19,7 @@
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="250"/>
-			<ColumnDefinition Width="Auto" MinWidth="710"/>
+			<ColumnDefinition Width="*" MinWidth="710"/>
 		</Grid.ColumnDefinitions>
 		
 		<StackPanel Name="RecipeButtonStack" Grid.Column="0" Background="#FF313131">
@@ -42,7 +42,7 @@
 			<StackPanel Name="RecipeStepStack">
 
 				<Popup x:Name="InformationPopup" StaysOpen="False" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
-					<local:InfoPopup x:Name="PopupContent" Padding="7" Foreground="{x:Null}" />
+					<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
 				</Popup>
 				
 				<Grid x:Name="RecipeTitleImageGrid" Height="180">
@@ -54,7 +54,7 @@
 					
 					<!--local:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Loaded="RecipeStarRating_Loaded" -->
 
-                    <Grid Grid.Column="0" Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                    <Grid Grid.Column="0" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
                             <ColumnDefinition Width="*"/>
@@ -68,12 +68,15 @@
                         <TextBlock x:Name="Star4" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="3"/>
                         <TextBlock x:Name="Star5" Style="{DynamicResource Icon}" Text="{DynamicResource Star-Empty-Icon}" Foreground="{StaticResource Inactive-Light-Brush}" Grid.Column="4"/>
                     </Grid>
-                    <Label x:Name="RecipeTime" Content="YY minutes" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Foreground="#FFEEEEEE"/>
-					<Label x:Name="RecipeTitle" Content="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36" FontWeight="Bold" Foreground="#FFEEEEEE" />
+                    <StackPanel x:Name="StepWarningPanel" Grid.Row="1" Orientation="Horizontal" Height="40" Margin="10,37,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <TextBlock Style="{DynamicResource Icon}"  Text="{DynamicResource Time-Icon}" Foreground="{StaticResource Text-Light-Brush}"/>
+                        <TextBlock x:Name="RecipeTime" HorizontalAlignment="Left" VerticalAlignment="Center" Text="0:00" Margin="5,0,0,0" FontFamily="{StaticResource RobotoLight}" Foreground="{StaticResource Text-Light-Brush}" />
+                    </StackPanel>
+                    <TextBlock x:Name="RecipeTitle" Text="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Roboto}" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-V-Large}" Effect="{StaticResource DropShadow-L}"/>
 				</Grid>
 				
 				<Border BorderBrush="#FFC8C8C8" BorderThickness="1">
-					<TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,18,10" Background="{DynamicResource RecipeStepBrush}">
+					<TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,18,10" Background="{DynamicResource RecipeStepBrush}" >
                         Description <LineBreak/> <LineBreak/> Prep time 25 minutes <LineBreak/> Cook time 15 minutes <LineBreak/> 6 Servings
 					</TextBlock>
 				</Border>

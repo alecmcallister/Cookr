@@ -22,10 +22,13 @@
 
         <Border BorderBrush="#FFC8C8C8" BorderThickness="1" Background="{DynamicResource RecipeStepBrush}">
             <StackPanel>
-                <TextBlock x:Name="StepTitle" Grid.Row="0" HorizontalAlignment="Left"  Margin="0,0,0,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Step" VerticalAlignment="Top" FontSize="24" FontWeight="Bold"/>
+                <TextBlock x:Name="StepTitle" Grid.Row="0" HorizontalAlignment="Left" Margin="0,0,0,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Step" VerticalAlignment="Top" FontFamily="{StaticResource Roboto}" FontSize="{StaticResource Text-Large}" />
 
                 <Border CornerRadius="20" Background="#FFFFB265" HorizontalAlignment="Left" Margin="15,0,0,0" >
-                    <TextBlock x:Name="StepWarning" Grid.Row="1" HorizontalAlignment="Left"   Padding="10,10,10,10" TextWrapping="Wrap" Text="Warning" VerticalAlignment="Top" FontSize="14" Visibility="Collapsed" Background="#00000000" Foreground="White"/>
+                    <StackPanel x:Name="StepWarningPanel" Grid.Row="1" Orientation="Horizontal" Height="40" HorizontalAlignment="Center" Visibility="Collapsed">
+                        <TextBlock Style="{DynamicResource Icon}"  Text="{DynamicResource Alert-Icon}" Foreground="{StaticResource Text-Light-Brush}" Margin="10,0,0,0"/>
+                        <TextBlock x:Name="StepWarning" HorizontalAlignment="Left"   Margin="5,0,15,0" TextWrapping="Wrap" Text="Warning" VerticalAlignment="Center" FontSize="14" Background="#00000000" Foreground="White"/>
+                    </StackPanel>
                 </Border>
                 <TextBlock x:Name="StepInstruction" Grid.Row="2" HorizontalAlignment="Left"  Margin="15,0,10,0" Padding="10,10,10,10" TextWrapping="Wrap" Text="Instructions" VerticalAlignment="Top" FontSize="14" Visibility="Visible"/>
                 <WrapPanel x:Name="ImageStackPanel" Grid.Row="3" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="15,0,0,10">
@@ -36,7 +39,6 @@
                             <Setter Property="Stretch" Value="Uniform" />
                         </Style>
                     </WrapPanel.Resources>
-
                 </WrapPanel>
 
             </StackPanel>

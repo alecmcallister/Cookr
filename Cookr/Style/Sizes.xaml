@@ -6,8 +6,9 @@
 	<system:Double x:Key="Text-V-Small">14</system:Double>
 	<system:Double x:Key="Text-Small">16</system:Double>
 	<system:Double x:Key="Text-Regular">20</system:Double>
-	<system:Double x:Key="Text-Large">24</system:Double>
-	<system:Double x:Key="Text-Title">72</system:Double>
+    <system:Double x:Key="Text-Large">24</system:Double>
+    <system:Double x:Key="Text-V-Large">48</system:Double>
+    <system:Double x:Key="Text-Title">72</system:Double>
 
 	<system:Double x:Key="Icon-Small">20</system:Double>
 	<system:Double x:Key="Icon-Regular">24</system:Double>

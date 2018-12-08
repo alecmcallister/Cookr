@@ -31,7 +31,7 @@ namespace Cookr
             StepTitle.Text = step.Number.ToString() + ". " + step.Title;
             if(step.Warning != null && step.Warning.Length > 0)
             {
-                StepWarning.Visibility = Visibility.Visible;
+                StepWarningPanel.Visibility = Visibility.Visible;
                 StepWarning.Text = step.Warning;
             }
             
@@ -44,8 +44,13 @@ namespace Cookr
             {
                 if(File.Exists("Images/" + i))
                 {
+                    //RoundedCornerImage roundedImage = new RoundedCornerImage();
                     Image img = new Image();
                     img.Source = new BitmapImage(new Uri("/Images/" + i, UriKind.Relative));
+                    //ImageBrush image = new ImageBrush(img.Source) { Stretch = Stretch.UniformToFill };
+                    //roundedImage.ImageBrushContent.Background = image;
+                    //ScaleTransform st = new ScaleTransform(1.05f, 1.05f, 0.5f, 0.5f);
+                    //roundedImage.ImageBrushContent.Background.RelativeTransform = st;
                     ImageStackPanel.Children.Add(img);
                 }
             }

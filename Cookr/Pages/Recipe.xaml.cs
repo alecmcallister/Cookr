@@ -39,8 +39,10 @@ namespace Cookr
 			recipe = _recipe;
 
 			// Populate Title, time, star rating, TitleImage.
-			RecipeTitle.Content = recipe.Title;
-			RecipeTime.Content = hoursAndMinutesString(recipe.TotalTime);
+			RecipeTitle.Text = recipe.Title;
+            TimeSpan total = TimeSpan.FromMinutes(_recipe.TotalTime);
+            string recipetime = total.ToString("g");
+            RecipeTime.Text = recipetime.Substring(0, recipetime.LastIndexOf(':'));
             //RecipeStarRating.Value = (int)(recipe.Rating);
 
             // Populate the star rating
@@ -64,8 +66,25 @@ namespace Cookr
 
 			SetUpButtonDefaults();
 			fillRecipeScrollableNavigationThingyList();
-		}
 
+            RecipeStepScrollViewer.ScrollToHome();
+
+        }
+
+        private string hoursAndMinutesString(int time)
+        {
+            int hours = time / 60;
+            string result = "";
+            if (hours > 0)
+            {
+                result = hours.ToString() + " hours ";
+            }
+            if (time % 60 > 0)
+            {
+                result += (time % 60).ToString() + " minutes";
+            }
+            return result;
+        }
 
         /// <summary>
         /// Go ham on that star rating.
@@ -91,26 +110,11 @@ namespace Cookr
         }
 
 
-        private string hoursAndMinutesString(int time)
-		{
-			int hours = time / 60;
-			string result = "";
-			if (hours > 0)
-			{
-				result = hours.ToString() + " hours ";
-			}
-			if (time % 60 > 0)
-			{
-				result += (time % 60).ToString() + " minutes";
-			}
-			return result;
-		}
-
-		/// <summary>
-		/// Set up the first 3 buttons for the recipe more directly.
-		/// Also set up a callback function for when the buttons are clicked.
-		/// </summary>
-		private void SetUpButtonDefaults()
+        /// <summary>
+        /// Set up the first 3 buttons for the recipe more directly.
+        /// Also set up a callback function for when the buttons are clicked.
+        /// </summary>
+        private void SetUpButtonDefaults()
 		{
 			stepButtons[0].Content.Text = recipe.Title;
 			stepButtons[1].Content.Text = "Ingredients";
@@ -230,8 +234,8 @@ namespace Cookr
 
 			// Add the rating bar at the bottom. populate the already voted value.
 			RecipeRatingStepLayout rateStep = new RecipeRatingStepLayout();
-			rateStep.RecipeRating.listener = RecipeRatingUpdated;
-			rateStep.RecipeRating.Value = recipe.UserRating;
+			rateStep.listener = RecipeRatingUpdated;
+			rateStep.Value = recipe.UserRating;
 			RecipeStepStack.Children.Add(rateStep);
 
 		}

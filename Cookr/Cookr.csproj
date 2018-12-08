@@ -93,6 +93,9 @@
     <Compile Include="UserControls\RecipeRatingStepLayout.xaml.cs">
       <DependentUpon>RecipeRatingStepLayout.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\RoundedCornerImage.xaml.cs">
+      <DependentUpon>RoundedCornerImage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SearchbarControl.xaml.cs">
       <DependentUpon>SearchbarControl.xaml</DependentUpon>
     </Compile>
@@ -190,6 +193,10 @@
     <Page Include="UserControls\RecipeRatingStepLayout.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\RoundedCornerImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SearchbarControl.xaml">
       <SubType>Designer</SubType>
