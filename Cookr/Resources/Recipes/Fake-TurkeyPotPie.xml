@@ -1,27 +1,22 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Turkey Pot Pie</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>turkey</Tag>
+		<Tag>pie</Tag>
+		<Tag>poultry</Tag>
 	</Tags>
 	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<TitleImage>TurkeyPotPie-Title.jpg</TitleImage>
+	<RecipeIntroduction>This is a pie'd turkey. Turkey pie turkey pie. Pie in the face, pie in the pie more pie less pie pie pie pie. 3.14 doesn't taste that good though. In fact, it's a bit of an irrational meal.</RecipeIntroduction>
+	<PrepTime>20</PrepTime>
+	<CookTime>60</CookTime>
+	<TotalTime>80</TotalTime>
+	<NumberOfServings>8</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

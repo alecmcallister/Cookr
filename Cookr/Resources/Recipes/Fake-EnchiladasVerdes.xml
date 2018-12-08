@@ -1,27 +1,22 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Enchiladas Verdes</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>mexican</Tag>
+		<Tag>enchilada</Tag>		
+		<Tag>enchiladas</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>EnchiladasVerdes-Title.jpg</TitleImage>
+	<RecipeIntroduction>They're green now. They come in green. Only green. And I know that makes you green with envy.</RecipeIntroduction>
+	<PrepTime>30</PrepTime>
+	<CookTime>30</CookTime>
+	<TotalTime>60</TotalTime>
+	<NumberOfServings>9</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

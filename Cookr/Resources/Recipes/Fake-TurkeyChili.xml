@@ -1,27 +1,22 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Turkey Chili</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>turkey</Tag>
+		<Tag>chili</Tag>
+		<Tag>poultry</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>TurkeyChili-Title.jpg</TitleImage>
+	<RecipeIntroduction>This chili turkey is better than beef. Throw your beef away and eat the bird.</RecipeIntroduction>
+	<PrepTime>15</PrepTime>
+	<CookTime>55</CookTime>
+	<TotalTime>70</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

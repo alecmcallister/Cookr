@@ -1,27 +1,22 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Greek Pasta Salad</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>greek</Tag>
+		<Tag>pasta</Tag>
+		<Tag>salad</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>3</Rating>
+	<TitleImage>GreekPastaSalad-Title.jpg</TitleImage>
+	<RecipeIntroduction>Salad like but with pasta maybe sometimes.</RecipeIntroduction>
+	<PrepTime>120</PrepTime>
+	<CookTime>10</CookTime>
+	<TotalTime>130</TotalTime>
+	<NumberOfServings>12</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

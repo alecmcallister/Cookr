@@ -1,27 +1,23 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Baklava</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>baklava</Tag>
+		<Tag>dessert</Tag>
+		<Tag>greek</Tag>
+		<Tag>honey</Tag>
 	</Tags>
 	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<TitleImage>Baklava-Title.jpg</TitleImage>
+	<RecipeIntroduction>Honey pastry. Now with 5% more nut!</RecipeIntroduction>
+	<PrepTime>30</PrepTime>
+	<CookTime>720</CookTime>
+	<TotalTime>750</TotalTime>
+	<NumberOfServings>18</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

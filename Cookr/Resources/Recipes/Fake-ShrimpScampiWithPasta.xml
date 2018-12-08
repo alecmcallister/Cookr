@@ -1,27 +1,23 @@
 <Recipe>
-	<Title>Pear and Gorgonzola Pizza</Title>
+	<Title>Shrimp Scampi with Pasta</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>italian</Tag>
-		<Tag>dinner</Tag>
-		<Tag>pizza</Tag>
-		<Tag>healthy</Tag>
-		<Tag>vegetarian</Tag>
+		<Tag>shrimp</Tag>
+		<Tag>pasta</Tag>
+		<Tag>scampi</Tag>
+		<Tag>seafood</Tag>
 	</Tags>
-	<Rating>4</Rating>
-	<TitleImage>PearAndGorgonzolaPizza-Title.jpg</TitleImage>
-	<RecipeIntroduction>This is a template.</RecipeIntroduction>
-	<PrepTime>0</PrepTime>
-	<CookTime>0</CookTime>
-	<TotalTime>25</TotalTime>
-	<NumberOfServings>0</NumberOfServings>
+	<Rating>1</Rating>
+	<TitleImage>ShrimpScampiWithPasta-Title.jpg</TitleImage>
+	<RecipeIntroduction>It has like shrimp and pasta and it's not a salad so it won't show up if you search salad. It's scampi.</RecipeIntroduction>
+	<PrepTime>20</PrepTime>
+	<CookTime>20</CookTime>
+	<TotalTime>30</TotalTime>
+	<NumberOfServings>6</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Pizza dough" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Pear" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Provolone" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Gorgonzola" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Unobtanium" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>

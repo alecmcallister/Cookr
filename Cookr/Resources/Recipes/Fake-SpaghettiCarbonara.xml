@@ -1,33 +1,25 @@
 <Recipe>
-	<Title>Spicy Vegan Potato Curry</Title>
+	<Title>Spaghetti Carbonara</Title>
 	<PopularToday>0</PopularToday>
 	<Tags>
-		<Tag>indian</Tag>
-		<Tag>asian</Tag>
-		<Tag>spicy</Tag>
-		<Tag>vegetarian</Tag>
-		<Tag>rice</Tag>
-		<Tag>healthy</Tag>
-		<Tag>dinner</Tag>
-		<Tag>potatoes</Tag>
-		<Tag>potato</Tag>
+		<Tag>pasta</Tag>
+		<Tag>italian</Tag>
 	</Tags>
-	<Rating>2</Rating>
-	<TitleImage>SpicyVeganPotatoCurry-Title.jpg</TitleImage>
+	<Rating>4</Rating>
+	<TitleImage>SpaghettiCarbonara-Title.jpg</TitleImage>
 	<RecipeIntroduction>This is a template.</RecipeIntroduction>
 	<PrepTime>0</PrepTime>
 	<CookTime>0</CookTime>
-	<TotalTime>60</TotalTime>
+	<TotalTime>40</TotalTime>
 	<NumberOfServings>0</NumberOfServings>
 	<FakeRecipe>1</FakeRecipe>
 
 	<Ingredients>
-		<Ingredient Name="Rice" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Potatoes" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Garlic" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Spaghetti" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Eggs" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Bacon" Quantity="0" Optional="0" ToolTipID="0"/>
 		<Ingredient Name="Onion" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Cumin" Quantity="0" Optional="0" ToolTipID="0"/>
-		<Ingredient Name="Cayenne" Quantity="0" Optional="0" ToolTipID="0"/>
+		<Ingredient Name="Parmesan" Quantity="0" Optional="0" ToolTipID="0"/>
 	</Ingredients>
 
 	<Tools>
