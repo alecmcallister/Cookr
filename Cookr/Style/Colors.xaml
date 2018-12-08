@@ -24,6 +24,9 @@
 	<Color x:Key="BG-Dark">#bcbcbc</Color>
 	<SolidColorBrush x:Key="BG-Dark-Brush" Color="{StaticResource BG-Dark}" />
 
+	<Color x:Key="BG-Darker">#afafaf</Color>
+	<SolidColorBrush x:Key="BG-Darker-Brush" Color="{StaticResource BG-Darker}" />
+
 	<Color x:Key="Text-Light">#fff</Color>
 	<SolidColorBrush x:Key="Text-Light-Brush" Color="{StaticResource Text-Light}" />
 
@@ -47,6 +50,9 @@
 
 	<Color x:Key="Red-Dark">#c50e29</Color>
 	<SolidColorBrush x:Key="Red-Dark-Brush" Color="{StaticResource Red-Dark}" />
+
+	<Color x:Key="Green-Normal">#7f7</Color>
+	<SolidColorBrush x:Key="Green-Normal-Brush" Color="{StaticResource Green-Normal}" />
 
 	<LinearGradientBrush x:Key="RecipeStepBrush" StartPoint="0,0" EndPoint="0,1">
 		<GradientStop Color="#FFE5E5E5" Offset="0"/>

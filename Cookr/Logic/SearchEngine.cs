@@ -4,6 +4,13 @@ using System.Linq;
 
 namespace Cookr
 {
+	public enum SortBy
+	{
+		Rating = 0,
+		CookTime = 1,
+		Relevance = 2
+	}
+
 	/// <summary>
 	/// This class is a collection of methods required 
 	/// </summary>
@@ -15,13 +22,6 @@ namespace Cookr
 		{
 			public RecipeObject recipe;
 			public int searchCorr;
-		}
-
-		public enum SortBy
-		{
-			Rating,
-			CookTime,
-			Relevance
 		}
 
 		public struct Filter

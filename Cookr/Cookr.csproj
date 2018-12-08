@@ -35,8 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MicrosoftExpressionInteractions.3.0.40218.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Expression.Blend.Sdk.1.0.2\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -76,11 +82,26 @@
     <Compile Include="UserControls\CategoryTextButton.xaml.cs">
       <DependentUpon>CategoryTextButton.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\FilterControlPanel.xaml.cs">
+      <DependentUpon>FilterControlPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\HomeButton.xaml.cs">
       <DependentUpon>HomeButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\InfoPopup.xaml.cs">
       <DependentUpon>InfoPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MaxCookTimeControl.xaml.cs">
+      <DependentUpon>MaxCookTimeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MinRatingControl.xaml.cs">
+      <DependentUpon>MinRatingControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ExcludeIngredientControl.xaml.cs">
+      <DependentUpon>ExcludeIngredientControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\MustIncludeIngredientControl.xaml.cs">
+      <DependentUpon>MustIncludeIngredientControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
       <DependentUpon>RecipeCard.xaml</DependentUpon>
@@ -107,6 +128,9 @@
     <Compile Include="UserControls\SearchbarControl.xaml.cs">
       <DependentUpon>SearchbarControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SortControl.xaml.cs">
+      <DependentUpon>SortControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\StarRatingDisplay.xaml.cs">
       <DependentUpon>StarRatingDisplay.xaml</DependentUpon>
     </Compile>
@@ -118,6 +142,9 @@
     </Compile>
     <Compile Include="UserControls\FilterExpandButton.xaml.cs">
       <DependentUpon>FilterExpandButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\ClearFiltersButton.xaml.cs">
+      <DependentUpon>ClearFiltersButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ToggleButtonControl.xaml.cs">
       <DependentUpon>ToggleButtonControl.xaml</DependentUpon>
@@ -178,11 +205,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\FilterControlPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\HomeButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\InfoPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MaxCookTimeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\MinRatingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\ExcludeIngredientControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\MustIncludeIngredientControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -218,6 +265,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\SortControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\StarRatingDisplay.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -231,6 +282,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\FilterExpandButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\ClearFiltersButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -267,6 +322,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Resource Include="Style\Font\MaterialIcons-Regular.ttf" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

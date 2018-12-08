@@ -38,7 +38,7 @@ namespace Cookr
 
 			// TODO: Make async and wait until done animating before changing text
 			ToggleButtonArrowIcon.Text = GetIconString();
-			ToggleButtonText.Text = toggled ? "Less" : "Filter";
+			ToggleButtonText.Text = toggled ? "Less" : "Sort / Filter";
 		}
 
 		string GetIconString()

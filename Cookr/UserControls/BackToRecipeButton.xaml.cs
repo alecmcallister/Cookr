@@ -44,6 +44,11 @@ namespace Cookr
 			await DoHover(false);
 		}
 
+		public void SetCurrentRecipt(string recipe)
+		{
+			CurrentRecipeNameText.Text = recipe;
+		}
+
 		SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("FGNormal"); } }
 		Color bgNormalColor { get { return (Color)TryFindResource("Red-Normal"); } }
 		Color bgHoveredColor { get { return (Color)TryFindResource("Red-Dark"); } }

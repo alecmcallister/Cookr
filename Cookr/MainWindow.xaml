@@ -45,7 +45,7 @@
 					</Grid.ColumnDefinitions>
 					<local:BackButton x:Name="BackButton" HorizontalAlignment="Right" Margin="0,0,-60,0" Grid.Column="0" Visibility="Hidden"/>
 					<local:HomeButton x:Name="HomeButton" HorizontalAlignment="Left" Margin="-60,0,0,0" Grid.Column="0" Visibility="Hidden"/>
-					<local:BackToRecipeButton x:Name="RecipeButton" HorizontalAlignment="Left" Margin="-60,0,0,0" Grid.Column="2" Visibility="Hidden"/>
+					<local:BackToRecipeButton x:Name="RecipeButton" HorizontalAlignment="Right" Margin="0,0,-400,0" Grid.Column="2" Visibility="Hidden"/>
 					<local:SearchbarControl x:Name="Searchbar" Grid.Column="1"/>
 
 

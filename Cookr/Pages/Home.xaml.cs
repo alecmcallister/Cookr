@@ -70,7 +70,7 @@ namespace Cookr
 			animating = true;
 
 			expanded = !expanded;
-			double height = expanded ? 150f : 0f;
+			double height = expanded ? 350f : 0f;
 
 			await ChangeExpandableGridHeight(height);
 
@@ -101,8 +101,23 @@ namespace Cookr
                 GroupName = "Time of Day",
                 categories = new List<string>(new string[] { "Breakfast", "Lunch", "Dinner", "Dessert" })
             });
-            
-            
+            CategoryGroups.Add(new CategoryGroup()
+            {
+                GroupName = "Ingredients",
+                categories = new List<string>(new string[] { "Chicken", "Beef", "Fish", "Fruit", "Asparagus", "eggs" })
+            });
+            CategoryGroups.Add(new CategoryGroup()
+            {
+                GroupName = "Cuisine",
+                categories = new List<string>(new string[] { "Italian", "Indian", "Chinese", "French", "Greek" })
+            });
+            CategoryGroups.Add(new CategoryGroup()
+            {
+                GroupName = "Other",
+                categories = new List<string>(new string[] { "Salad" })
+            });
+
+
             for (int i = 0; i < CategoryGroups.Count; i++)
             {
                 // Add in a bunch of categories...
@@ -112,7 +127,7 @@ namespace Cookr
                 categoryGroup.Effect = (Effect)FindResource("DropShadow");
                 categoryGroup.FontFamily = (FontFamily)FindResource("RobotoLight");
                 categoryGroup.Text = CategoryGroups[i].GroupName;
-                AllCategoriesExpandablePanel.Children.Add(categoryGroup);
+                AllCategoriesStackPanel.Children.Add(categoryGroup);
 
                 StackPanel categoryButtonStack = new StackPanel();
                 categoryButtonStack.HorizontalAlignment = HorizontalAlignment.Left;
@@ -124,7 +139,7 @@ namespace Cookr
                     CategoryTextButton categoryButton = new CategoryTextButton(CategoryGroups[i].categories[c]);
                     categoryButtonStack.Children.Add(categoryButton);
                 }
-                AllCategoriesExpandablePanel.Children.Add(categoryButtonStack);
+                AllCategoriesStackPanel.Children.Add(categoryButtonStack);
             }
         }
 
