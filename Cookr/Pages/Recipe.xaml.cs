@@ -289,7 +289,8 @@ namespace Cookr
 				}
 			}
 		}
-		private void RunButtonsListUpdate()
+
+		public void RunButtonsListUpdate()
 		{
 			int i = 0;
 			foreach (UIElement e in recipeScrollableNavigationThingys)

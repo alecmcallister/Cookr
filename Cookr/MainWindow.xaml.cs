@@ -114,7 +114,8 @@ namespace Cookr
 
 			prevFrame = currentFrame;
 			currentFrame = RecipeFrame;
-		}
+            theRecipe.RunButtonsListUpdate();
+        }
 
 		bool headerFullyVisible = true;
 		bool haveRecipeInProgress { get { return theRecipe.recipe != null; } }
