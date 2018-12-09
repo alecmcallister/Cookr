@@ -198,6 +198,7 @@ namespace Cookr
 
 		void LoadSearchResults(List<RecipeObject> searchResults)
 		{
+            SearchResultsStack.Children.Clear();
 			if (searchResults.Count == 0)
 			{
 				TextBlock noResults = new TextBlock();
