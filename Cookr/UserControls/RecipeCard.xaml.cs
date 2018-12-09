@@ -35,7 +35,23 @@ namespace Cookr
 			recipe = _recipe;
 			TimeSpan total = TimeSpan.FromMinutes(_recipe.TotalTime);
 
-			ImageBrush image = new ImageBrush(recipe.TitleBitmap) { Stretch = Stretch.UniformToFill };
+            int rating = (int)_recipe.Rating;
+            List<TextBlock> stars = new List<TextBlock>() { Star1, Star2, Star3, Star4, Star5 };
+            for (int i = 0; i < 5; i++)
+            {
+                if (rating > i)
+                {
+                    stars[i].Text = (string)FindResource("Star-Icon");
+                    stars[i].Foreground = (SolidColorBrush)FindResource("Star-Brush");
+                }
+                else
+                {
+                    stars[i].Text = (string)FindResource("Star-Empty-Icon");
+                    stars[i].Foreground = (SolidColorBrush)FindResource("Inactive-Light-Brush");
+                }
+            }
+
+            ImageBrush image = new ImageBrush(recipe.TitleBitmap) { Stretch = Stretch.UniformToFill };
 			RecipeCardImage.Background = image;
 			string duration = total.ToString("g");
 			RecipeDurationText.Text = duration.Substring(0, duration.LastIndexOf(':'));
