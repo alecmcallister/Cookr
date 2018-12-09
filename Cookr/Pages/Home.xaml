@@ -16,10 +16,36 @@
 			<ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
 
 				<StackPanel Orientation="Vertical">
-					<StackPanel Background="{StaticResource BG-Dark-Brush}">
-						<StackPanel x:Name="CategoryPictureStack" Height="170" Orientation="Horizontal">
+					<Grid Margin="0,0,0,-120" Panel.ZIndex="1">
 
-						</StackPanel>
+						<!-- The actual icon changes at runtime -->
+						<local:CircularIconButton x:Name="CategoryLeftButton"
+												  HorizontalAlignment="Left" 
+												  VerticalAlignment="Bottom"
+												  ButtonBase.Click="CategoryScrollLeftClick"/>
+						
+						<!-- The actual icon changes at runtime -->
+						<local:CircularIconButton x:Name="CategoryRightButton"
+												  HorizontalAlignment="Right" 
+												  VerticalAlignment="Bottom"
+												  ButtonBase.Click="CategoryScrollRightClick"/>
+
+					</Grid>
+					<StackPanel Background="{StaticResource BG-Dark-Brush}">
+
+						<ScrollViewer x:Name="ScrollBabyScroll"
+									  HorizontalScrollBarVisibility="Hidden" 
+									  VerticalScrollBarVisibility="Disabled">
+
+							<StackPanel x:Name="CategoryPictureStack" 
+										Height="170" 
+										Orientation="Horizontal">
+
+								<!--<local:RecipeCategoryCard/>-->
+
+							</StackPanel>
+							
+						</ScrollViewer>
 
 						<Grid x:Name="AllCategoriesExpandablePanel" Height="0">
 							<StackPanel Margin="10,0" x:Name="AllCategoriesStackPanel">
@@ -27,6 +53,8 @@
 							</StackPanel>
 						</Grid>
 					</StackPanel>
+
+				
 
 					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" Margin="0,-20,0,0" />
 

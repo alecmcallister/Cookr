@@ -66,7 +66,7 @@ namespace Cookr
 
 		#region Animation
 
-		double filterPanelExpandedHeight = 250f;
+		double filterPanelExpandedHeight = 220f;
 		float animationTime = 0.3f;
 		IEasingFunction ease = new CubicEase();
 

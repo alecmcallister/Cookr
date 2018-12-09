@@ -34,6 +34,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Images\Logo\Cookr_Ring_Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\MicrosoftExpressionInteractions.3.0.40218.0\lib\net45\Microsoft.Expression.Interactions.dll</HintPath>
@@ -81,6 +84,9 @@
     </Compile>
     <Compile Include="UserControls\CategoryTextButton.xaml.cs">
       <DependentUpon>CategoryTextButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\CircularIconButton.xaml.cs">
+      <DependentUpon>CircularIconButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SortFilter\FilterControlPanel.xaml.cs">
       <DependentUpon>FilterControlPanel.xaml</DependentUpon>
@@ -208,6 +214,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="UserControls\CategoryTextButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CircularIconButton.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -539,6 +549,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Images\PearAndGorgonzolaPizza-Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Logo\Cookr_NoRing_Logo.png" />
+    <Resource Include="Images\Logo\Cookr_Ring_Logo.ico" />
+    <Resource Include="Images\Logo\Cookr_Ring_Logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

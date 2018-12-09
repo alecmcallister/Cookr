@@ -52,7 +52,7 @@
 						   TextWrapping="Wrap"
 						   FontSize="{StaticResource Text-Large}"
 						   Foreground="{StaticResource Text-Light-Brush}"
-						   Effect="{StaticResource DropShadow-F}"
+						   Effect="{StaticResource DropShadow-L}"
 						   Text="Recipe"/>
 				
 				<Grid Grid.Row="1" Margin="10,0">
