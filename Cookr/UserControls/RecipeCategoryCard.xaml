@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cookr"
 			 Height="150" Width="150"
-			 Margin="10"
+			 Margin="5"
 			 x:Name="RecipeCategoryCardGrid">
     <UserControl.Resources>
         <SolidColorBrush x:Key="BGNormal" Color="{StaticResource FG}"></SolidColorBrush>

@@ -64,7 +64,7 @@
     <Compile Include="Animation\AnimationEnums.cs" />
     <Compile Include="Converters\Converters.cs" />
     <Compile Include="Logic\Categories.cs" />
-    <Compile Include="Style\ColorHelper.cs" />
+    <Compile Include="Animation\ColorHelper.cs" />
     <Compile Include="Animation\Extensions.cs" />
     <Compile Include="Logic\RecipeComponents\Ingredient.cs" />
     <Compile Include="Logic\RecipeComponents\RecipeStep.cs" />
@@ -82,7 +82,7 @@
     <Compile Include="UserControls\CategoryTextButton.xaml.cs">
       <DependentUpon>CategoryTextButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\FilterControlPanel.xaml.cs">
+    <Compile Include="UserControls\SortFilter\FilterControlPanel.xaml.cs">
       <DependentUpon>FilterControlPanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\HomeButton.xaml.cs">
@@ -91,16 +91,22 @@
     <Compile Include="UserControls\InfoPopup.xaml.cs">
       <DependentUpon>InfoPopup.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MaxCookTimeControl.xaml.cs">
+    <Compile Include="UserControls\SortFilter\FilteredIngredient.xaml.cs">
+      <DependentUpon>FilteredIngredient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SortFilter\InputField.xaml.cs">
+      <DependentUpon>InputField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SortFilter\MaxCookTimeControl.xaml.cs">
       <DependentUpon>MaxCookTimeControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MinRatingControl.xaml.cs">
+    <Compile Include="UserControls\SortFilter\MinRatingControl.xaml.cs">
       <DependentUpon>MinRatingControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ExcludeIngredientControl.xaml.cs">
+    <Compile Include="UserControls\SortFilter\ExcludeIngredientControl.xaml.cs">
       <DependentUpon>ExcludeIngredientControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\MustIncludeIngredientControl.xaml.cs">
+    <Compile Include="UserControls\SortFilter\MustIncludeIngredientControl.xaml.cs">
       <DependentUpon>MustIncludeIngredientControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\RecipeCard.xaml.cs">
@@ -128,7 +134,7 @@
     <Compile Include="UserControls\SearchbarControl.xaml.cs">
       <DependentUpon>SearchbarControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\SortControl.xaml.cs">
+    <Compile Include="UserControls\SortFilter\SortControl.xaml.cs">
       <DependentUpon>SortControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\StarRatingDisplay.xaml.cs">
@@ -143,7 +149,7 @@
     <Compile Include="UserControls\FilterExpandButton.xaml.cs">
       <DependentUpon>FilterExpandButton.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\ClearFiltersButton.xaml.cs">
+    <Compile Include="UserControls\SortFilter\ClearFiltersButton.xaml.cs">
       <DependentUpon>ClearFiltersButton.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\ToggleButtonControl.xaml.cs">
@@ -205,7 +211,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\FilterControlPanel.xaml">
+    <Page Include="UserControls\SortFilter\FilterControlPanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -217,19 +223,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\MaxCookTimeControl.xaml">
+    <Page Include="UserControls\SortFilter\FilteredIngredient.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\MinRatingControl.xaml">
+    <Page Include="UserControls\SortFilter\InputField.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\ExcludeIngredientControl.xaml">
+    <Page Include="UserControls\SortFilter\MaxCookTimeControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SortFilter\MinRatingControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SortFilter\ExcludeIngredientControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\MustIncludeIngredientControl.xaml">
+    <Page Include="UserControls\SortFilter\MustIncludeIngredientControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -265,7 +279,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\SortControl.xaml">
+    <Page Include="UserControls\SortFilter\SortControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,7 +299,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="UserControls\ClearFiltersButton.xaml">
+    <Page Include="UserControls\SortFilter\ClearFiltersButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

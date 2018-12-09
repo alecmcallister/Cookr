@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Cookr.FilteredIngredient"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Cookr"
+			 Height="40" Margin="5,5,0,0">
+	
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid Effect="{StaticResource DropShadow}">
+		<Border Background="{StaticResource FG-Brush}" CornerRadius="20">
+			<Grid>
+
+				<TextBlock x:Name="IngredientNameText" 
+						   Text="Ingredient"
+						   VerticalAlignment="Center"
+						   Margin="12.5,0,40,0"/>
+
+				<Button Style="{StaticResource InputFieldButton}"
+						Content="{StaticResource Close-Icon}"
+						Foreground="{StaticResource Red-Normal-Brush}"
+						Click="StopFilteringClick"/>
+
+			</Grid>
+		</Border>
+
+	</Grid>
+</UserControl>

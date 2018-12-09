@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="Cookr.MustIncludeIngredientControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Cookr"
+			 MinWidth="200">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="*"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<Border Height="60"
+				Margin="5,40,5,0"
+				VerticalAlignment="Top" 
+				Background="{StaticResource BG-Brush}" 
+				CornerRadius="30" 
+				Effect="{StaticResource DropShadow}" 
+				Panel.ZIndex="1">
+
+			<Grid Margin="10,0">
+				<local:InputField x:Name="IngredientField" />
+
+				<Button x:Name="AddItemButton"
+						Style="{DynamicResource InputFieldButton}"
+						Foreground="{DynamicResource Text-Dark-Brush}"
+						Click="AddItemButton_Click">
+				</Button>
+			</Grid>
+
+		</Border>
+
+		<ScrollViewer VerticalScrollBarVisibility="Hidden" VerticalAlignment="Stretch">
+
+			<WrapPanel x:Name="FilteredIngredientStack" Margin="5,100,5,10" >
+
+
+			</WrapPanel>
+		</ScrollViewer>
+
+	</Grid>
+</UserControl>

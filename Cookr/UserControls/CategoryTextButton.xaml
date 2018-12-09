@@ -2,31 +2,24 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Cookr"
-             mc:Ignorable="d" 
-             d:DesignHeight="40"
-			 Height="40"
-			 HorizontalAlignment="Center"
-			 MinWidth="40"
-			 MinHeight="40"
-			 Margin="5">
-    <UserControl.Resources>
-        <SolidColorBrush x:Key="BGNormal" Color="{StaticResource Primary}"></SolidColorBrush>
-    </UserControl.Resources>
+			 Margin="10,10,0,0">
+	<UserControl.Resources>
+		<SolidColorBrush x:Key="BGNormal" Color="{StaticResource Text-Dark}"></SolidColorBrush>
+	</UserControl.Resources>
 
-    <Grid Effect="{StaticResource DropShadow}">
-        <Border Background="{DynamicResource BlueGradient}" 
-				CornerRadius="20">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock x:Name="CategoryButtonText" Grid.Column="1" Margin="15,0,15,0" VerticalAlignment="Center" Text="Category" Foreground="{StaticResource Text-Light-Brush}" />
+	<Grid>
+		<Border Background="{DynamicResource BGNormal}" CornerRadius="20" Height="40" Effect="{StaticResource DropShadow}">
+				
+				<TextBlock x:Name="CategoryButtonText" 
+						   Margin="15,0,15,0" 
+						   VerticalAlignment="Center" 
+						   Text="Category" 
+						   Foreground="{StaticResource Text-Light-Brush}" />
 
-            </Grid>
-        </Border>
-        <Button Style="{StaticResource EmptyButton}" Click="CategoryButtonClicked" />
+		</Border>
+		
+		<Button Style="{StaticResource EmptyButton}" Click="CategoryButtonClicked" />
 
-    </Grid>
+	</Grid>
 </UserControl>

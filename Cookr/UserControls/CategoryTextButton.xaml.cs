@@ -16,29 +16,19 @@ using System.Windows.Shapes;
 
 namespace Cookr
 {
-    /// <summary>
-    /// Interaction logic for CategoryTextButton.xaml
-    /// </summary>
     public partial class CategoryTextButton : UserControl
     {
-        string category;
+		public static event Action<string> CategorySelectedEvent;
+        public string Category { get { return CategoryButtonText.Text; } set { CategoryButtonText.Text = value; } }
 
         public CategoryTextButton()
         {
             InitializeComponent();
         }
 
-        public CategoryTextButton(string _category)
-        {
-            InitializeComponent();
-            category = _category;
-            CategoryButtonText.Text = category;
-        }
-        
-
         void CategoryButtonClicked(object sender, RoutedEventArgs e)
         {
-            // Cause a search to occur with the category string..
+			CategorySelectedEvent?.Invoke(Category);
         }
 
         protected async override void OnMouseEnter(MouseEventArgs e)
@@ -56,8 +46,8 @@ namespace Cookr
         }
 
         SolidColorBrush bgBrush { get { return (SolidColorBrush)TryFindResource("BGNormal"); } }
-        Color bgNormalColor { get { return (Color)TryFindResource("Primary"); } }
-        Color bgHoveredColor { get { return (Color)TryFindResource("Primary-Dark"); } }
+        Color bgNormalColor { get { return (Color)TryFindResource("Text-Dark"); } }
+        Color bgHoveredColor { get { return (Color)TryFindResource("Primary"); } }
 
         float enterTime = 0.3f;
         float exitTime = 0.2f;

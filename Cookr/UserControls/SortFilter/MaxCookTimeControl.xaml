@@ -1,0 +1,70 @@
+﻿<UserControl x:Class="Cookr.MaxCookTimeControl"
+			 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:local="clr-namespace:Cookr">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid Effect="{StaticResource DropShadow}">
+
+		<Border Width="250"
+				Height="60"
+				Background="{StaticResource BG-Brush}"
+				CornerRadius="30">
+
+			<Grid HorizontalAlignment="Left"
+				  Margin="12.5,0,0,0">
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="37.5" />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+
+				<Grid Grid.Column="0">
+					<TextBlock Style="{StaticResource Icon}"
+							   Text="{StaticResource Time-Icon}"
+							   FontSize="{StaticResource Icon-Large}"
+							   Foreground="{StaticResource Text-Dark-Brush}" />
+				</Grid>
+
+				<Grid Grid.Column="1"
+					  Margin="5,0,0,0">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition />
+						<ColumnDefinition />
+					</Grid.ColumnDefinitions>
+
+					<Grid Grid.Column="0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="Auto" />
+						</Grid.ColumnDefinitions>
+
+						<local:InputField x:Name="HoursInput" />
+
+						<TextBlock Grid.Column="1"
+								   Text="hr"
+								   VerticalAlignment="Center"
+								   Margin="3,0"/>
+					</Grid>
+
+					<Grid Grid.Column="1" Margin="2,0,0,0">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="60" />
+							<ColumnDefinition Width="Auto" />
+						</Grid.ColumnDefinitions>
+
+						<local:InputField x:Name="MinutesInput" />
+
+						<TextBlock Grid.Column="1"
+								   Text="min"
+								   VerticalAlignment="Center"
+								   Margin="3,0,0,0"/>
+					</Grid>
+				</Grid>
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

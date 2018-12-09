@@ -15,14 +15,19 @@ using System.Windows.Shapes;
 
 namespace Cookr
 {
-	/// <summary>
-	/// Interaction logic for MaxCookTimeControl.xaml
-	/// </summary>
-	public partial class MaxCookTimeControl : UserControl
+	public partial class FilteredIngredient : UserControl
 	{
-		public MaxCookTimeControl()
+		public event Action<FilteredIngredient> StopFilteringIngredient = new Action<FilteredIngredient>(i => { }); 
+		public string IngredientName { get { return IngredientNameText.Text; } set { IngredientNameText.Text = value; } }
+
+		public FilteredIngredient()
 		{
 			InitializeComponent();
+		}
+
+		void StopFilteringClick(object sender, RoutedEventArgs e)
+		{
+			StopFilteringIngredient(this);
 		}
 	}
 }

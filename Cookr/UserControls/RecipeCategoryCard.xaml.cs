@@ -88,7 +88,7 @@ namespace Cookr
             double toScaleX = entered ? 1.1f : 1.05f;
             double toDepth = entered ? 4f : 1f;
             double toBlur = entered ? 8f : 3f;
-            Thickness toMargin = entered ? new Thickness(10, 5, 10, 15) : new Thickness(10);
+            Thickness toMargin = entered ? new Thickness(5, 5, 5, 15) : new Thickness(5);
 
             bgBrush.BeginAnimation(SolidColorBrush.ColorProperty, new ColorAnimation(toBGColor, duration) { EasingFunction = ease });
             RecipeCategoryCardImage.Background.RelativeTransform.BeginAnimation(ScaleTransform.ScaleXProperty, new DoubleAnimation(toScaleX, duration) { EasingFunction = ease });

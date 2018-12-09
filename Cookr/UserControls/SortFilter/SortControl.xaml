@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Cookr.SortControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:local="clr-namespace:Cookr">
+
+	<UserControl.Resources>
+	</UserControl.Resources>
+
+	<Grid Effect="{StaticResource DropShadow}" >
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="Auto"/>
+		</Grid.RowDefinitions>
+
+		<Border Background="{StaticResource BG-Brush}" Grid.RowSpan="3" CornerRadius="20"/>
+
+		<Border Grid.Row="0" x:Name="RatingBG" Background="{StaticResource Primary-Brush}" CornerRadius="20" Height="40" Margin="2.5">
+			<Grid Margin="15,5">
+				<TextBlock x:Name="RatingFG" VerticalAlignment="Center" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Regular}" Text="Rating"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="0" />
+			</Grid>
+		</Border>
+		<Border Grid.Row="1" x:Name="CookTimeBG" Background="{DynamicResource BG-Brush}" CornerRadius="20" Height="40" Margin="2.5">
+			<Grid Margin="15,5">
+				<TextBlock x:Name="CookTimeFG" VerticalAlignment="Center" Foreground="{StaticResource Text-Dark-Brush}" FontSize="{StaticResource Text-Regular}" Text="Cook time"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="1" />
+			</Grid>
+		</Border>
+		<Border Grid.Row="2" x:Name="RelevanceBG" Background="{DynamicResource BG-Brush}" CornerRadius="20" Height="40" Margin="2.5">
+			<Grid>
+				<TextBlock x:Name="RelevanceFG" Margin="15,5" VerticalAlignment="Center" Foreground="{StaticResource Text-Dark-Brush}" FontSize="{StaticResource Text-Regular}" Text="Relevance"/>
+				<Button Style="{StaticResource EmptyButton}" Click="SortClicked" Content="2" />
+			</Grid>
+		</Border>
+	</Grid>
+</UserControl>

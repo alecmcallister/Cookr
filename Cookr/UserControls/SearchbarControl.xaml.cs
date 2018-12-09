@@ -20,13 +20,15 @@ namespace Cookr
 	{
 		public event Action<string> SearchEvent = new Action<string>(s => { });
 
-		public bool HasText { get { return SearchbarTextBox?.Text.Length > 0; } }
+		public bool HasText { get { return InputField?.Text.Length > 0; } }
 
-		public string Text { get { return SearchbarTextBox?.Text; } set { SearchbarTextBox.Text = value; } }
+		public string Text { get { return InputField?.Text; } set { InputField.Text = value; } }
 
 		public SearchbarControl()
 		{
 			InitializeComponent();
+			InputField.Placeholder = "Search...";
+			InputField.SubmitEvent += s => { SearchbarButton_Click(null, null); };
 		}
 
 		void SearchbarTextChanged(object sender, TextChangedEventArgs e)
@@ -39,7 +41,7 @@ namespace Cookr
 			if (!HasText)
 				return;
 
-			SearchEvent(SearchbarTextBox.Text);
+			SearchEvent(InputField.Text);
 			Text = "";
 		}
 
@@ -51,7 +53,6 @@ namespace Cookr
 
 		void UpdatePlaceholder()
 		{
-			SearchbarPlaceholderText.Text = HasText ? "" : "Search...";
 			SearchbarButton.Foreground = (Brush)(HasText ? TryFindResource("Text-Dark-Brush") : TryFindResource("Inactive-Brush"));
 		}
 	}

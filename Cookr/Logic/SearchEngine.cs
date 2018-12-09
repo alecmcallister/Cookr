@@ -28,8 +28,8 @@ namespace Cookr
 		{
 			public int minRating;
 			public int maxTime;
-			public ObservableCollection<string> mustIncludeIngredients;
-			public ObservableCollection<string> mustExcludeIngredients;
+			public List<string> mustIncludeIngredients;
+			public List<string> mustExcludeIngredients;
 			public SortBy sortBy;
 		}
 
@@ -40,10 +40,10 @@ namespace Cookr
 
 		public static void clearFilters()
 		{
-			filter.minRating = 1;
+			filter.minRating = 0;
 			filter.maxTime = int.MaxValue;
-			filter.mustIncludeIngredients = new ObservableCollection<string>();
-			filter.mustExcludeIngredients = new ObservableCollection<string>();
+			filter.mustIncludeIngredients = new List<string>();
+			filter.mustExcludeIngredients = new List<string>();
 			filter.sortBy = SortBy.Rating;
 		}
 

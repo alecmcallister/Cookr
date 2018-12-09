@@ -16,25 +16,20 @@
 			<ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled">
 
 				<StackPanel Orientation="Vertical">
+					<StackPanel Background="{StaticResource BG-Dark-Brush}">
+						<StackPanel x:Name="CategoryPictureStack" Height="170" Orientation="Horizontal">
 
-                    <StackPanel x:Name="CategoryPictureStack" Height="170" Orientation="Horizontal" Background="{StaticResource BG-Dark-Brush}">
-                        <local:RecipeCategoryCard></local:RecipeCategoryCard>
-                        <!--Border CornerRadius="20" Background="{StaticResource Primary-Dark-Brush}" Height="40" Width="Auto" Margin="15,0,0,0" Padding="15,0" Effect="{StaticResource DropShadow}">
-							<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center" Text="TODO: Change to a picture" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-Small}"/>
-						</-->
+						</StackPanel>
+
+						<Grid x:Name="AllCategoriesExpandablePanel" Height="0">
+							<StackPanel Margin="10,0" x:Name="AllCategoriesStackPanel">
+
+							</StackPanel>
+						</Grid>
 					</StackPanel>
-
-                    <Grid x:Name="AllCategoriesExpandablePanel" Background="{StaticResource BG-Dark-Brush}" Height="0">
-                        <ScrollViewer VerticalScrollBarVisibility="Hidden" HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Stretch" Visibility="Visible">
-                            <StackPanel Margin="10" x:Name="AllCategoriesStackPanel">
-                            </StackPanel>
-                        </ScrollViewer>
-                    </Grid>
 
 					<local:ToggleButtonControl x:Name="ExpandCategoriesButton" Margin="0,-20,0,0" />
 
-
-					<!-- FIX THE DELAYED CARD RAISE -->
 
 					<Grid HorizontalAlignment="Center">
 						<Grid.ColumnDefinitions>
@@ -83,7 +78,7 @@
 								</ei:FluidMoveBehavior>
 							</i:Interaction.Behaviors>
 
-							<local:RecipeCard />
+							<!--<local:RecipeCard />-->
 
 						</WrapPanel>
 					</Grid>

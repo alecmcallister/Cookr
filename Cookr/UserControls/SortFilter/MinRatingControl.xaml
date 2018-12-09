@@ -2,26 +2,17 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:Cookr"
-             mc:Ignorable="d" 
-			 Margin="10">
+             xmlns:local="clr-namespace:Cookr">
 	
 	<UserControl.Resources>
 	</UserControl.Resources>
 
-	<Grid HorizontalAlignment="Left" Effect="{StaticResource DropShadow}">
-		<Grid.RowDefinitions>
-			<RowDefinition Height="32"/>
-			<RowDefinition Height="60"/>
-		</Grid.RowDefinitions>
+	<Grid Effect="{StaticResource DropShadow}">
 
-		<TextBlock Margin="15,0"
-				   FontSize="{StaticResource Text-Regular}"
-				   Foreground="{StaticResource Text-Light-Brush}"
-				   Text="Min rating" />
-
-		<Border Grid.Row="1" Width="250" Height="60" Background="{StaticResource BG-Brush}"  CornerRadius="30">
+		<Border Width="250"
+				Height="60" 
+				Background="{StaticResource BG-Brush}" 
+				CornerRadius="30">
 
 			<Grid HorizontalAlignment="Center">
 

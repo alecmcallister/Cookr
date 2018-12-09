@@ -21,6 +21,9 @@ namespace Cookr
 		public event Action<SortBy> SortByEvent = new Action<SortBy>(s => { });
 
 		public Dictionary<int, Border> BGList;
+		public Dictionary<int, TextBlock> FGList;
+
+		public bool IsFiltering { get { return currIndex != 0; } }
 
 		int currIndex = 0;
 		int prevIndex = 0;
@@ -34,17 +37,27 @@ namespace Cookr
 				{1, CookTimeBG },
 				{2, RelevanceBG }
 			};
+			FGList = new Dictionary<int, TextBlock>()
+			{
+				{0, RatingFG },
+				{1, CookTimeFG },
+				{2, RelevanceFG }
+			};
 		}
 
-		private void SortClicked(object sender, RoutedEventArgs e)
+		public void Reset()
+		{
+			HighlightListItem(0);
+			SortByEvent(SortBy.Rating);
+		}
+
+		void SortClicked(object sender, RoutedEventArgs e)
 		{
 			Button button = (Button)sender;
 			int index = int.Parse(button.Content.ToString());
 			HighlightListItem(index);
-			SortBy sortBy = (SortBy)index;
-			SortByEvent(sortBy);
+			SortByEvent((SortBy)index);
 		}
-
 
 		#region Animation
 
@@ -58,13 +71,20 @@ namespace Cookr
 
 			currIndex = item;
 
-			Color highlight = (Color)TryFindResource("Green-Normal");
+			Color highlight = (Color)TryFindResource("Primary");
 			Color normal = (Color)TryFindResource("BG");
+			Color highlightFG = (Color)TryFindResource("Text-Light");
+			Color normalFG = (Color)TryFindResource("Text-Dark");
+
 
 			BGList[item].AnimateBGToColor(highlight, time, ease);
+			FGList[item].AnimateFGToColor(highlightFG, time, ease);
 
 			if (prevIndex != currIndex)
+			{
 				BGList[prevIndex].AnimateBGToColor(normal, time, ease);
+				FGList[prevIndex].AnimateFGToColor(normalFG, time, ease);
+			}
 
 			prevIndex = currIndex;
 		}

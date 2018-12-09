@@ -20,7 +20,11 @@ namespace Cookr
 	{
 		public event Action<int> MinRatingSetEvent = new Action<int>(i => { });
 
+		public bool IsFiltering { get { return min > 0; } }
+
 		public List<TextBlock> Stars;
+
+		int min;
 
 		public MinRatingControl()
 		{
@@ -36,10 +40,15 @@ namespace Cookr
 			};
 		}
 
-		void ClearButtonClick(object sender, RoutedEventArgs e)
+		public void Reset()
 		{
 			SetMinRating(0);
 			MinRatingSetEvent(0);
+		}
+
+		void ClearButtonClick(object sender, RoutedEventArgs e)
+		{
+			Reset();
 		}
 
 		void StarClick(object sender, RoutedEventArgs e)
@@ -54,6 +63,8 @@ namespace Cookr
 
 		public void SetMinRating(int rating)
 		{
+			min = rating;
+
 			for (int i = 0; i < Stars.Count; i++)
 				SetStarActive(i, rating > i);
 		}
@@ -63,20 +74,16 @@ namespace Cookr
 		float time = 0.2f;
 		IEasingFunction ease = new CubicEase();
 
-		//Color starActiveColor { get { return (Color)TryFindResource("Star"); } }
-		Color starActiveColor { get { return (Color)TryFindResource("Text-Dark"); } }
+		Color starActiveColor { get { return (Color)TryFindResource("Primary"); } }
+		//Color starActiveColor { get { return (Color)TryFindResource("Text-Dark"); } }
 		Color starInactiveColor { get { return (Color)TryFindResource("Inactive"); } }
 
 		void SetStarActive(int star, bool active)
 		{
-			// Can animate fontsize (double)
-
 			string icon = (string)TryFindResource(active ? "Star-Icon" : "Star-Empty-Icon");
 			Stars[star].Text = icon;
 
-			double toSize = active ? 38f : 36f;
-			Stars[star].AnimateDoubleProperty(TextBlock.FontSizeProperty, toSize, time, ease);
-			Stars[star].AnimateIconToColor(active ? starActiveColor : starInactiveColor, time, ease);
+			Stars[star].AnimateFGToColor(active ? starActiveColor : starInactiveColor, time, ease);
 		}
 
 		#endregion

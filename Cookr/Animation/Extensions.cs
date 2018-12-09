@@ -135,7 +135,7 @@ namespace Cookr
 			await Task.Delay(TimeSpan.FromSeconds(time));
 		}
 
-		public static async Task AnimateIconToColor(this TextBlock element, Color to, float time, IEasingFunction easeFunction)
+		public static async Task AnimateFGToColor(this TextBlock element, Color to, float time, IEasingFunction easeFunction)
 		{
 			element.Foreground = new SolidColorBrush(((SolidColorBrush)element.Foreground).Color);
 			ColorAnimation animation = new ColorAnimation()

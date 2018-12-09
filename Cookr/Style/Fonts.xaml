@@ -1,19 +1,17 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:local="clr-namespace:Cookr">
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:local="clr-namespace:Cookr">
 
 	<FontFamily x:Key="Roboto">pack://application;,,,/Style/Font/#Roboto</FontFamily>
 	<FontFamily x:Key="RobotoLight">pack://application;,,,/Style/Font/#Roboto Light</FontFamily>
 
 	<Style TargetType="{x:Type Control}" x:Key="BaseStyle">
 		<Setter Property="FontFamily" Value="{StaticResource Roboto}" />
-		<Setter Property="FontSize" Value="20" />
+		<Setter Property="FontSize" Value="{StaticResource Text-Regular}" />
 		<Setter Property="Foreground" Value="{StaticResource Text-Dark-Brush}" />
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="BaseTextBlockStyle">
 		<Setter Property="FontFamily" Value="{StaticResource Roboto}" />
-		<Setter Property="FontSize" Value="20" />
+		<Setter Property="FontSize" Value="{StaticResource Text-Regular}" />
 		<Setter Property="Foreground" Value="{StaticResource Text-Dark-Brush}" />
 	</Style>
 
@@ -22,5 +20,23 @@
 	<Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource BaseTextBlockStyle}" />
 	<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" />
 	<Style TargetType="{x:Type ListView}" BasedOn="{StaticResource BaseStyle}" />
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="DropShadowText">
+		<Setter Property="FontFamily" Value="{StaticResource Roboto}" />
+		<Setter Property="FontSize" Value="{StaticResource Text-Regular}" />
+		<Setter Property="Foreground" Value="{StaticResource Text-Light-Brush}" />
+		<Setter Property="Effect" Value="{StaticResource DropShadow-L}" />
+	</Style>
+
+	<Style TargetType="{x:Type TextBox}" BasedOn="{StaticResource BaseStyle}" x:Key="BaseTextBox">
+		<Setter Property="CaretBrush" Value="{StaticResource Text-Dark-Brush}" />
+		<Setter Property="Background" Value="Transparent" />
+		<Setter Property="BorderThickness" Value="0" />
+		<Setter Property="BorderBrush" Value="Transparent" />
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="HorizontalContentAlignment" Value="Left" />
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="Padding" Value="12.5,0" />
+	</Style>
 
 </ResourceDictionary>
