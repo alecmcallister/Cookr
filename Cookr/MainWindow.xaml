@@ -7,7 +7,9 @@
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen"
         Title="Cookr" Height="900" Width="1315"
-		MinWidth="650" MinHeight="600">
+		MinWidth="650" MinHeight="600"
+        PreviewMouseDown="CloseFakeRecipePopup"
+        PreviewMouseWheel="CloseFakeRecipePopup">
 	<Window.Resources>
 
 	</Window.Resources>
@@ -53,6 +55,10 @@
 
 
 			</Grid>
+            
+			<Popup x:Name="FakeRecipePopup" StaysOpen="True" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
+				<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
+			</Popup>
 
 
 			<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed"/>

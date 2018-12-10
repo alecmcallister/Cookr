@@ -55,7 +55,9 @@ namespace Cookr
 
 			RecipeButton.BackToRecipeClicked += async () => { await GoToRecipe(); };
 
-			RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); RecipeButton.SetCurrentRecipt(r.Title); await GoToRecipe(); };
+            RecipeCard.FakeRecipeSelectedEvent += async () => { await OpenFakeRecipePopup(); };
+
+            RecipeCard.RecipeSelectedEvent += async r => { theRecipe.SetRecipe(r); RecipeButton.SetCurrentRecipt(r.Title); await GoToRecipe(); };
             RecipeCategoryCard.CategorySelectedEvent += async c => { theSearch.DoSearch(c); if (currentFrame != SearchFrame) await GoToSearch(); };
 			CategoryTextButton.CategorySelectedEvent += async c => { theSearch.DoSearch(c); if (currentFrame != SearchFrame) await GoToSearch(); };
 		}
@@ -114,7 +116,28 @@ namespace Cookr
 
 			prevFrame = currentFrame;
 			currentFrame = RecipeFrame;
+
             theRecipe.RunButtonsListUpdate();
+        }
+
+        public async Task OpenFakeRecipePopup()
+        {
+
+            PopupContent.TooltipImageStackPanel.Children.Clear();
+            PopupContent.TooltipImageStackPanel.Visibility = Visibility.Collapsed;
+            PopupContent.PopupGrid.MaxWidth = 250;
+            PopupContent.TooltipText.Text = "Sorry, this recipe isn't ready yet! Please try another recipe.";
+            FakeRecipePopup.IsOpen = true;
+        }
+
+        private void CloseFakeRecipePopup(object sender, MouseWheelEventArgs e)
+        {
+            FakeRecipePopup.IsOpen = false;
+        }
+
+        private void CloseFakeRecipePopup(object sender, MouseButtonEventArgs e)
+        {
+            FakeRecipePopup.IsOpen = false;
         }
 
 		bool headerFullyVisible = true;
