@@ -359,8 +359,9 @@ namespace Cookr
                         RoundedCornerImage roundedImage = new RoundedCornerImage();
                         Image img = new Image();
                         img.Source = new BitmapImage(new Uri("Images/" + imgname, UriKind.Relative));
-                        Thickness margin = roundedImage.RoundedCornerImageGrid.Margin;
-                        margin.Right = 0;
+						//Thickness margin = roundedImage.RoundedCornerImageGrid.Margin;
+						//margin.Right = 0;
+						Thickness margin = new Thickness(5);
                         roundedImage.RoundedCornerImageGrid.Margin = margin;
                         roundedImage.RoundedCornerImageGrid.Height = 180;
                         roundedImage.RoundedCornerImageGrid.Width = (180.0 / img.Source.Height) * img.Source.Width;

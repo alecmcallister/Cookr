@@ -61,9 +61,9 @@
       <BeginStoryboard x:Name="OnMouseLeave1_BeginStoryboard" Storyboard="{StaticResource OnMouseLeave1}"/>
     </EventTrigger>
   </UserControl.Triggers>
-  <Border BorderBrush="#FF555555" Background="#FF616161" >
-    <Grid x:Name="SidebarRecipeStepButtonCustom" Height="35" Margin="0,0,0,0" VerticalAlignment="Top" MouseDown="SidebarRecipeStepButton_Click">
-      <Rectangle x:Name="HoverCover" Stroke="#FF555555" d:IsHidden="True" >
+  <Border>
+    <Grid x:Name="SidebarRecipeStepButtonCustom" Height="40" Margin="0,0,0,0" VerticalAlignment="Top" MouseDown="SidebarRecipeStepButton_Click">
+      <Rectangle x:Name="HoverCover" Stroke="#FF555555" d:IsHidden="true" >
         <Rectangle.Fill>
           <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="#FF666666"/>

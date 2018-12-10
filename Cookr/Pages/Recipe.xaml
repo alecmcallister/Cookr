@@ -10,8 +10,8 @@
       Title="Recipe">
 	<Page.Resources>
 		<LinearGradientBrush x:Key="RecipeStepGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-			<GradientStop Color="#FFE5E5E5" Offset="0"/>
-			<GradientStop Color="#FFD4D4D4" Offset="1"/>
+			<GradientStop Color="{StaticResource BG}" Offset="0"/>
+			<GradientStop Color="{StaticResource BG}" Offset="1"/>
 		</LinearGradientBrush>
 		<sys:Double x:Key="Factor">-1.18</sys:Double>
 	</Page.Resources>
@@ -39,7 +39,7 @@
 
 		<ScrollViewer x:Name="RecipeStepScrollViewer" Grid.Column="1" ScrollChanged="ScrollViewer_ScrollChanged" VerticalScrollBarVisibility="Hidden">
 
-			<StackPanel Name="RecipeStepStack">
+			<StackPanel Name="RecipeStepStack" Background="{StaticResource BG-Darker-Brush}">
 
 				<Popup x:Name="InformationPopup" StaysOpen="False" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
 					<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
@@ -50,10 +50,6 @@
 						<ImageBrush x:Name="RecipeTitleImage" Stretch="UniformToFill"/>
 					</Grid.Background>
 					
-					<!-- Change this stuff -->
-					
-					<!--local:StarRatingDisplay x:Name="RecipeStarRating" Height="25" Width="100" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="10,10,0,0" Loaded="RecipeStarRating_Loaded" -->
-
                     <Grid Grid.Column="0" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"/>
@@ -75,8 +71,13 @@
                     <TextBlock x:Name="RecipeTitle" Text="Recipe Title" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="{StaticResource Roboto}" Foreground="{StaticResource Text-Light-Brush}" FontSize="{StaticResource Text-V-Large}" Effect="{StaticResource DropShadow-L}"/>
 				</Grid>
 				
-				<Border BorderBrush="#FFC8C8C8" BorderThickness="1">
-					<TextBlock x:Name="DescriptionTextBlock" TextWrapping="Wrap" Padding="10,10,18,10" Background="{DynamicResource RecipeStepBrush}" >
+				<Border CornerRadius="10" 
+						Background="{StaticResource BG-Brush}" 
+						Effect="{StaticResource DropShadow}"
+						Margin="5,2.5">
+					<TextBlock x:Name="DescriptionTextBlock" 
+							   TextWrapping="Wrap" 
+							   Padding="10,10,18,10" >
                         Description <LineBreak/> <LineBreak/> Prep time 25 minutes <LineBreak/> Cook time 15 minutes <LineBreak/> 6 Servings
 					</TextBlock>
 				</Border>
@@ -85,13 +86,21 @@
 						<ColumnDefinition Width="0.5*"/>
 						<ColumnDefinition Width="0.5*"/>
 					</Grid.ColumnDefinitions>
-					<Border BorderBrush="#FFC8C8C8" BorderThickness="2" Grid.Column="0" >
-						<TextBlock x:Name="IngredientsTextBlock" TextWrapping="Wrap" Grid.Column="0"  Padding="10,10,10,10" Background="{DynamicResource RecipeStepGradient}">
+					<Border CornerRadius="10" 
+							Background="{StaticResource BG-Brush}" 
+							Effect="{StaticResource DropShadow}"
+							Margin="5,2.5,2.5,2.5"
+							Grid.Column="0">
+						<TextBlock x:Name="IngredientsTextBlock" TextWrapping="Wrap" Padding="10">
                         Ingredients <LineBreak/> <LineBreak/>- Asparagus<LineBreak/>- Asparagus<LineBreak/>- Asparagus
 						</TextBlock>
 					</Border>
-					<Border BorderBrush="#FFC8C8C8" BorderThickness="2" Grid.Column="1">
-						<TextBlock x:Name="ToolsTextBlock" TextWrapping="Wrap"  Grid.Column="1" Padding="10,10,10,10" Background="{DynamicResource RecipeStepGradient}">
+					<Border CornerRadius="10" 
+							Background="{StaticResource BG-Brush}" 
+							Effect="{StaticResource DropShadow}"
+							Margin="2.5,2.5,5,2.5"
+							Grid.Column="1">
+						<TextBlock x:Name="ToolsTextBlock" TextWrapping="Wrap" Padding="10" >
                         Tools <LineBreak/> <LineBreak/> - Spoon <LineBreak/> - Another Spoon <LineBreak/>- Another Spoon <LineBreak/>
 						</TextBlock>
 					</Border>

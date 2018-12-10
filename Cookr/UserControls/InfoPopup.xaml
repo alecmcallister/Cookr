@@ -6,59 +6,47 @@
              xmlns:local="clr-namespace:Cookr"
              mc:Ignorable="d" 
              >
-    <UserControl.Resources>
-        <ResourceDictionary>
-            <Style x:Key="RoundButtonTemplate" TargetType="Button">
-                <Setter Property="Background" Value="Brown"/>
-                <Setter Property="Foreground" Value="{StaticResource Text-Light-Brush}" />
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="15" Background="{StaticResource Text-Dark-Brush}"
-                          BorderThickness="1">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center">
+	<UserControl.Resources>
+	
+	</UserControl.Resources>
+	<Grid MinHeight="40" Effect="{StaticResource DropShadow-L}">
+		<Border BorderBrush="Transparent"
+                BorderThickness="0"
+                Background="{StaticResource FG-Brush}"
+                CornerRadius="20">
+			<Grid MaxWidth="580">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="Auto"/>
+				</Grid.ColumnDefinitions>
 
-                                </ContentPresenter>
-                            </Border>
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </ResourceDictionary>
-    </UserControl.Resources>
-    <Grid>
-        <Border BorderBrush="White"
-                BorderThickness="2"
-                Background="#FF313131"
-                CornerRadius="8">
-            <Grid MaxWidth="580">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <StackPanel x:Name="TooltipImageStackPanel" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,0,0,0">
+				<StackPanel x:Name="TooltipImageStackPanel" Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="0,0,0,0">
 
-                </StackPanel>
+				</StackPanel>
 
-                <TextBlock  x:Name="TooltipText" 
-                        Margin="10,10,10,10"
+				<TextBlock  x:Name="TooltipText" 
+                        Margin="10,10,0,10"
                         TextWrapping="Wrap"
-                        Foreground="WhiteSmoke"
+                        Foreground="{StaticResource Text-Dark-Brush}"
                         FontSize="14"
-                        Grid.Column="1">
-                        Olive oil is recommended, but other oils or butter are fine.
-                </TextBlock>
-                <Border BorderBrush="White"
-                        BorderThickness="2"
-                        Background="#FF313131"
                         Grid.Column="1"
-                        CornerRadius="15"
-                        HorizontalAlignment="Right"
-                        VerticalAlignment="Top"
-                        Margin="0,-15,-15,0" >
-                    <TextBlock x:Name="Closebutton" Cursor="Hand" Text="{DynamicResource Close-Icon}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="23" Width="23.709" Style="{DynamicResource Icon}" Foreground="{StaticResource Text-Light-Brush}"  MouseUp="Closebutton_Click"/>
-                </Border>
-            </Grid>
-        </Border>
-    </Grid>
+							VerticalAlignment="Center">
+                        Olive oil is recommended, but other oils or butter aaerfawefawefawefawefawfawfawe wefa wef awef awf awf  
+					ewafwef awef awef aw aw fawef wafa wfare fr butter aaerfawefawefawefawefawfawfawe wefa wef awef awf awf  ewafwef aw
+					ef awef aw aw fawef wafa wfare fr butter aaerfawefawefawefawefawfawfawe wefa wef awef awf awf  ewafwef aw
+					ef awef aw aw fawef wafa wfare fr butter aaerfawefawefawefawefawfawfawe wefa wef awef awf awf  ewaf
+					wef awef awef aw aw fawef wafa wfare fine.
+				</TextBlock>
+
+				<TextBlock x:Name="Closebutton" 
+						   Grid.Column="2"
+						   Style="{DynamicResource Icon}" 
+						   Text="{DynamicResource Close-Icon}" 
+						   Foreground="{StaticResource Text-Dark-Brush}"
+						   MouseUp="Closebutton_Click"
+						   VerticalAlignment="Top" Margin="5"/>
+			</Grid>
+		</Border>
+	</Grid>
 </UserControl>
