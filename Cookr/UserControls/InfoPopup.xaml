@@ -45,6 +45,7 @@
 						   Text="{DynamicResource Close-Icon}" 
 						   Foreground="{StaticResource Text-Dark-Brush}"
 						   MouseUp="Closebutton_Click"
+						   Cursor="Hand"
 						   VerticalAlignment="Top" Margin="5"/>
 			</Grid>
 		</Border>

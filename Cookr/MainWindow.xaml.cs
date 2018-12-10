@@ -72,6 +72,7 @@ namespace Cookr
 
 		public void MaximizeWindow(object sender, EventArgs e)
 		{
+			time = (WindowState == WindowState.Maximized) ? 0.5f : 0;
 			WindowState ^= WindowState.Maximized;
 		}
 

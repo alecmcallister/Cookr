@@ -4,13 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Cookr"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen"
 		AllowsTransparency="True"
 		WindowStyle="None"
         Title="Cookr" Height="900" Width="1315"
 		MinWidth="830" MinHeight="700"
-		SnapsToDevicePixels="True">
+		SnapsToDevicePixels="True"
+        PreviewMouseDown="CloseFakeRecipePopup"
+        PreviewMouseWheel="CloseFakeRecipePopup">
 
 	<WindowChrome.WindowChrome>
 		<WindowChrome  ResizeBorderThickness="18"
@@ -103,6 +106,8 @@
 				</Setter.Value>
 			</Setter>
 		</Style>
+		<local:MultiplyConverter x:Key="MultiplyConverter" />
+		<sys:Double x:Key="Factor">-1.18</sys:Double>
 	</Window.Resources>
 
 	<Grid>
@@ -156,8 +161,12 @@
 
 		</Border>
 
-		<Popup x:Name="FakeRecipePopup" StaysOpen="True" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
-			<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
+        <Popup x:Name="FakeRecipePopup" StaysOpen="True" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
+            <Popup.VerticalOffset>
+                <Binding Path="Child.ActualHeight" RelativeSource="{RelativeSource Self}"
+					Converter="{StaticResource MultiplyConverter}" ConverterParameter="{StaticResource Factor}" />
+            </Popup.VerticalOffset>
+            <local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
 		</Popup>
 
 		<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed">

@@ -13,6 +13,7 @@
 			<GradientStop Color="{StaticResource BG}" Offset="0"/>
 			<GradientStop Color="{StaticResource BG}" Offset="1"/>
 		</LinearGradientBrush>
+		<local:MultiplyConverter x:Key="MultiplyConverter" />
 		<sys:Double x:Key="Factor">-1.18</sys:Double>
 	</Page.Resources>
 
@@ -42,6 +43,10 @@
 			<StackPanel Name="RecipeStepStack" Background="{StaticResource BG-Darker-Brush}">
 
 				<Popup x:Name="InformationPopup" StaysOpen="False" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
+					<Popup.VerticalOffset>
+						<Binding Path="Child.ActualHeight" RelativeSource="{RelativeSource Self}"
+						Converter="{StaticResource MultiplyConverter}" ConverterParameter="{StaticResource Factor}" />
+					</Popup.VerticalOffset>
 					<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
 				</Popup>
 				
