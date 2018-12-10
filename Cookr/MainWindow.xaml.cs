@@ -18,7 +18,7 @@ namespace Cookr
 {
 	public partial class MainWindow : Window
 	{
-		float time = 0.75f;
+		float time = 0.2f;
 		IEasingFunction ease = new CubicEase();
 
 		Frame prevFrame;
@@ -72,7 +72,7 @@ namespace Cookr
 
 		public void MaximizeWindow(object sender, EventArgs e)
 		{
-			time = (WindowState == WindowState.Maximized) ? 0.5f : 0;
+			time = (WindowState == WindowState.Maximized) ? 0.2f : 0;
 			WindowState ^= WindowState.Maximized;
 		}
 
