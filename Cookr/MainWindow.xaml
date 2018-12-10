@@ -155,6 +155,10 @@
 
 		</Border>
 
+		<Popup x:Name="FakeRecipePopup" StaysOpen="True" Placement="Mouse" PopupAnimation="Slide" AllowsTransparency="True">
+			<local:InfoPopup x:Name="PopupContent" Padding="13" Foreground="{x:Null}" />
+		</Popup>
+
 		<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed">
 			<Frame.OpacityMask>
 				<VisualBrush Visual="{Binding ElementName=BorderMask}" Stretch="None"/>

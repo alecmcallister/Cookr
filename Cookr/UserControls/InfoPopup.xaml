@@ -14,7 +14,7 @@
                 BorderThickness="0"
                 Background="{StaticResource FG-Brush}"
                 CornerRadius="20">
-			<Grid MaxWidth="580">
+			<Grid MaxWidth="580" x:Name="PopupGrid">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto"/>
 					<ColumnDefinition Width="*"/>
