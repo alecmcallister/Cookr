@@ -68,4 +68,6 @@
 	<DropShadowEffect x:Key="DropShadow-L" BlurRadius="5" Opacity="0.6" Direction="270" ShadowDepth="2"/>
 
 	<DropShadowEffect x:Key="DropShadow-F" BlurRadius="3" Opacity="0.3" ShadowDepth="0"/>
+
+	<DropShadowEffect x:Key="DropShadow-W" BlurRadius="5" Opacity="0.5" ShadowDepth="0" Direction="-90" />
 </ResourceDictionary>

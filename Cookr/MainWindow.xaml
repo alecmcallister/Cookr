@@ -6,36 +6,138 @@
         xmlns:local="clr-namespace:Cookr"
         mc:Ignorable="d"
 		WindowStartupLocation="CenterScreen"
+		AllowsTransparency="True"
+		WindowStyle="None"
         Title="Cookr" Height="900" Width="1315"
-		MinWidth="650" MinHeight="600">
+		MinWidth="830" MinHeight="700"
+		SnapsToDevicePixels="True">
+	<WindowChrome.WindowChrome>
+		<WindowChrome  ResizeBorderThickness="18"
+					   CaptionHeight="50"
+					   CornerRadius="0"
+					   GlassFrameThickness="0"/>
+	</WindowChrome.WindowChrome>
+
 	<Window.Resources>
+		<Style TargetType="{x:Type local:MainWindow}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Window}">
+						<Border Padding="10">
+							<Grid>
+								<Border Height="50" Panel.ZIndex="3" VerticalAlignment="Top">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="*"/>
+											<ColumnDefinition Width="Auto"/>
+											<ColumnDefinition Width="*"/>
+										</Grid.ColumnDefinitions>
 
+										<!-- Alternate spelling (Cook/r) -->
+										<TextBlock Grid.Column="1" 
+												   Style="{StaticResource DropShadowText}"
+												   Effect="{StaticResource DropShadow-L}"
+												   FontSize="28"
+												   VerticalAlignment="Center">
+											Cook<Run Foreground="{StaticResource Inactive-Light-Brush}" Text="/"/><Run Foreground="{StaticResource Star-Brush}" Text="r"/>
+										</TextBlock>
+
+
+										<!-- Normal spelling (Cookr) -->
+										<!--<TextBlock Grid.Column="1" 
+												   Style="{StaticResource DropShadowText}"
+												   Effect="{StaticResource DropShadow-L}"
+												   FontSize="28"
+												   VerticalAlignment="Center">
+											Cookr
+										</TextBlock>-->
+
+										<!-- Window Buttons -->
+
+										<StackPanel Orientation="Horizontal" Grid.Column="2" HorizontalAlignment="Right">
+
+											<!-- Minimize -->
+											<Button Style="{StaticResource IconButton}" 
+													Foreground="{StaticResource Text-Light-Brush}"
+													FontSize="30"
+													Padding="5,16,5,0"
+													Content="{StaticResource Remove-Icon}"
+													Click="MinimizeWindow"
+													Effect="{StaticResource DropShadow}"
+													WindowChrome.IsHitTestVisibleInChrome="True"/>
+
+											<!-- Maximize / Restore -->
+											<Button Style="{StaticResource IconButton}" 
+													Foreground="{StaticResource Text-Light-Brush}"
+													FontSize="24"
+													Padding="5,0"
+													Content="{StaticResource Maximize-Icon}"
+													Click="MaximizeWindow"
+													Effect="{StaticResource DropShadow}"
+													WindowChrome.IsHitTestVisibleInChrome="True"/>
+
+											<!-- Close -->
+											<Button Style="{StaticResource IconButton}" 
+													Foreground="{StaticResource Text-Light-Brush}"
+													FontSize="30"
+													Padding="5,0,10,0"
+													Content="{StaticResource Close-Icon}"
+													Click="CloseWindow"
+													Effect="{StaticResource DropShadow}"
+													WindowChrome.IsHitTestVisibleInChrome="True"/>
+
+
+
+										</StackPanel>
+
+									</Grid>
+								</Border>
+
+								<ContentPresenter/>
+
+							</Grid>
+
+						</Border>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
 	</Window.Resources>
-	<Grid>
-		<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto"/>
-				<RowDefinition Height="*"/>
-			</Grid.RowDefinitions>
 
-			<Grid x:Name="Header" 
-				  Height="200" 
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<!-- Clipping border -->
+
+		<Border x:Name="BorderMask" 
+				Grid.Row="1"
+				CornerRadius="0,0,20,20" 
+				Background="{StaticResource BG-Brush}">
+		</Border>
+
+		<Border	Grid.Row="0"
+				Grid.RowSpan="2"
+				CornerRadius="20" 
+				Background="{StaticResource BG-Brush}" 
+				Effect="{StaticResource DropShadow-W}">
+		</Border>
+
+		<Border x:Name="Header" 
+				  Height="250" 
 				  Background="{StaticResource Primary-Brush}" 
 				  Effect="{StaticResource DropShadow-L}" 
+				  CornerRadius="20,20,0,0"
 				  Panel.ZIndex="2">
 
-				<TextBlock 
-						FontSize="{StaticResource Text-Title}" 
-						Effect="{StaticResource DropShadow-L}" 
-						Foreground="{StaticResource Text-Light-Brush}" 
-						HorizontalAlignment="Center" 
-						Margin="25" >
-						Cook<Run 
-							Foreground="{StaticResource Inactive-Light-Brush}">\
-						</Run><Run 
-							Foreground="{StaticResource Star-Brush}">r
-						</Run>
-				</TextBlock>
+			<Grid>
+				<Border Effect="{StaticResource DropShadow-L}" Margin="0,50,0,70">
+					<Border.Background>
+						<ImageBrush ImageSource="/Cookr;component/Images/Logo/Cookr_Ring_Logo.png" Stretch="Uniform"/>
+					</Border.Background>
+				</Border>
 
 				<Grid x:Name="HeaderControlsGrid" Margin="15" Height="60" VerticalAlignment="Bottom">
 					<Grid.ColumnDefinitions>
@@ -47,17 +149,28 @@
 					<local:HomeButton x:Name="HomeButton" HorizontalAlignment="Left" Margin="-60,0,0,0" Grid.Column="0" Visibility="Hidden"/>
 					<local:BackToRecipeButton x:Name="RecipeButton" HorizontalAlignment="Right" Margin="0,0,-400,0" Grid.Column="2" Visibility="Hidden"/>
 					<local:SearchbarControl x:Name="Searchbar" Grid.Column="1"/>
-
-
 				</Grid>
-
 
 			</Grid>
 
+		</Border>
 
-			<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed"/>
-			<Frame x:Name="SearchFrame" Grid.Row="1" Visibility="Collapsed" />
-			<Frame x:Name="HomeFrame"  Grid.Row="1"/>
-		</Grid>
+		<Frame x:Name="RecipeFrame" Grid.Row="1" Visibility="Collapsed">
+			<Frame.OpacityMask>
+				<VisualBrush Visual="{Binding ElementName=BorderMask}" Stretch="None"/>
+			</Frame.OpacityMask>
+		</Frame>
+		<Frame x:Name="SearchFrame" Grid.Row="1" Visibility="Collapsed">
+			<Frame.OpacityMask>
+				<VisualBrush Visual="{Binding ElementName=BorderMask}" Stretch="None"/>
+			</Frame.OpacityMask>
+		</Frame>
+		<Frame x:Name="HomeFrame"  Grid.Row="1">
+			<Frame.OpacityMask>
+				<VisualBrush Visual="{Binding ElementName=BorderMask}" Stretch="None"/>
+			</Frame.OpacityMask>
+		</Frame>
 	</Grid>
+
+
 </Window>

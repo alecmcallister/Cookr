@@ -18,7 +18,7 @@ namespace Cookr
 {
 	public partial class MainWindow : Window
 	{
-		float time = 0.5f;
+		float time = 0.75f;
 		IEasingFunction ease = new CubicEase();
 
 		Frame prevFrame;
@@ -30,6 +30,7 @@ namespace Cookr
 
 		public MainWindow()
 		{
+			Timeline.DesiredFrameRateProperty.OverrideMetadata(typeof(Timeline), new FrameworkPropertyMetadata() { DefaultValue = 120 });
 			InitializeComponent();
 
 			theHome = new Home();
@@ -59,6 +60,28 @@ namespace Cookr
             RecipeCategoryCard.CategorySelectedEvent += async c => { theSearch.DoSearch(c); if (currentFrame != SearchFrame) await GoToSearch(); };
 			CategoryTextButton.CategorySelectedEvent += async c => { theSearch.DoSearch(c); if (currentFrame != SearchFrame) await GoToSearch(); };
 		}
+
+		#region Frame
+
+		public void MinimizeWindow(object sender, EventArgs e)
+		{
+			WindowState = WindowState.Minimized;
+		}
+
+		public void MaximizeWindow(object sender, EventArgs e)
+		{
+			WindowState ^= WindowState.Maximized;
+		}
+
+		public void CloseWindow(object sender, EventArgs e)
+		{
+			Close();
+		}
+
+		#endregion
+
+
+		#region Navigation
 
 		public async Task BackPressed()
 		{
@@ -119,8 +142,8 @@ namespace Cookr
 
 		bool headerFullyVisible = true;
 		bool haveRecipeInProgress { get { return theRecipe.recipe != null; } }
-		double headerFullHeight = 200f;
-		double headerSmallHeight = 60f;
+		double headerFullHeight = 250f;
+		double headerSmallHeight = 100f;
 		Thickness headerFullMargin = new Thickness(15);
 		Thickness headerSmallMargin = new Thickness(15, 0, 15, 0);
 		Thickness backButtonFullMargin = new Thickness(0, 0, -60f, 0);
@@ -187,5 +210,7 @@ namespace Cookr
 			double hHeight = value ? headerFullHeight : headerSmallHeight;
 			await Header.AnimateDoubleProperty(HeightProperty, hHeight, time, ease);
 		}
+
+		#endregion
 	}
 }

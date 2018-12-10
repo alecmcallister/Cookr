@@ -36,7 +36,7 @@ namespace Cookr
 
 		#region Animate frame in/ out
 
-		public static void AnimateFrameIn(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
+		public static async Task AnimateFrameIn(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
 		{
 			float x = animType == PageAnimationType.Right ? -1f : 1f;
 
@@ -51,9 +51,11 @@ namespace Cookr
 				EasingFunction = ease
 			};
 			element.BeginAnimation(FrameworkElement.MarginProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
 		}
 
-		public static void AnimateFrameOut(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
+		public static async Task AnimateFrameOut(this FrameworkElement element, double width, PageAnimationType animType, float time, IEasingFunction ease)
 		{
 			float x = animType == PageAnimationType.Left ? -1f : 1f;
 
@@ -68,6 +70,8 @@ namespace Cookr
 				EasingFunction = ease
 			};
 			element.BeginAnimation(FrameworkElement.MarginProperty, animation);
+
+			await Task.Delay(TimeSpan.FromSeconds(time));
 		}
 
 		#endregion
