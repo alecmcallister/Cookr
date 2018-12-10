@@ -11,6 +11,7 @@
         Title="Cookr" Height="900" Width="1315"
 		MinWidth="830" MinHeight="700"
 		SnapsToDevicePixels="True">
+
 	<WindowChrome.WindowChrome>
 		<WindowChrome  ResizeBorderThickness="18"
 					   CaptionHeight="50"
