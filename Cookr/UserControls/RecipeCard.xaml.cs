@@ -18,10 +18,11 @@ using System.Windows.Shapes;
 namespace Cookr
 {
 	public partial class RecipeCard : UserControl
-	{
-		public static event Action<RecipeObject> RecipeSelectedEvent;
+    {
+        public static event Action<RecipeObject> RecipeSelectedEvent;
+        public static event Action FakeRecipeSelectedEvent = new Action(() => { });
 
-		RecipeObject recipe;
+        RecipeObject recipe;
 
 		public RecipeCard()
 		{
@@ -62,7 +63,15 @@ namespace Cookr
 
 		void RecipeCardMouseDown(object sender, MouseButtonEventArgs e)
 		{
-			RecipeSelectedEvent?.Invoke(recipe);
+            if(recipe.FakeRecipe == 0)
+            {
+			    RecipeSelectedEvent?.Invoke(recipe);
+            }
+            else
+            {
+                // This recipe is FAKE!
+                FakeRecipeSelectedEvent?.Invoke();
+            }
 		}
 
 		protected override async void OnMouseEnter(MouseEventArgs e)
